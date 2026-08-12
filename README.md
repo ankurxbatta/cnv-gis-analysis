@@ -215,6 +215,8 @@ score, and that intersections without collision data are never scored as safe.
 | [`METHODOLOGY.md`](METHODOLOGY.md) | Every formula, assumption and limitation |
 | [`DATA_GAPS.md`](DATA_GAPS.md) | 13 documented gaps with proxies and coverage |
 | [`LICENSES_AND_ATTRIBUTION.md`](LICENSES_AND_ATTRIBUTION.md) | Licence terms and required attribution |
+| [`ADDING_DATA.md`](ADDING_DATA.md) | **How to find new data and add it as a layer** |
+| [`DEPLOYMENT.md`](DEPLOYMENT.md) | GitHub → Vercel deployment |
 
 ---
 

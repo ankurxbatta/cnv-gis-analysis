@@ -1113,3 +1113,18 @@ sources:
     coverage: "Metro Vancouver / Lower Mainland"
     license: "Open Data Licence for ICBC Information"
     notes: "Regional baseline used to check how CNV compares and to detect name collisions."
+
+  - source_id: cnv_playgrounds
+    organization: "City of North Vancouver"
+    dataset: "Playgrounds"
+    handler: arcgis_layer
+    service: "Applications/Parks/MapServer"
+    layer_id: 2
+    url: "https://gisext2.cnv.org/arcgis/rest/services/Applications/Parks/MapServer/2"
+    out_dir: cnv
+    filename: cnv_playgrounds.geojson
+    format: GeoJSON
+    geographic_level: point
+    coverage: "City of North Vancouver"
+    license: "City of North Vancouver open data terms - verify"
+    notes: "Worked example for ADDING_DATA.md."
