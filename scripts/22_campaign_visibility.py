@@ -283,13 +283,105 @@ a.back:hover{background:var(--surface-2)}
 .leaflet-popup-content{margin:0;font-size:13px;min-width:250px;max-width:320px}
 .ph{padding:11px 13px 8px;border-bottom:1px solid var(--line);font-weight:600}
 .pb{padding:10px 13px 12px;font-size:12.5px;color:var(--muted)}
-@media(max-width:900px){#app{flex-direction:column}#side{width:100%;flex:0 0 auto;max-height:55vh}}
+
+/* ============================ MOBILE ============================ */
+.sheet-grab{display:none}
+
+@media (max-width:860px){
+  html,body{overscroll-behavior:none}
+  #app{display:block;height:100%}
+
+  /* Map fills the viewport; the sheet floats above it. */
+  #map{position:fixed;inset:0;width:100%;height:100%;z-index:1}
+
+  #side{
+    position:fixed;left:0;right:0;bottom:0;width:auto;flex:none;
+    max-height:88vh;height:88vh;
+    border-right:0;border-top:1px solid var(--line);
+    border-radius:20px 20px 0 0;
+    box-shadow:0 -6px 30px rgba(26,25,23,.16);
+    transform:translateY(calc(100% - var(--peek,132px)));
+    transition:transform .3s cubic-bezier(.32,.72,0,1);
+    z-index:40;will-change:transform;
+  }
+  #side.open{transform:translateY(0)}
+  #side.dragging{transition:none}
+  :root[data-theme="dark"] #side{box-shadow:0 -6px 30px rgba(0,0,0,.5)}
+
+  /* Grab handle doubles as the expand/collapse control. */
+  .sheet-grab{
+    display:flex;align-items:center;justify-content:center;
+    width:100%;min-height:34px;border:0;background:transparent;
+    cursor:grab;touch-action:none;padding:11px 0 5px;
+  }
+  .sheet-grab span{
+    display:block;width:42px;height:5px;border-radius:3px;background:var(--line-strong);
+    transition:background .18s ease;
+  }
+  .sheet-grab:active{cursor:grabbing}
+  .sheet-grab:active span{background:var(--faint)}
+  .sheet-grab:focus-visible{outline:2px solid var(--petrol-500);outline-offset:-4px;border-radius:12px}
+
+  .head{padding:2px 18px 12px}
+  .brand h1{font-size:18px}
+
+  /* Scroll the sheet body, not the page, and clear the home indicator. */
+  .body{-webkit-overflow-scrolling:touch;padding-bottom:calc(48px + env(safe-area-inset-bottom,0px))}
+  .tiles{grid-template-columns:repeat(3,1fr);padding:10px 18px;gap:7px}
+  .tile{padding:8px 9px}
+  .tile .v{font-size:16px}
+  .tile .k{font-size:9.5px}
+
+  /* 44px minimum touch targets throughout. */
+  .layer{padding:11px 8px;min-height:44px;font-size:14.5px}
+  .layer input{width:22px;height:22px;flex:0 0 22px}
+  .sw{width:16px;height:16px;flex:0 0 16px}
+  .iconbtn{width:44px;height:44px;flex:0 0 44px}
+  .linkrow{padding:13px 13px;min-height:48px}
+  .dl a{padding:11px 7px;min-height:44px;font-size:13px}
+  #results button{padding:12px 10px;min-height:44px;font-size:14px}
+  .slider input[type=range]{height:34px}
+
+  /* 16px stops iOS zooming the page when the field is focused. */
+  #search{font-size:16px;padding:13px 12px 13px 38px;min-height:48px}
+  .searchwrap svg{left:12px;width:18px;height:18px}
+
+  h2.sec{margin:18px 0 6px}
+
+  /* Controls sit clear of the sheet. */
+  .leaflet-top.leaflet-right{top:calc(10px + env(safe-area-inset-top,0px))}
+  .leaflet-bar a{width:40px!important;height:40px!important;line-height:40px!important;font-size:19px!important}
+  .leaflet-bottom.leaflet-left{bottom:calc(var(--peek,132px) + 8px)}
+  .leaflet-bottom.leaflet-right{bottom:calc(var(--peek,132px) + 8px)}
+
+  /* Legend collapses to a tappable chip so it never covers the map. */
+  .legend{max-width:150px;font-size:11px;padding:9px 10px}
+  .legend.collapsed .row,.legend.collapsed h4:not(:first-child){display:none}
+  .legend h4{cursor:pointer;margin-bottom:4px}
+  .legend h4:first-child::after{content:" ▾";color:var(--faint)}
+  .legend.collapsed h4:first-child::after{content:" ▸"}
+
+  .leaflet-popup-content{min-width:0;max-width:78vw;font-size:13.5px}
+  .pop-b{max-height:44vh}
+  .pop-b td{font-size:13px;padding:5px 0}
+  .leaflet-popup-content-wrapper{max-width:82vw}
+
+  .callout{font-size:13px;padding:12px 13px}
+  .meta{font-size:12px}
+}
+
+@media (max-width:400px){
+  .tiles{grid-template-columns:repeat(2,1fr)}
+  #side{--peek:126px}
+}
+
 @media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
 .leaflet-control-attribution{background:transparent!important;color:var(--faint)!important;
   font-size:9.5px!important;padding:1px 5px!important;box-shadow:none!important}
 .leaflet-control-attribution a{color:var(--faint)!important;text-decoration:none}
 </style></head><body>
 <div id="app"><aside id="side">
+<button class="sheet-grab" id="grab" aria-label="Expand panel" aria-expanded="false"><span></span></button>
  <div class="head"><h1>Where people actually are</h1>
  <p>Highest-exposure public locations in the City of North Vancouver</p></div>
  <div class="body">
@@ -317,7 +409,7 @@ a.back:hover{background:var(--surface-2)}
 <script>
 const root=document.documentElement;
 const saved=localStorage.getItem('cnv-theme'); if(saved) root.setAttribute('data-theme',saved);
-const map=L.map('map',{preferCanvas:true,zoomControl:false,
+const map=window.map=L.map('map',{preferCanvas:true,zoomControl:false,
   attributionControl:false}).setView([49.320,-123.073],14);
 L.control.attribution({prefix:false,position:'bottomright'})
   .addAttribution('&copy; OpenStreetMap &copy; CARTO').addTo(map);
@@ -364,6 +456,71 @@ L.tileLayer(dark?'https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}
    el.onclick=go; el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
  });
 })();
+
+/* ---------- mobile bottom sheet ---------- */
+(function(){
+  const side=document.getElementById('side');
+  const grab=document.getElementById('grab');
+  if(!side||!grab) return;
+  const mq=window.matchMedia('(max-width:860px)');
+  let startY=0, startOpen=false, dragging=false, moved=0;
+
+  const setOpen=(open)=>{
+    side.classList.toggle('open',open);
+    grab.setAttribute('aria-expanded',String(open));
+    grab.setAttribute('aria-label',open?'Collapse panel':'Expand panel');
+    setTimeout(()=>{ if(window.map) window.map.invalidateSize(); },320);
+  };
+
+  grab.addEventListener('click',()=>{ if(!dragging||Math.abs(moved)<6) setOpen(!side.classList.contains('open')); });
+  grab.addEventListener('keydown',e=>{
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();setOpen(!side.classList.contains('open'));}
+  });
+
+  grab.addEventListener('touchstart',e=>{
+    if(!mq.matches) return;
+    dragging=true; moved=0; startY=e.touches[0].clientY;
+    startOpen=side.classList.contains('open');
+    side.classList.add('dragging');
+  },{passive:true});
+
+  grab.addEventListener('touchmove',e=>{
+    if(!dragging) return;
+    moved=e.touches[0].clientY-startY;
+    const peek=parseInt(getComputedStyle(side).getPropertyValue('--peek'))||132;
+    const closedY=side.offsetHeight-peek;
+    let y=(startOpen?0:closedY)+moved;
+    y=Math.max(0,Math.min(closedY,y));
+    side.style.transform=`translateY(${y}px)`;
+  },{passive:true});
+
+  const end=()=>{
+    if(!dragging) return;
+    dragging=false;
+    side.classList.remove('dragging');
+    side.style.transform='';
+    if(Math.abs(moved)>44) setOpen(moved<0);
+  };
+  grab.addEventListener('touchend',end);
+  grab.addEventListener('touchcancel',end);
+
+  // Collapse the legend by default on a phone; tap its title to reopen.
+  const collapseLegend=()=>{
+    document.querySelectorAll('.legend').forEach(l=>{
+      if(mq.matches && !l.dataset.wired){
+        l.classList.add('collapsed');
+        const h=l.querySelector('h4');
+        if(h){ h.style.cursor='pointer';
+          h.addEventListener('click',()=>l.classList.toggle('collapsed')); }
+        l.dataset.wired='1';
+      }
+    });
+  };
+  setTimeout(collapseLegend,700);
+  mq.addEventListener('change',()=>{ setOpen(false); collapseLegend();
+    setTimeout(()=>{ if(window.map) window.map.invalidateSize(); },80); });
+})();
+
 </script></body></html>
 """
 

@@ -4,7 +4,7 @@ data/raw/**
 !data/raw/**/
 !data/raw/**/*.meta.json
 
-# ---- intermediate + derived binaries ----
+# ---- intermediate and derived binaries ----
 data/interim/**
 !data/interim/*.md
 data/processed/*.gpkg
@@ -15,17 +15,9 @@ logs/*.log
 __pycache__/
 *.pyc
 .pytest_cache/
-scripts/_shared_css.txt
 
 # ---- os ----
 .DS_Store
 
 # NOTE: outputs/interactive/, outputs/maps/, outputs/tables/ and outputs/report/
 # are deliberately COMMITTED — they are the published site and its downloads.
-
-# Local project brief — kept out of the public repo
-claude.md
-CLAUDE.md
-
-# Vercel CLI link data (contains org/project ids)
-.vercel/
