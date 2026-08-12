@@ -113,6 +113,20 @@ h2.sec::after{content:"";flex:1;height:1px;background:var(--line)}
 .layer .nm{flex:1;min-width:0}
 .layer .ct{font-variant-numeric:tabular-nums;font-size:10.5px;color:var(--faint)}
 
+.theme{display:flex;align-items:flex-start;gap:10px;padding:10px 10px;margin:0 -10px 2px;
+  border-radius:9px;cursor:pointer;transition:background .15s ease}
+.theme:hover{background:var(--surface-2)}
+.theme.active{background:var(--surface-2);box-shadow:inset 3px 0 0 var(--petrol-700)}
+.theme input{margin-top:3px;width:16px;height:16px;accent-color:var(--petrol-700);cursor:pointer;flex:0 0 16px}
+.theme .tt{font-size:13.5px;font-weight:600;line-height:1.3}
+.theme .td{font-size:11.5px;color:var(--faint);margin-top:2px;line-height:1.4}
+.sub{display:flex;flex-wrap:wrap;gap:6px;padding:4px 0 2px}
+.sub button{font:inherit;font-size:12px;padding:6px 11px;border:1px solid var(--line-strong);
+  border-radius:20px;background:var(--surface);color:var(--muted);cursor:pointer;
+  transition:all .15s ease;min-height:34px}
+.sub button:hover{border-color:var(--petrol-500);color:var(--fg)}
+.sub button.on{background:var(--petrol-700);border-color:var(--petrol-700);color:#fff;font-weight:600}
+.sub button:focus-visible{outline:2px solid var(--petrol-500);outline-offset:2px}
 .slider{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--muted);padding:4px 0}
 .slider input[type=range]{flex:1;accent-color:var(--petrol-700);cursor:pointer}
 .slider .val{font-variant-numeric:tabular-nums;font-size:11.5px;min-width:34px;text-align:right}
@@ -214,10 +228,11 @@ __MOBILE_CSS__
       </div>
       <div id="results"></div>
 
-      <h2 class="sec">Base geography</h2><div id="grp-base"></div>
-      <h2 class="sec">Population &amp; housing</h2><div id="grp-pop"></div>
-      <h2 class="sec">Transport</h2><div id="grp-transport"></div>
-      <h2 class="sec">Civic</h2><div id="grp-civic"></div>
+      <h2 class="sec">Show on the map</h2>
+      <div id="themes" role="radiogroup" aria-label="Map theme"></div>
+      <div id="subthemes"></div>
+
+      <h2 class="sec">Reference layers</h2><div id="grp-base"></div>
 
       <h2 class="sec">Display</h2>
       <div class="slider">
@@ -248,11 +263,6 @@ __MOBILE_CSS__
         <span class="arrow">&rarr;</span>
       </a>
 
-      <a class="linkrow" href="review.html">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
-        <span>Data review &mdash; what was excluded</span>
-        <span class="arrow">&rarr;</span>
-      </a>
 
       <h2 class="sec">Metadata</h2>
       <div class="meta" id="meta"></div>
@@ -355,6 +365,7 @@ async function addLayer(c){
   document.getElementById(c.group).appendChild(el);
 }
 
+// Reference layers only. The DA choropleth is driven by the theme selector below.
 const CONF=[
  {file:'boundary',group:'grp-base',label:'Municipal boundary',swatch:'#1A1917',on:true,
   style:()=>({color:'#1A1917',weight:2.2,fill:false}),
@@ -363,112 +374,193 @@ const CONF=[
   note:'The legal boundary includes foreshore. Densities use StatCan land area (11.79 km²).'},
 
  {file:'neighbourhoods',group:'grp-base',label:'Neighbourhoods',swatch:'#8B857C',on:true,
-  style:()=>({color:'#8B857C',weight:1.4,dashArray:'5 4',fill:false}),
+  style:()=>({color:'#57534E',weight:1.5,dashArray:'5 4',fill:false}),
   title:f=>f.properties.neighbourhood,sub:'CNV neighbourhood',
   fields:[['population_2021','Population (est.)'],['adult_population_18plus_proxy','Adults 18+ (proxy)'],
    ['senior_population_65plus','Seniors 65+'],['population_density','Persons / km²'],
-   ['housing_density','Dwellings / km²'],['apartment_share','Apartment share'],
-   ['building_count','Buildings']],
+   ['housing_density','Dwellings / km²'],['apartment_share','Apartment share']],
   note:'Areally interpolated from dissemination areas — an estimate, not a count.'},
 
- {file:'census_da',group:'grp-pop',label:'Population density',swatch:'#0F4C5C',on:true,
-  style:f=>({fillColor:ramp(f.properties.population_density,[0,3000,6000,10000,15000,20000],BLUES),
-             color:'#fff',weight:.5,fillOpacity:fillOpacity}),
-  title:f=>'DA '+f.properties.DAUID,sub:'Dissemination area',
-  fields:[['population_2021','Population'],['population_density','Persons / km²'],
-   ['adult_population_18plus_proxy','Adults 18+ (proxy)'],['canadian_citizens_18plus','Citizens 18+'],
-   ['senior_population_65plus','Seniors 65+'],['occupied_private_dwellings','Occupied dwellings'],
-   ['multiunit_share','Multi-unit share'],['highrise_share','High-rise share'],
-   ['land_area_km2','Land area (km²)']],
-  note:'Statistics Canada 2021 Census Profile 98-401-X2021006.'},
-
- {file:'intersections',group:'grp-transport',label:'Public-space score',swatch:'#B08D57',on:true,
-  point:(f,ll)=>L.circleMarker(ll,{radius:3+(f.properties.public_space_composite||0)/13,
-    fillColor:ramp(f.properties.public_space_composite,[0,40,52,62,72,80],VIRIDIS),
-    color:'#fff',weight:.8,fillOpacity:.92}),
-  title:f=>f.properties.street_names||f.properties.intersection_id,
-  sub:'Intersection',searchable:true,
-  fields:[['composite_rank','Rank'],['public_space_composite','Composite'],
-   ['neighbourhood','Neighbourhood'],['road_hierarchy_score','Road hierarchy'],
-   ['transit_score','Transit'],['pedestrian_proxy_score','Pedestrian (proxy)'],
-   ['parking_access_score','Parking access'],['intersection_prominence_score','Prominence'],
-   ['safety_score','Safety (separate)'],['signalised','Signalised'],
-   ['collision_count','Collisions'],['transit_departures_250m','Departures 250 m'],
-   ['onstreet_supply_250m','On-street spaces 250 m'],['population_2021_400m','Residents 400 m']],
-  note:'Composite = mean of five full-coverage components. Safety is reported separately, not inside it.'},
-
- {file:'roads',group:'grp-transport',label:'Street centrelines',swatch:'#B4ADA2',on:false,
-  style:f=>({color:{freeway:'#7F1D1D',arterial:'#8C2F39',Major:'#B08D57',collector:'#EAB308',
-    Minor:'#B4ADA2',local:'#CBD5E1'}[f.properties.ROADCLASS]||'#CBD5E1',
-    weight:{freeway:3,arterial:2.4,Major:2,collector:1.5}[f.properties.ROADCLASS]||.8}),
-  title:f=>f.properties.full_street_name,sub:'Street segment',
-  fields:[['ROADCLASS','Class'],['NOLANES','Lanes'],['ONEWAY','One way']]},
-
- {file:'transit_stops',group:'grp-transport',label:'Transit stops',swatch:'#3C7C8A',on:false,
-  point:(f,ll)=>L.circleMarker(ll,{radius:2.5+Math.sqrt(f.properties.trips_per_weekday||0)/3.2,
-    fillColor:'#3C7C8A',color:'#fff',weight:.7,fillOpacity:.88}),
-  title:f=>f.properties.stop_name,sub:'TransLink stop',
-  fields:[['trips_per_weekday','Departures / weekday'],['trips_am_peak','AM peak departures'],
-   ['am_peak_avg_headway_min','AM peak headway (min)'],['routes_serving','Routes']],
-  note:'Scheduled service from the TransLink GTFS feed for a representative weekday.'},
-
- {file:'parking_occupancy',group:'grp-transport',label:'Parking occupancy',swatch:'#B08D57',on:false,
-  style:f=>({color:ramp(f.properties.occupancy_peak,[0,.4,.6,.75,.85,1.0],HEAT),weight:3,opacity:.9}),
-  title:()=>'On-street segment',sub:'Surveyed parking',
-  fields:[['supply_spaces','Supply (spaces)'],['occupancy_peak','Peak occupancy'],
-   ['occupancy_mean','Mean occupancy'],['peak_period','Busiest period'],
-   ['at_practical_capacity','At/above 85%']],
-  note:'Survey by Bunt &amp; Associates, Dec 2022 – Feb 2023. Not a real-time feed.'},
-
- {file:'parking_lots',group:'grp-transport',label:'Off-street lots',swatch:'#0B3A46',on:false,
-  point:(f,ll)=>L.circleMarker(ll,{radius:6,fillColor:'#0B3A46',color:'#fff',weight:1.4,fillOpacity:.95}),
-  title:f=>f.properties.LOT_NAME,sub:'Parking lot',
-  fields:[['ADDRESS','Address'],['Operator','Operator'],['SPACES_WEEKDAY','Weekday spaces'],
-   ['ACCESSIBLE_PARKING_SPACES','Accessible spaces'],['PAY_PARKING','Pay parking']]},
-
- {file:'collisions',group:'grp-transport',label:'Collisions (ICBC)',swatch:'#8C2F39',on:false,
-  point:(f,ll)=>L.circleMarker(ll,{radius:3+Math.sqrt(f.properties.crash_count||0)/1.5,
-    fillColor:'#8C2F39',color:'#fff',weight:.7,fillOpacity:.7}),
-  title:()=>'Recorded collisions',sub:'ICBC, name-matched',
-  fields:[['crash_count','Crashes'],['icbc_locations','ICBC location']],
-  note:'Only high-confidence matches. Intersections without data are unknown, not zero.'},
-
- {file:'voting_places',group:'grp-civic',label:'Voting places (2022)',swatch:'#8C2F39',on:true,
+ {file:'voting_places',group:'grp-base',label:'Voting places (2022)',swatch:'#8C2F39',on:true,
   point:(f,ll)=>L.circleMarker(ll,{radius:8,fillColor:'#8C2F39',color:'#fff',weight:2.2,fillOpacity:.97}),
   title:f=>f.properties.place_name,sub:'2022 voting place',searchable:true,
   fields:[['address','Address'],['place_type','Type'],['mayoral_votes_2022','Mayoral votes 2022']],
-  note:'CNV runs any-voting-place elections, so there are no polling-division catchments.'},
-
- {file:'seniors_housing',group:'grp-civic',label:'Seniors-eligible housing',swatch:'#6B4E71',on:false,
-  style:()=>({color:'#6B4E71',weight:1.5,fillOpacity:.6}),
-  point:(f,ll)=>L.circleMarker(ll,{radius:6,fillColor:'#6B4E71',color:'#fff',weight:1.4,fillOpacity:.95}),
-  title:f=>f.properties.ah_name||f.properties.BUILDING_NAME||'Seniors housing',
-  sub:'Municipal eligibility record',
-  fields:[['ah_address','Address'],['ah_total_units','Units'],['ah_eligibility','Eligibility'],
-   ['classification_basis','Evidence']]}
+  note:'CNV runs any-voting-place elections, so there are no polling-division catchments.'}
 ];
+
+// ---------------------------------------------------------------------------
+// THEMES — the four questions this map answers.
+// ---------------------------------------------------------------------------
+const THEMES={
+ people:{
+   label:'Where the most people are',
+   desc:'Residents per km², 2021 Census',
+   src:'census_da', field:'population_density', ramp:'BLUES',
+   legend:'Residents / km²', fmt:v=>Math.round(v).toLocaleString(),
+   breaks:[0,3000,6000,10000,15000,20000],
+   labels:['< 3k','3–6k','6–10k','10–15k','15–20k','20k+'],
+   fields:[['population_2021','Population'],['population_density','Residents / km²'],
+     ['occupied_private_dwellings','Occupied dwellings'],['land_area_km2','Land area (km²)']]},
+
+ adults:{
+   label:'Where the most adults 18+ are',
+   desc:'A demographic PROXY for potential electorate — not an elector count',
+   src:'census_da', field:'adult_population_density', ramp:'PETROL',
+   legend:'Adults 18+ / km²', fmt:v=>Math.round(v).toLocaleString(),
+   breaks:[0,2500,5000,8500,12500,17000],
+   labels:['< 2.5k','2.5–5k','5–8.5k','8.5–12.5k','12.5–17k','17k+'],
+   sub:[['adult_population_density','Adults 18+ (proxy)'],
+        ['citizen_adult_density','Canadian citizens 18+']],
+   fields:[['adult_population_18plus_proxy','Adults 18+ (proxy)'],
+     ['adult_population_density','Adults 18+ / km²'],
+     ['canadian_citizens_18plus','Canadian citizens 18+'],
+     ['population_2021','Total population']],
+   note:'PROXY. Population aged 18+ from the 2021 Census, used as a proxy for potential '+
+        'electorate size. It is NOT a count of eligible or registered electors — it ignores '+
+        'citizenship and residency rules and reflects 2021.'},
+
+ age:{
+   label:'Age distribution by area',
+   desc:'Choose an age band',
+   src:'census_da', field:'age_18_34_proxy', ramp:'AMBER', perArea:true,
+   legend:'Persons / km²', fmt:v=>Math.round(v).toLocaleString(),
+   breaks:[0,500,1500,3000,5000,8000],
+   labels:['< 500','0.5–1.5k','1.5–3k','3–5k','5–8k','8k+'],
+   sub:[['age_0_14','Under 15'],['age_18_34_proxy','18–34'],['age_35_49','35–49'],
+        ['age_50_64','50–64'],['senior_population_65plus','65+'],
+        ['senior_population_75plus','75+'],['senior_population_85plus','85+']],
+   fields:[['age_0_14','Under 15'],['age_18_34_proxy','18–34 (proxy)'],['age_35_49','35–49'],
+     ['age_50_64','50–64'],['senior_population_65plus','65+'],
+     ['senior_population_75plus','75+'],['senior_population_85plus','85+'],
+     ['population_2021','Total population']],
+   note:'The 18–34 band is a proxy: the Census publishes 15–19 as one band, so ages 18–19 '+
+        'are apportioned as two fifths of it.'},
+
+ residence:{
+   label:'Residence type',
+   desc:'Share of homes by dwelling structure',
+   src:'housing_da', field:'apartment_share', ramp:'PURPLE', pct:true,
+   legend:'Share of dwellings', fmt:v=>(v*100).toFixed(0)+'%',
+   breaks:[0,.2,.4,.6,.8,.95],
+   labels:['< 20%','20–40%','40–60%','60–80%','80–95%','95%+'],
+   sub:[['apartment_share','Apartments'],['highrise_share','High-rise (5+)'],
+        ['townhouse_share','Townhouse / row'],['single_family_share','Single detached'],
+        ['multiunit_share','All multi-unit']],
+   fields:[['dominant_dwelling_type','Most common type'],
+     ['occupied_private_dwellings','Occupied dwellings'],
+     ['dw_single_detached','Single detached'],['dw_row_house','Row house'],
+     ['dw_apartment_lt5_storeys','Apartment < 5 storeys'],
+     ['dw_apartment_5plus_storeys','Apartment 5+ storeys'],
+     ['apartment_share','Apartment share'],['single_family_share','Detached share']]}
+};
+
+const RAMPS={
+ BLUES:['#F2EEE7','#DDE7E5','#B9CFCE','#86ADB0','#4A848E','#0F4C5C'],
+ PETROL:['#F4F1EA','#D8E3E2','#A8C6C6','#6FA3A9','#3B7B88','#0B3A46'],
+ AMBER:['#F9F4E9','#EFE1C4','#DFC898','#CBA96D','#B08D57','#8A6A3B'],
+ PURPLE:['#F5F1F3','#E4D8DE','#CBB4C1','#AC8CA0','#8A6580','#5E4258']
+};
 
 (async()=>{
   const st=await (await fetch('data/stats.json')).json();
-  const tiles=[
+  document.getElementById('tiles').innerHTML=[
     [st.population.toLocaleString(),'Population'],
     [st.density.toLocaleString(),'Persons / km²'],
     [st.multiunit_pct+'%','Multi-unit'],
     [st.adults.toLocaleString(),'Adults 18+*'],
-    [st.intersections.toLocaleString(),'Intersections'],
-    [st.transit_stops.toLocaleString(),'Transit stops'],
-  ];
-  document.getElementById('tiles').innerHTML=tiles.map(([v,k])=>
-    `<div class="tile"><div class="v">${v}</div><div class="k">${k}</div></div>`).join('');
+    [st.seniors.toLocaleString(),'Seniors 65+'],
+    [st.das.toLocaleString(),'Census areas'],
+  ].map(([v,k])=>`<div class="tile"><div class="v">${v}</div><div class="k">${k}</div></div>`).join('');
 
   for(const c of CONF) await addLayer(c);
+
+  // --- theme engine -------------------------------------------------------
+  const cache={};
+  const getData=async src=>cache[src]||(cache[src]=await (await fetch(`data/${src}.geojson`)).json());
+  let themeLayer=null, current='people', currentField=null;
+
+  const legend=L.control({position:'bottomright'});
+  let legendDiv=null;
+  legend.onAdd=()=>{legendDiv=L.DomUtil.create('div','legend');return legendDiv;};
+  legend.addTo(map);
+
+  function drawLegend(t,fieldLabel){
+    const cols=RAMPS[t.ramp];
+    legendDiv.innerHTML=`<h4>${fieldLabel||t.legend}</h4>`+
+      cols.map((c,i)=>`<div class="row"><i style="background:${c}"></i>`+
+        `<span class="lb">${t.labels[i]}</span></div>`).join('');
+  }
+
+  async function showTheme(key,fieldOverride){
+    current=key;
+    const t=THEMES[key];
+    const field=fieldOverride||t.field;
+    currentField=field;
+    const gj=await getData(t.src);
+
+    // Age bands are stored as counts; show them per km² so areas compare fairly.
+    const areaOf=f=>f.properties.land_area_km2||null;
+    const valueOf=f=>{
+      const raw=f.properties[field];
+      if(raw===null||raw===undefined) return null;
+      if(t.perArea){const a=areaOf(f); return a?raw/a:null;}
+      return raw;
+    };
+
+    if(themeLayer) map.removeLayer(themeLayer);
+    themeLayer=L.geoJSON(gj,{
+      style:f=>({fillColor:ramp(valueOf(f),t.breaks,RAMPS[t.ramp]),
+                 color:'#fff',weight:.5,fillOpacity:fillOpacity}),
+      onEachFeature:(f,l)=>{
+        const v=valueOf(f);
+        const sub=(t.sub||[]).find(x=>x[0]===field);
+        const head=sub?sub[1]:t.legend;
+        l.bindPopup(popup(`DA ${f.properties.DAUID}`,
+          `${head} — ${v==null?'no data':t.fmt(v)}`,
+          f.properties,t.fields,t.note),{maxWidth:340});
+      }
+    });
+    themeLayer.addTo(map);
+    if(themeLayer.bringToBack) themeLayer.bringToBack();
+
+    const sub=(t.sub||[]).find(x=>x[0]===field);
+    drawLegend(t,sub?sub[1]:t.legend);
+
+    // sub-theme chips
+    const holder=document.getElementById('subthemes');
+    if(t.sub&&t.sub.length){
+      holder.innerHTML='<div class="sub">'+t.sub.map(([f2,lab])=>
+        `<button data-f="${f2}" class="${f2===field?'on':''}">${lab}</button>`).join('')+'</div>';
+      holder.querySelectorAll('button').forEach(b=>
+        b.onclick=()=>showTheme(key,b.dataset.f));
+    } else holder.innerHTML='';
+
+    document.querySelectorAll('.theme').forEach(el=>
+      el.classList.toggle('active',el.dataset.k===key));
+  }
+
+  document.getElementById('themes').innerHTML=Object.entries(THEMES).map(([k,t])=>
+    `<label class="theme ${k===current?'active':''}" data-k="${k}">
+       <input type="radio" name="theme" value="${k}" ${k===current?'checked':''}>
+       <span><span class="tt">${t.label}</span><span class="td">${t.desc}</span></span>
+     </label>`).join('');
+  document.querySelectorAll('input[name=theme]').forEach(r=>
+    r.onchange=()=>showTheme(r.value));
+
+  await showTheme('people');
 
   document.getElementById('op').addEventListener('input',e=>{
     fillOpacity=e.target.value/100;
     document.getElementById('opv').textContent=e.target.value+'%';
-    if(layers['census_da']) layers['census_da'].setStyle(f=>({
-      fillColor:ramp(f.properties.population_density,[0,3000,6000,10000,15000,20000],BLUES),
-      color:'#fff',weight:.5,fillOpacity}));
+    if(themeLayer){
+      const t=THEMES[current];
+      themeLayer.setStyle(f=>{
+        const a=f.properties.land_area_km2||null;
+        const raw=f.properties[currentField];
+        const v=(raw==null)?null:(t.perArea&&a?raw/a:raw);
+        return {fillColor:ramp(v,t.breaks,RAMPS[t.ramp]),color:'#fff',weight:.5,fillOpacity};
+      });
+    }
   });
 
   const box=document.getElementById('search'),out=document.getElementById('results');
@@ -484,32 +576,16 @@ const CONF=[
     if(!out.children.length) out.innerHTML='<button disabled style="color:var(--faint)">No match</button>';
   });
 
-  // The legend is generated FROM the same colour arrays the map uses, so the two can
-  // never drift apart when a palette changes.
-  const DENSITY_LABELS=['< 3k','3–6k','6–10k','10–15k','15–20k','20k+ /km²'];
-  const legend=L.control({position:'bottomright'});
-  legend.onAdd=()=>{const d=L.DomUtil.create('div','legend');
-    const swatches=(cols,labels)=>cols.map((c,i)=>
-      `<div class="row"><i style="background:${c}"></i><span class="lb">${labels[i]}</span></div>`).join('');
-    d.innerHTML='<h4>Population density</h4>'+swatches(BLUES,DENSITY_LABELS)+
-      '<h4 style="margin-top:10px">Public-space score</h4>'+
-      swatches([VIRIDIS[0],VIRIDIS[2],VIRIDIS[4],VIRIDIS[5]],['lower','mid','high','highest']);
-    return d;};
-  legend.addTo(map);
-
   document.getElementById('meta').innerHTML=
     `Analysis CRS EPSG:26910 (NAD83 / UTM 10N); displayed in EPSG:4326.<br>
-     Census: Statistics Canada 2021, ${st.das} dissemination areas, land area ${st.land_km2} km².<br>
-     Boundary: BC ABMS. Transport &amp; parking: City of North Vancouver ArcGIS.<br>
-     Transit: TransLink GTFS (${st.departures.toLocaleString()} weekday departures).<br>
-     Collisions: ICBC. Geometry generalised for display only.<br>
+     Census: Statistics Canada 2021 Profile 98-401-X2021006, ${st.das} dissemination areas.<br>
+     Boundaries: cartographic (shoreline-clipped) files; densities use StatCan land area.<br>
+     Voting places: City of North Vancouver official records.<br>
      <em>*Adults 18+ is a demographic proxy, not an elector count.</em>`;
 
-  const files=['public_space_summary.csv','census_area_rankings.csv','neighbourhood_rankings.csv',
-   'housing_rankings.csv','polling_location_summary.csv','election_turnout_series.csv',
-   'traffic_intersection_summary.csv','transit_intersection_summary.csv',
-   'parking_intersection_summary.csv','safety_intersection_summary.csv',
-   'field_audit_checklist.csv','data_inventory.csv','data_gaps.csv'];
+  const files=['census_area_rankings.csv','neighbourhood_rankings.csv','housing_rankings.csv',
+   'polling_location_summary.csv','election_turnout_series.csv',
+   'campaign_visibility_recommendations.csv','data_inventory.csv','data_gaps.csv'];
   document.getElementById('downloads').innerHTML=
     files.map(f=>`<a href="tables/${f}" download>${ICON_FILE}<span>${f}</span></a>`).join('');
 })();

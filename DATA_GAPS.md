@@ -334,6 +334,32 @@ and is complete.
 
 ---
 
+## 14. Zoning regulations (permitted height, FSR) for standard zones
+
+**Dataset:** Maximum building height and floor space ratio per zoning district.
+
+**Desired use:** Permitted built form everywhere, to compensate for actual building height
+being published for only 0.9% of footprints.
+
+**What was found:** The CNV zoning GIS layer carries `MAX_BLDG_HT`, `FSR`, setbacks and
+`MINIM_OFFSTREET_PKG` fields, but they are populated for only **13%** of zone polygons
+(88 of 683) — and mostly for site-specific Comprehensive Development (CD) zones
+(71 of 457 CD polygons) rather than the 38 standard zone codes (C-1A, RS-1, LL-1 … ),
+where only 17 of 226 polygons carry a height.
+
+`CNV_ZoningBook.pdf` was retrieved and inspected as a candidate source. It is a **42-page
+tiled map book with zero regulation text** — a search across all pages for
+"maximum height", "floor space ratio" or "FSR" returns **no matches**. It cannot fill this
+gap.
+
+**Best available proxy used:** None. Permitted height is not modelled. Built form is
+described from the Census dwelling-structure mix, which is complete and authoritative.
+
+**Recommended next action:** Obtain the CNV Zoning Bylaw text (not the map book) and join
+its per-zone regulation table to the 38 standard zone codes.
+
+---
+
 ## Summary table
 
 | # | Gap | Severity | Proxy used | Coverage achieved |
@@ -351,3 +377,4 @@ and is complete.
 | 11 | Collision geography | Medium | Conservative name matching | 288/503 intersections |
 | 12 | Land area vs legal area | Resolved | StatCan land area used | 100% |
 | 13 | Road class polygons | Low | Centreline `ROADCLASS` | 507/518 |
+| 14 | Zoning regulations (height/FSR) | Medium | none — not modelled | 13% of zone polygons |

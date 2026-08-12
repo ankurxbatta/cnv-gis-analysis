@@ -28,7 +28,7 @@ jobs:
       - name: Check required pages exist
         run: |
           set -euo pipefail
-          for page in index.html review.html recommendations.html; do
+          for page in index.html recommendations.html; do
             test -f "$SITE_DIR/$page" || { echo "::error::$page is missing"; exit 1; }
             echo "  ok  $page"
           done
@@ -68,7 +68,7 @@ jobs:
         # OpenStreetMap (ODbL) and CARTO both require attribution on a public site.
         run: |
           set -euo pipefail
-          for page in index.html review.html recommendations.html; do
+          for page in index.html recommendations.html; do
             grep -qi "openstreetmap" "$SITE_DIR/$page" \
               || { echo "::error::$page is missing the required OSM/CARTO attribution"; exit 1; }
           done

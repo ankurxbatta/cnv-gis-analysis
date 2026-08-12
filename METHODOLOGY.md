@@ -34,6 +34,43 @@ A QA test enforces this.
 The BC-only dissemination-area Census Profile (`98-401-X2021006`, `GEONO=006_BC_CB`,
 293 MB compressed / 3.6 GB uncompressed) is used in preference to the 2.2 GB national file.
 
+### Cartographic versus Digital boundary files — a decision that changes the maps
+
+Statistics Canada ships every boundary in two variants that cover the same areas with the
+same IDs but differ at the water's edge:
+
+| | Digital (DBF) | Cartographic (CBF) |
+|---|---|---|
+| Filename flag | `lda_000**a**21a_e.zip` | `lda_000**b**21a_e.zip` |
+| Coastal edge | extends into water to the territorial limit | clipped to the shoreline |
+
+**This pipeline uses the Cartographic file.** Measured directly for CNV's 79 DAs:
+
+```
+Cartographic (CBF) : 11.852 km²
+Digital      (DBF) : 17.214 km²
+water included     : +5.363 km²  (+45.2%)
+```
+
+CNV fronts Burrard Inlet, so the Digital file pushes waterfront DAs out into the harbour —
+DA 59153241 grows 0.88 → 3.43 km² (3.9x), DA 59150200 grows 1.31 → 3.75 km² (2.9x).
+
+Because density is population / area, using the Digital file would have understated density
+by up to **74%** in exactly the densest places:
+
+| DA | Correct | With Digital | Error |
+|---|---|---|---|
+| 59153970 | 10,837 /km² | 3,850 /km² | 64% understated |
+| 59153241 | 2,846 /km² | 729 /km² | 74% understated |
+| 59150200 | 927 /km² | 324 /km² | 65% understated |
+
+DA 59153970 is Lower Lonsdale waterfront, one of the densest blocks in the city; the Digital
+file would have rendered it below average and demoted it in every ranking.
+
+Note there are therefore **three** defensible "areas" for CNV — legal 14.92 km² (BC ABMS,
+includes foreshore), digital census 17.21 km², cartographic census 11.85 km². Every density
+here divides by StatCan's published `LANDAREA` attribute (11.79 km²), enforced by a test.
+
 ### Seeking rather than parsing
 Statistics Canada ships a `Geo_starting_row` index giving the first line number of each
 geography's 2,631-row block. The pipeline reads that index, computes the line ranges for the

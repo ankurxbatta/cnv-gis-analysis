@@ -62,10 +62,13 @@ def main() -> int:
 
     export(gpd.read_file(DATA_PROCESSED / "cnv_census_2021.gpkg", layer="cnv_census_da"),
            "census_da",
-           ["DAUID", "population_2021", "population_density", "adult_population_18plus_proxy",
-            "adult_population_density", "canadian_citizens_18plus", "senior_population_65plus",
-            "senior_density", "occupied_private_dwellings", "housing_density",
-            "multiunit_share", "highrise_share", "land_area_km2"], tol)
+           ["DAUID", "population_2021", "population_density",
+            "adult_population_18plus_proxy", "adult_population_density",
+            "canadian_citizens_18plus", "citizen_adult_density",
+            "age_0_14", "age_18_34_proxy", "age_35_49", "age_50_64",
+            "senior_population_65plus", "senior_population_75plus",
+            "senior_population_85plus", "senior_density",
+            "occupied_private_dwellings", "housing_density", "land_area_km2"], tol)
 
     export(gpd.read_file(DATA_PROCESSED / "cnv_public_space_scores.gpkg",
                          layer="public_space_scores"),
@@ -77,6 +80,14 @@ def main() -> int:
             "collision_data_available", "transit_stops_250m", "transit_departures_250m",
             "onstreet_supply_250m", "onstreet_peak_occupancy_250m", "population_2021_400m",
             "components_available"], 0, simplify=False)
+
+    export(gpd.read_file(DATA_PROCESSED / "cnv_housing.gpkg", layer="cnv_housing_da"),
+           "housing_da",
+           ["DAUID", "dominant_dwelling_type", "occupied_private_dwellings",
+            "dw_single_detached", "dw_semi_detached", "dw_row_house",
+            "dw_apartment_duplex", "dw_apartment_lt5_storeys", "dw_apartment_5plus_storeys",
+            "single_family_share", "townhouse_share", "apartment_share", "highrise_share",
+            "multiunit_share", "housing_density"], tol)
 
     export(gpd.read_file(DATA_PROCESSED / "cnv_elections.gpkg", layer="voting_places"),
            "voting_places",
