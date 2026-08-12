@@ -22,3 +22,7 @@ scripts/_shared_css.txt
 
 # NOTE: outputs/interactive/, outputs/maps/, outputs/tables/ and outputs/report/
 # are deliberately COMMITTED — they are the published site and its downloads.
+
+# Local project brief — kept out of the public repo
+claude.md
+CLAUDE.md

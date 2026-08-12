@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Download every source defined in config/sources.yaml into data/raw/.
 
-Rules enforced here (see CLAUDE.md section 5):
+Rules enforced here (see PROJECT_BRIEF section 5):
   * raw files are never overwritten unless --force is given
   * every download gets a SHA256 and a .meta.json sidecar
   * failed downloads are retried with backoff and then logged, never faked

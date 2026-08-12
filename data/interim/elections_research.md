@@ -571,7 +571,7 @@ Limitations: A Voronoi/service-area polygon is NOT a polling division. Electors 
 Recommended next action: If per-area electoral data is genuinely required, submit a written
   request to the CNV Chief Election Officer (elections@cnv.org, 604-982-8354) asking whether
   voting divisions were ever established. Otherwise, close this gap as NOT APPLICABLE and use the
-  Census adult_population_18plus_proxy for spatial population analysis, per CLAUDE.md §11.
+  Census adult_population_18plus_proxy for spatial population analysis, per PROJECT_BRIEF §11.
 ```
 
 ---
@@ -651,7 +651,7 @@ Pre-existing (downloaded by `01_download.py` before this research):
 ## 12. Caveats for downstream use
 
 1. **Every CNV results table is an image.** The 2022 PDF has zero text layer; 2011/2014/2018 are JPGs. All figures in §2–§5 were read visually. Grand totals cross-check against CNV's independently-worded news release and turnout table, so **totals are high confidence**. The 2014 sheet is the lowest-resolution (772×400 px) — **re-verify 2014 per-poll cells** before publishing them.
-2. **Do not treat "registered/eligible voters" as the census-eligible population.** These are electors on CNV's list. Per CLAUDE.md §11, use `adult_population_18plus_proxy` for spatial analysis, and never label census 18+ counts as eligible voters.
+2. **Do not treat "registered/eligible voters" as the census-eligible population.** These are electors on CNV's list. Per PROJECT_BRIEF §11, use `adult_population_18plus_proxy` for spatial analysis, and never label census 18+ counts as eligible voters.
 3. **Do not attribute votes at a voting place to the surrounding area.** Any-place voting means a ballot cast at Ridgeway Elementary carries no information about the voter's residence. In 2022 the advance + mail + special columns alone account for roughly a quarter to a third of all votes cast, with no geographic anchor whatsoever.
-4. **Do not derive political-preference surfaces.** Per CLAUDE.md §20/§34, results data here is for descriptive civic geography only.
+4. **Do not derive political-preference surfaces.** Per PROJECT_BRIEF §20/§34, results data here is for descriptive civic geography only.
 5. **Voting-place venues change materially between elections** (Holy Trinity / St. Agnes / St. John's / Capilano Mall / St. Andrew's & St. Stephen's dropped after 2014; The Pipe Shop added; JBCC dropped in 2022 and restored for 2026; Memorial Rec Centre becomes Harry Jerome Community Recreation Centre in 2026). Time-series comparison by venue is not valid.
