@@ -48,6 +48,7 @@ STAGES = {
         ("18_create_maps.py", "Static map series"),
         ("19_create_interactive_map.py", "Interactive web map"),
         ("22_campaign_visibility.py", "Public visibility recommendations"),
+        ("23_create_qgis_project.py", "QGIS desktop project"),
     ],
     "report": [
         ("20_generate_report.py", "Final HTML report and DATA_SOURCES.md"),
