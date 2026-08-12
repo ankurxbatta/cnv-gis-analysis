@@ -26,3 +26,6 @@ scripts/_shared_css.txt
 # Local project brief — kept out of the public repo
 claude.md
 CLAUDE.md
+
+# Vercel CLI link data (contains org/project ids)
+.vercel/

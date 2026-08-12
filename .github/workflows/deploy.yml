@@ -1,0 +1,149 @@
+name: Deploy to Vercel
+
+# Any push to main publishes the site. Pull requests get a preview deployment.
+# Manual runs are available from the Actions tab.
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  SITE_DIR: outputs/interactive
+
+jobs:
+  validate:
+    name: Validate published site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check required pages exist
+        run: |
+          set -euo pipefail
+          for page in index.html review.html recommendations.html; do
+            test -f "$SITE_DIR/$page" || { echo "::error::$page is missing"; exit 1; }
+            echo "  ok  $page"
+          done
+
+      - name: Check every GeoJSON layer parses
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          count=0
+          for f in "$SITE_DIR"/data/*.geojson "$SITE_DIR"/data/*.json; do
+            python3 -c "import json,sys; json.load(open(sys.argv[1]))" "$f" \
+              || { echo "::error::$f is not valid JSON"; exit 1; }
+            count=$((count+1))
+          done
+          echo "  ok  $count data files parse"
+          test "$count" -gt 0 || { echo "::error::no data files found"; exit 1; }
+
+      - name: Check the required caveats are present
+        # These pages state that 18+ is a proxy and that the score carries no
+        # political variable. Publishing without them would misrepresent the data.
+        run: |
+          set -euo pipefail
+          for page in index.html recommendations.html; do
+            body=$(tr '\n' ' ' < "$SITE_DIR/$page" | tr -s ' ')
+            echo "$body" | grep -qi "proxy" \
+              || { echo "::error::$page lost the proxy caveat"; exit 1; }
+            echo "$body" | grep -qi "no political variable" \
+              || { echo "::error::$page lost the neutrality statement"; exit 1; }
+            echo "  ok  $page carries its caveats"
+          done
+          body=$(tr '\n' ' ' < "$SITE_DIR/recommendations.html" | tr -s ' ')
+          echo "$body" | grep -qi "voting place" \
+            || { echo "::error::recommendations.html lost the voting-place restriction"; exit 1; }
+          echo "  ok  voting-place restriction present"
+
+      - name: Check attribution is intact
+        # OpenStreetMap (ODbL) and CARTO both require attribution on a public site.
+        run: |
+          set -euo pipefail
+          for page in index.html review.html recommendations.html; do
+            grep -qi "openstreetmap" "$SITE_DIR/$page" \
+              || { echo "::error::$page is missing the required OSM/CARTO attribution"; exit 1; }
+          done
+          echo "  ok  attribution present on all pages"
+
+      - name: Report site size
+        run: |
+          echo "### Published site" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          du -sh "$SITE_DIR" >> "$GITHUB_STEP_SUMMARY"
+          echo "pages:  $(find "$SITE_DIR" -maxdepth 1 -name '*.html' | wc -l)" >> "$GITHUB_STEP_SUMMARY"
+          echo "layers: $(find "$SITE_DIR/data" -name '*.geojson' | wc -l)" >> "$GITHUB_STEP_SUMMARY"
+          echo "tables: $(find "$SITE_DIR/tables" -name '*.csv' | wc -l)" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+  deploy:
+    name: Deploy
+    needs: validate
+    runs-on: ubuntu-latest
+    # Skips cleanly if the Vercel secrets have not been added yet, so the
+    # workflow does not fail red before the project is connected.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify Vercel secrets are configured
+        id: check
+        run: |
+          if [ -z "${{ secrets.VERCEL_TOKEN }}" ] || [ -z "${{ secrets.VERCEL_ORG_ID }}" ] \
+             || [ -z "${{ secrets.VERCEL_PROJECT_ID }}" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Vercel secrets not set — skipping deploy. Add VERCEL_TOKEN, VERCEL_ORG_ID and VERCEL_PROJECT_ID under Settings → Secrets and variables → Actions."
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/setup-node@v4
+        if: steps.check.outputs.configured == 'true'
+        with:
+          node-version: 20
+
+      - name: Install Vercel CLI
+        if: steps.check.outputs.configured == 'true'
+        run: npm install --global vercel@latest
+
+      - name: Pull Vercel environment
+        if: steps.check.outputs.configured == 'true'
+        run: |
+          vercel pull --yes \
+            --environment=${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }} \
+            --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Build
+        if: steps.check.outputs.configured == 'true'
+        run: vercel build ${{ github.ref == 'refs/heads/main' && '--prod' || '' }} --token=${{ secrets.VERCEL_TOKEN }}
+
+      - name: Deploy
+        if: steps.check.outputs.configured == 'true'
+        id: deploy
+        run: |
+          url=$(vercel deploy --prebuilt \
+            ${{ github.ref == 'refs/heads/main' && '--prod' || '' }} \
+            --token=${{ secrets.VERCEL_TOKEN }})
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "### Deployed" >> "$GITHUB_STEP_SUMMARY"
+          echo "$url" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Comment the preview URL on the pull request
+        if: steps.check.outputs.configured == 'true' && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `Preview deployment: ${{ steps.deploy.outputs.url }}`
+            })
