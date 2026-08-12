@@ -1,0 +1,20 @@
+{
+  "source_id": "cnv_pdf_genzoning",
+  "organization": "City of North Vancouver",
+  "dataset": "General Zoning Map (PDF)",
+  "source_url": "https://gisext2.cnv.org/PDFMaps/CNV_GenZoning48x36.pdf",
+  "download_url": "https://gisext2.cnv.org/PDFMaps/CNV_GenZoning48x36.pdf",
+  "handler": "http_file",
+  "format": "PDF",
+  "geographic_level": null,
+  "coverage": "City of North Vancouver",
+  "version": null,
+  "license": null,
+  "download_date": "2026-08-12T07:14:54+00:00",
+  "sha256": "a19b027f7824c0b2254ef6f62392a503a722acf82baebeaa22675c1660fa54ce",
+  "notes": "",
+  "http_content_type": "application/pdf",
+  "http_content_disposition": null,
+  "bytes": 1200857,
+  "validation": "ok"
+}

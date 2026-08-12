@@ -1,0 +1,1115 @@
+# =============================================================================
+# config/sources.yaml
+# Source inventory for the City of North Vancouver GIS analysis pipeline.
+#
+# Audited: 2026-08-11. Every entry below was probed live before being recorded.
+# Handler types consumed by scripts/01_download.py:
+#   http_file     - direct file download (zip/csv/pdf), streamed to data/raw/
+#   arcgis_layer  - ArcGIS REST MapServer/FeatureServer layer, paginated to GeoJSON
+#   wfs           - OGC WFS GetFeature, saved as GeoJSON
+#   html_page     - HTML saved verbatim for later structured extraction
+# =============================================================================
+
+defaults:
+  arcgis_out_sr: 26910        # NAD83 / UTM zone 10N - native CRS of the CNV server
+  arcgis_page_size: 1000      # server maxRecordCount is 2000; stay under it
+  retries: 4
+  backoff_seconds: 3
+  timeout_seconds: 180
+
+servers:
+  cnv_arcgis: "https://gisext2.cnv.org/arcgis/rest/services"
+  bc_wfs: "https://openmaps.gov.bc.ca/geo/pub/wfs"
+  statcan_geo: "https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/files-fichiers"
+  statcan_profile: "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger/comp/GetFile.cfm"
+
+sources:
+
+  # ---------------------------------------------------------------------------
+  # BOUNDARY
+  # ---------------------------------------------------------------------------
+  - source_id: bc_cnv_boundary
+    organization: "Province of BC - GeoBC / BC Data Catalogue"
+    dataset: "Municipalities - Legally Defined Administrative Areas of BC (ABMS)"
+    handler: wfs
+    url: "https://catalogue.data.gov.bc.ca/dataset/municipalities-legally-defined-administrative-areas-of-bc"
+    typename: "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP"
+    cql_filter: "ADMIN_AREA_NAME='City of North Vancouver'"
+    out_dir: bcdata
+    filename: cnv_municipal_boundary_abms.geojson
+    format: GeoJSON
+    geographic_level: municipality
+    coverage: "City of North Vancouver"
+    license: "Open Government Licence - British Columbia"
+    authoritative: true
+    notes: >
+      Authoritative legal municipal boundary. LGL_ADMIN_AREA_ID=114. The District of
+      North Vancouver is a separate feature (ID=125) and is deliberately excluded.
+
+  - source_id: bc_northshore_municipalities
+    organization: "Province of BC - GeoBC"
+    dataset: "ABMS Municipalities - North Shore context"
+    handler: wfs
+    url: "https://catalogue.data.gov.bc.ca/dataset/municipalities-legally-defined-administrative-areas-of-bc"
+    typename: "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP"
+    cql_filter: "ADMIN_AREA_NAME LIKE '%North Vancouver%' OR ADMIN_AREA_NAME LIKE '%West Vancouver%'"
+    out_dir: bcdata
+    filename: northshore_municipalities_abms.geojson
+    format: GeoJSON
+    geographic_level: municipality
+    coverage: "North Shore municipalities"
+    license: "Open Government Licence - British Columbia"
+    notes: "Context layer only, used to verify CNV/DNV separation. Never used as the study area."
+
+  # ---------------------------------------------------------------------------
+  # STATISTICS CANADA - census geography
+  # ---------------------------------------------------------------------------
+  - source_id: statcan_da_boundaries_2021
+    organization: "Statistics Canada"
+    dataset: "2021 Census - Dissemination Areas cartographic boundary file (92-169-X)"
+    handler: http_file
+    url: "https://www150.statcan.gc.ca/n1/en/catalogue/92-169-X2021001"
+    download_url: "https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/files-fichiers/lda_000b21a_e.zip"
+    out_dir: statcan
+    filename: lda_000b21a_e.zip
+    format: "Shapefile (zip)"
+    geographic_level: dissemination_area
+    coverage: Canada
+    version: "2021 Census, cartographic boundary"
+    license: "Statistics Canada Open Licence"
+    expect_magic: zip
+    notes: "Primary DA geometry. Join key DAUID. Native CRS EPSG:3347 (Lambert)."
+
+  - source_id: statcan_db_boundaries_2021
+    organization: "Statistics Canada"
+    dataset: "2021 Census - Dissemination Blocks cartographic boundary file (92-163-X)"
+    handler: http_file
+    url: "https://www150.statcan.gc.ca/n1/en/catalogue/92-163-X2021001"
+    download_url: "https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/files-fichiers/ldb_000b21a_e.zip"
+    out_dir: statcan
+    filename: ldb_000b21a_e.zip
+    format: "Shapefile (zip)"
+    geographic_level: dissemination_block
+    coverage: Canada
+    license: "Statistics Canada Open Licence"
+    expect_magic: zip
+    notes: "Finer geography for population/dwelling counts only (DB profiles are suppressed for most variables)."
+
+  - source_id: statcan_csd_boundaries_2021
+    organization: "Statistics Canada"
+    dataset: "2021 Census - Census Subdivisions cartographic boundary file"
+    handler: http_file
+    url: "https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm"
+    download_url: "https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/files-fichiers/lcsd000b21a_e.zip"
+    out_dir: statcan
+    filename: lcsd000b21a_e.zip
+    format: "Shapefile (zip)"
+    geographic_level: census_subdivision
+    coverage: Canada
+    license: "Statistics Canada Open Licence"
+    expect_magic: zip
+    notes: "Used to confirm the CNV CSD (CSDUID 5915051) and validate DA membership."
+
+  # ---------------------------------------------------------------------------
+  # STATISTICS CANADA - census profile (PRIMARY demographic source)
+  # ---------------------------------------------------------------------------
+  - source_id: statcan_census_profile_bc_da
+    organization: "Statistics Canada"
+    dataset: "Census Profile, 2021 - British Columbia, dissemination areas (98-401-X2021006)"
+    handler: http_file
+    url: "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm"
+    download_url: "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger/comp/GetFile.cfm?Lang=E&FILETYPE=CSV&GEONO=006_BC_CB"
+    out_dir: statcan
+    filename: 98-401-X2021006_BC_CB_eng_CSV.zip
+    format: "CSV (zip)"
+    geographic_level: dissemination_area
+    coverage: "British Columbia"
+    version: "98-401-X2021006, released 2022-12-15"
+    license: "Statistics Canada Open Licence"
+    expect_magic: zip
+    approx_size_mb: 293
+    primary_source: true
+    notes: >
+      PRIMARY source for population, age and dwelling variables. This is the
+      British-Columbia-only comprehensive Census Profile at DA level, preferred over
+      the 2.2 GB national file. Confirmed via Content-Disposition header.
+
+  - source_id: statcan_census_profile_bc_csd
+    organization: "Statistics Canada"
+    dataset: "Census Profile, 2021 - British Columbia, census subdivisions (98-401-X2021006)"
+    handler: http_file
+    url: "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm"
+    download_url: "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger/comp/GetFile.cfm?Lang=E&FILETYPE=CSV&GEONO=025"
+    out_dir: statcan
+    filename: 98-401-X2021006_BC_CSD_eng_CSV.zip
+    format: "CSV (zip)"
+    geographic_level: census_subdivision
+    coverage: "British Columbia"
+    license: "Statistics Canada Open Licence"
+    expect_magic: zip
+    notes: "CSD-level totals used to validate that DA sums reconcile to the CNV municipal total."
+
+  # ---------------------------------------------------------------------------
+  # CNV - core geography (ArcGIS REST, gisext2.cnv.org)
+  # ---------------------------------------------------------------------------
+  - source_id: cnv_neighbourhoods
+    organization: "City of North Vancouver"
+    dataset: "Neighbourhoods"
+    handler: arcgis_layer
+    service: "BaseMapServices/query_layers/MapServer"
+    layer_id: 8
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/query_layers/MapServer/8"
+    out_dir: cnv
+    filename: cnv_neighbourhoods.geojson
+    format: GeoJSON
+    geographic_level: neighbourhood
+    coverage: "City of North Vancouver"
+    license: "City of North Vancouver open data terms - verify"
+    expected_count: 10
+    notes: "Vector replacement for the CNV_Neighbourhoods PDF map. 10 neighbourhoods."
+
+  - source_id: cnv_named_areas
+    organization: "City of North Vancouver"
+    dataset: "Named Areas"
+    handler: arcgis_layer
+    service: "BaseMapServices/query_layers/MapServer"
+    layer_id: 0
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/query_layers/MapServer/0"
+    out_dir: cnv
+    filename: cnv_named_areas.geojson
+    format: GeoJSON
+    geographic_level: named_area
+    coverage: "City of North Vancouver"
+    expected_count: 105
+
+  - source_id: cnv_street_centreline
+    organization: "City of North Vancouver"
+    dataset: "Street Centre Line"
+    handler: arcgis_layer
+    service: "BaseMapServices/query_layers/MapServer"
+    layer_id: 7
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/query_layers/MapServer/7"
+    out_dir: cnv
+    filename: cnv_street_centreline.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+    expected_count: 962
+    notes: "Carries ROADCLASS, ROADLEVEL, NOLANES, ONEWAY, OWNER and address ranges. Basis for the intersection layer."
+
+  - source_id: cnv_buildings
+    organization: "City of North Vancouver"
+    dataset: "Building footprints"
+    handler: arcgis_layer
+    service: "BaseMapServices/query_layers/MapServer"
+    layer_id: 5
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/query_layers/MapServer/5"
+    out_dir: cnv
+    filename: cnv_buildings.geojson
+    format: GeoJSON
+    geographic_level: building
+    coverage: "City of North Vancouver"
+    expected_count: 11834
+    notes: "Footprints only: BUILDING_STATUS, BUILDING_NAME. No height/units/year - see cnv_highrise_buildings."
+
+  - source_id: cnv_legal_parcels
+    organization: "City of North Vancouver"
+    dataset: "Legal parcels"
+    handler: arcgis_layer
+    service: "BaseMapServices/query_layers/MapServer"
+    layer_id: 2
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/query_layers/MapServer/2"
+    out_dir: cnv
+    filename: cnv_legal_parcels.geojson
+    format: GeoJSON
+    geographic_level: parcel
+    coverage: "City of North Vancouver"
+
+  - source_id: cnv_walkways
+    organization: "City of North Vancouver"
+    dataset: "Walkways"
+    handler: arcgis_layer
+    service: "BaseMapServices/query_layers/MapServer"
+    layer_id: 17
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/query_layers/MapServer/17"
+    out_dir: cnv
+    filename: cnv_walkways.geojson
+    format: GeoJSON
+    geographic_level: walkway
+    coverage: "City of North Vancouver"
+
+  # ---------------------------------------------------------------------------
+  # CNV - housing / buildings
+  # ---------------------------------------------------------------------------
+  - source_id: cnv_highrise_buildings
+    organization: "City of North Vancouver"
+    dataset: "High Rise Buildings (>18 m)"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 6
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/6"
+    out_dir: cnv
+    filename: cnv_highrise_buildings.geojson
+    format: GeoJSON
+    geographic_level: building
+    coverage: "City of North Vancouver"
+    expected_count: 107
+    notes: >
+      Carries BUILDING_Z (height), YearBuilt, NosUnits, Occupancy, StrataUnitArea,
+      CivicAddress. The only CNV building layer with unit counts and heights.
+
+  - source_id: cnv_affordable_housing
+    organization: "City of North Vancouver"
+    dataset: "Affordable Housing"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 73
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/73"
+    out_dir: cnv
+    filename: cnv_affordable_housing.geojson
+    format: GeoJSON
+    geographic_level: building
+    coverage: "City of North Vancouver"
+    expected_count: 59
+    notes: >
+      Type, Tenure_Type, Eligibility, Operator_Developer, Total_Units, Status.
+      The Eligibility/Type fields are the authoritative municipal basis for identifying
+      seniors housing - preferred over OpenStreetMap inference.
+
+  - source_id: cnv_population_by_parcel_2021
+    organization: "City of North Vancouver"
+    dataset: "2021 Population by Parcel (modelled)"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 11
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/11"
+    out_dir: cnv
+    filename: cnv_population_by_parcel_2021.geojson
+    format: GeoJSON
+    geographic_level: parcel
+    coverage: "City of North Vancouver"
+    expected_count: 7185
+    derived_estimate: true
+    notes: >
+      CNV-modelled parcel-level population disaggregated from census blocks
+      (SUM_NumUnits_byCensusBlk). NOT a Statistics Canada product. Treat as a
+      municipal estimate and never as a census count.
+
+  - source_id: cnv_zoning
+    organization: "City of North Vancouver"
+    dataset: "Zoning boundaries"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 93
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/93"
+    out_dir: cnv
+    filename: cnv_zoning.geojson
+    format: GeoJSON
+    geographic_level: zone
+    coverage: "City of North Vancouver"
+    notes: "Vector equivalent of CNV_GenZoning48x36.pdf."
+
+  - source_id: cnv_ocp_landuse
+    organization: "City of North Vancouver"
+    dataset: "2014 OCP Land Use"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 31
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/31"
+    out_dir: cnv
+    filename: cnv_ocp_landuse.geojson
+    format: GeoJSON
+    geographic_level: land_use_polygon
+    coverage: "City of North Vancouver"
+    notes: "Vector equivalent of Schedule A Land Use PDF. Feeds the commercial land-use component of the pedestrian proxy."
+
+  # ---------------------------------------------------------------------------
+  # CNV - census-derived operational layers
+  # ---------------------------------------------------------------------------
+  - source_id: cnv_dissemination_blocks
+    organization: "City of North Vancouver (Statistics Canada source data)"
+    dataset: "Dissemination Block population 2021/2016"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 14
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/14"
+    out_dir: cnv
+    filename: cnv_dissemination_blocks.geojson
+    format: GeoJSON
+    geographic_level: dissemination_block
+    coverage: "City of North Vancouver"
+    expected_count: 122
+    notes: "Cross-check layer only. StatCan remains the primary census source."
+
+  - source_id: cnv_db_population_2021
+    organization: "City of North Vancouver (Statistics Canada source data)"
+    dataset: "2021 Population by Dissemination Block"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 9
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/9"
+    out_dir: cnv
+    filename: cnv_db_population_2021.geojson
+    format: GeoJSON
+    geographic_level: dissemination_block
+    coverage: "City of North Vancouver and immediate surroundings"
+    expected_count: 302
+    notes: "DBpop_2021, DBtdwell_2021, DBurdwell_2021 with DBcode/DAcode/CTcode keys."
+
+  # ---------------------------------------------------------------------------
+  # CNV - roads, traffic, safety
+  # ---------------------------------------------------------------------------
+  - source_id: cnv_road_designation
+    organization: "City of North Vancouver"
+    dataset: "Road Designation / Major Road Network"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 48
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/48"
+    out_dir: cnv
+    filename: cnv_road_designation.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+    expected_count: 230
+    notes: "DESIGNATION (arterial/collector/local) and MRN flag."
+
+  - source_id: cnv_road_classifications
+    organization: "City of North Vancouver"
+    dataset: "Road Classifications"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 127
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/127"
+    out_dir: cnv
+    filename: cnv_road_classifications.geojson
+    page_size: 100
+    paging: oid
+    format: GeoJSON
+    geographic_level: road_polygon
+    coverage: "City of North Vancouver"
+    expected_count: 518
+
+  - source_id: cnv_traffic_signals
+    organization: "City of North Vancouver"
+    dataset: "Traffic Signals (asset inventory)"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 153
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/153"
+    out_dir: cnv
+    filename: cnv_traffic_signals.geojson
+    format: GeoJSON
+    geographic_level: point_asset
+    coverage: "City of North Vancouver"
+    expected_count: 587
+    notes: >
+      Signal POLE/asset inventory (UNITTYPE, POLE_TYPE, INSTALL_DATE, ADDRESS), not one
+      record per signalised intersection. Must be clustered to intersections before use.
+      Contains NO signal cycle/phase timing - see DATA_GAPS.md.
+
+  - source_id: cnv_traffic_signs
+    organization: "City of North Vancouver"
+    dataset: "Traffic Signs"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 152
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/152"
+    out_dir: cnv
+    filename: cnv_traffic_signs.geojson
+    format: GeoJSON
+    geographic_level: point_asset
+    coverage: "City of North Vancouver"
+    expected_count: 1093
+
+  - source_id: cnv_speed_zones
+    organization: "City of North Vancouver"
+    dataset: "Speed Zones"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 149
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/149"
+    out_dir: cnv
+    filename: cnv_speed_zones.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+    expected_count: 120
+    notes: "SPEED_ZONE, BYLAW_NO, INSTALL_DATE. Feeds the safety/visibility component."
+
+  - source_id: cnv_one_way_streets
+    organization: "City of North Vancouver"
+    dataset: "One Way Streets"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 148
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/148"
+    out_dir: cnv
+    filename: cnv_one_way_streets.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+
+  - source_id: cnv_traffic_calming
+    organization: "City of North Vancouver"
+    dataset: "Traffic Calming"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 151
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/151"
+    out_dir: cnv
+    filename: cnv_traffic_calming.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+
+  - source_id: cnv_truck_routes
+    organization: "City of North Vancouver"
+    dataset: "Truck Routes"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 154
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/154"
+    out_dir: cnv
+    filename: cnv_truck_routes.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+
+  - source_id: cnv_traffic_volume_northbound
+    organization: "City of North Vancouver"
+    dataset: "Traffic Volumes - Northbound"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 226
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/226"
+    out_dir: traffic
+    filename: cnv_traffic_volume_northbound.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+    expected_count: 11
+    sparse: true
+    notes: "Only 11 segments. Directional volumes exist for a very small subset of streets."
+
+  - source_id: cnv_traffic_volume_southbound
+    organization: "City of North Vancouver"
+    dataset: "Traffic Volumes - Southbound"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 227
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/227"
+    out_dir: traffic
+    filename: cnv_traffic_volume_southbound.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+    expected_count: 11
+    sparse: true
+
+  - source_id: cnv_traffic_volume_eastbound
+    organization: "City of North Vancouver"
+    dataset: "Traffic Volumes - Eastbound"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 228
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/228"
+    out_dir: traffic
+    filename: cnv_traffic_volume_eastbound.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+    expected_count: 8
+    sparse: true
+
+  - source_id: cnv_traffic_volume_westbound
+    organization: "City of North Vancouver"
+    dataset: "Traffic Volumes - Westbound"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 229
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/229"
+    out_dir: traffic
+    filename: cnv_traffic_volume_westbound.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+    expected_count: 8
+    sparse: true
+
+  - source_id: cnv_cyclist_volume
+    organization: "City of North Vancouver"
+    dataset: "Cyclist Volume by street segment"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 26
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/26"
+    out_dir: traffic
+    filename: cnv_cyclist_volume.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+
+  # ---------------------------------------------------------------------------
+  # CNV - pedestrian
+  # ---------------------------------------------------------------------------
+  - source_id: cnv_sidewalk_segments
+    organization: "City of North Vancouver"
+    dataset: "Sidewalk Segments"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 130
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/130"
+    out_dir: cnv
+    filename: cnv_sidewalk_segments.geojson
+    format: GeoJSON
+    geographic_level: sidewalk_segment
+    coverage: "City of North Vancouver"
+    expected_count: 1867
+    notes: >
+      Includes a PEDESTRIAN_TRAFFIC attribute. Verify during processing whether this is
+      an observed count or a qualitative class; if qualitative it belongs in the
+      pedestrian PROXY, not in an observed-count field.
+
+  - source_id: cnv_sidewalk_ramps
+    organization: "City of North Vancouver"
+    dataset: "Sidewalk Ramps"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 129
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/129"
+    out_dir: cnv
+    filename: cnv_sidewalk_ramps.geojson
+    format: GeoJSON
+    geographic_level: point_asset
+    coverage: "City of North Vancouver"
+    expected_count: 2613
+    notes: "Accessibility indicator and a marker of built-out pedestrian crossings."
+
+  - source_id: cnv_missing_sidewalks
+    organization: "City of North Vancouver"
+    dataset: "Missing Sidewalks"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 69
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/69"
+    out_dir: cnv
+    filename: cnv_missing_sidewalks.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+    expected_count: 385
+
+  - source_id: cnv_pedestrian_areas
+    organization: "City of North Vancouver"
+    dataset: "Pedestrian Areas"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 70
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/70"
+    out_dir: cnv
+    filename: cnv_pedestrian_areas.geojson
+    format: GeoJSON
+    geographic_level: area
+    coverage: "City of North Vancouver"
+    expected_count: 18
+
+  - source_id: cnv_school_routes
+    organization: "City of North Vancouver"
+    dataset: "School Routes"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 71
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/71"
+    out_dir: cnv
+    filename: cnv_school_routes.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+
+  - source_id: cnv_bike_routes_existing
+    organization: "City of North Vancouver"
+    dataset: "Bike Routes (Existing)"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 22
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/22"
+    out_dir: cnv
+    filename: cnv_bike_routes_existing.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+    expected_count: 199
+
+  # ---------------------------------------------------------------------------
+  # CNV - parking
+  # ---------------------------------------------------------------------------
+  - source_id: cnv_parking_occupancy
+    organization: "City of North Vancouver"
+    dataset: "On-street parking supply and observed occupancy by time period"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 55
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/55"
+    out_dir: parking
+    filename: cnv_parking_occupancy.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+    expected_count: 1169
+    notes: >
+      Carries Supply plus occupancy for eight observed periods (Weekday_07/08/11/12/16/17/21/22,
+      Weekend_07/09 ...). These are OBSERVED SURVEY counts from a parking study, NOT a
+      real-time availability feed. Survey date must be established before publication.
+
+  - source_id: cnv_parking_zones
+    organization: "City of North Vancouver"
+    dataset: "Parking Zones (on-street restrictions)"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 64
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/64"
+    out_dir: parking
+    filename: cnv_parking_zones.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+    expected_count: 5981
+    notes: "SIGNTYPE, PARKING_TYPE, SUPPLY, PARKING_TIME, RESTRICTIONS, NEIGHBOURHOOD."
+
+  - source_id: cnv_parking_offstreet_lots
+    organization: "City of North Vancouver"
+    dataset: "Off Street Parking Lots"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 62
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/62"
+    out_dir: parking
+    filename: cnv_parking_offstreet_lots.geojson
+    format: GeoJSON
+    geographic_level: point
+    coverage: "City of North Vancouver"
+    expected_count: 28
+    notes: "SPACES_WEEKDAY, SPACES_WEEKNIGHT_WKND, ACCESSIBLE_PARKING_SPACES, EV_PARKING_SPACES, Operator."
+
+  - source_id: cnv_parking_signs
+    organization: "City of North Vancouver"
+    dataset: "Parking Signs"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 63
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/63"
+    out_dir: parking
+    filename: cnv_parking_signs.geojson
+    format: GeoJSON
+    geographic_level: point_asset
+    coverage: "City of North Vancouver"
+    expected_count: 2580
+
+  - source_id: cnv_loading_zones
+    organization: "City of North Vancouver"
+    dataset: "Loading Zones"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 61
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/61"
+    out_dir: parking
+    filename: cnv_loading_zones.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+    expected_count: 138
+
+  - source_id: cnv_car_share_parking
+    organization: "City of North Vancouver"
+    dataset: "Car Share Parking"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 60
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/60"
+    out_dir: parking
+    filename: cnv_car_share_parking.geojson
+    format: GeoJSON
+    geographic_level: point
+    coverage: "City of North Vancouver"
+    expected_count: 32
+
+  - source_id: cnv_pay_parking_onstreet
+    organization: "City of North Vancouver"
+    dataset: "Pay Parking - On Street"
+    handler: arcgis_layer
+    service: "Applications/pparking/MapServer"
+    layer_id: 3
+    url: "https://gisext2.cnv.org/arcgis/rest/services/Applications/pparking/MapServer/3"
+    out_dir: parking
+    filename: cnv_pay_parking_onstreet.geojson
+    format: GeoJSON
+    geographic_level: street_segment
+    coverage: "City of North Vancouver"
+
+  - source_id: cnv_pay_parking_offstreet
+    organization: "City of North Vancouver"
+    dataset: "Pay Parking - Off Street"
+    handler: arcgis_layer
+    service: "Applications/pparking/MapServer"
+    layer_id: 2
+    url: "https://gisext2.cnv.org/arcgis/rest/services/Applications/pparking/MapServer/2"
+    out_dir: parking
+    filename: cnv_pay_parking_offstreet.geojson
+    format: GeoJSON
+    geographic_level: polygon
+    coverage: "City of North Vancouver"
+
+  - source_id: cnv_pay_stations
+    organization: "City of North Vancouver"
+    dataset: "Pay Stations"
+    handler: arcgis_layer
+    service: "Applications/pparking/MapServer"
+    layer_id: 1
+    url: "https://gisext2.cnv.org/arcgis/rest/services/Applications/pparking/MapServer/1"
+    out_dir: parking
+    filename: cnv_pay_stations.geojson
+    format: GeoJSON
+    geographic_level: point
+    coverage: "City of North Vancouver"
+
+  - source_id: cnv_accessible_parking
+    organization: "City of North Vancouver"
+    dataset: "Accessible (disabled) parking spots"
+    handler: arcgis_layer
+    service: "Applications/accessibleparking/MapServer"
+    layer_id: 0
+    url: "https://gisext2.cnv.org/arcgis/rest/services/Applications/accessibleparking/MapServer/0"
+    out_dir: parking
+    filename: cnv_accessible_parking.geojson
+    format: GeoJSON
+    geographic_level: point
+    coverage: "City of North Vancouver"
+
+  - source_id: cnv_resident_permit_parking_zones
+    organization: "City of North Vancouver"
+    dataset: "Resident Permit Parking Zones"
+    handler: arcgis_layer
+    service: "Applications/ResidentPermitParking/MapServer"
+    layer_id: 1
+    url: "https://gisext2.cnv.org/arcgis/rest/services/Applications/ResidentPermitParking/MapServer/1"
+    out_dir: parking
+    filename: cnv_resident_permit_zones.geojson
+    format: GeoJSON
+    geographic_level: zone
+    coverage: "City of North Vancouver"
+
+  # ---------------------------------------------------------------------------
+  # CNV - transit (municipal view; TransLink GTFS remains authoritative)
+  # ---------------------------------------------------------------------------
+  - source_id: cnv_bus_stops
+    organization: "City of North Vancouver"
+    dataset: "Bus Stops (municipal asset layer)"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 108
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/108"
+    out_dir: cnv
+    filename: cnv_bus_stops.geojson
+    format: GeoJSON
+    geographic_level: point
+    coverage: "City of North Vancouver"
+    expected_count: 183
+    notes: "Municipal view with STOPID and BUS_NUM. TransLink GTFS is the authoritative service-frequency source."
+
+  - source_id: cnv_bus_shelters
+    organization: "City of North Vancouver"
+    dataset: "Bus Shelters"
+    handler: arcgis_layer
+    service: "BaseMapServices/TransportMAP/MapServer"
+    layer_id: 107
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/TransportMAP/MapServer/107"
+    out_dir: cnv
+    filename: cnv_bus_shelters.geojson
+    format: GeoJSON
+    geographic_level: point
+    coverage: "City of North Vancouver"
+
+  - source_id: cnv_parks
+    organization: "City of North Vancouver"
+    dataset: "Parks"
+    handler: arcgis_layer
+    service: "BaseMapServices/query_layers/MapServer"
+    layer_id: 4
+    url: "https://gisext2.cnv.org/arcgis/rest/services/BaseMapServices/query_layers/MapServer/4"
+    out_dir: cnv
+    filename: cnv_parks.geojson
+    format: GeoJSON
+    geographic_level: polygon
+    coverage: "City of North Vancouver"
+    notes: "Civic destination component of the pedestrian activity proxy; candidate public-space locations."
+
+  # ---------------------------------------------------------------------------
+  # TRANSLINK
+  # ---------------------------------------------------------------------------
+  - source_id: translink_gtfs
+    organization: "TransLink (South Coast British Columbia Transportation Authority)"
+    dataset: "GTFS static feed"
+    handler: http_file
+    url: "https://www.translink.ca/about-us/doing-business-with-translink/app-developer-resources/gtfs/gtfs-data"
+    download_url: "https://gtfs-static.translink.ca/gtfs/google_transit.zip"
+    out_dir: transit
+    filename: translink_gtfs.zip
+    format: "GTFS (zip)"
+    geographic_level: regional
+    coverage: "Metro Vancouver (regional - clipped to CNV during processing)"
+    license: "TransLink Open Data / GTFS terms of use"
+    expect_magic: zip
+    notes: "Authoritative transit source: stops, routes, trips, stop_times, shapes, calendar."
+
+  # ---------------------------------------------------------------------------
+  # ELECTIONS (aggregate results and voting places only - never individual data)
+  # ---------------------------------------------------------------------------
+  - source_id: cnv_past_election_results
+    organization: "City of North Vancouver"
+    dataset: "Past Election Results"
+    handler: html_page
+    url: "https://www.cnv.org/City-Hall/General-Local-Election/Past-Election-Results"
+    out_dir: elections
+    filename: cnv_past_election_results.html
+    format: HTML
+    geographic_level: municipality
+    coverage: "City of North Vancouver"
+    notes: "Landing page for historical results. Linked PDFs are discovered and fetched by 07_prepare_elections.py."
+
+  - source_id: cnv_2022_official_results
+    organization: "City of North Vancouver"
+    dataset: "Official Results of 2022 City Election"
+    handler: html_page
+    url: "https://www.cnv.org/City-Hall/News-Room/Whats-New/2022/10/19/Official-Results-of-2022-City-Election-Announced"
+    out_dir: elections
+    filename: cnv_2022_official_results.html
+    format: HTML
+    geographic_level: municipality
+    coverage: "City of North Vancouver"
+    notes: "Aggregate candidate vote totals and turnout. Contains no individual-level data."
+
+  - source_id: cnv_election_landing
+    organization: "City of North Vancouver"
+    dataset: "General Local Election - programme page"
+    handler: html_page
+    url: "https://www.cnv.org/City-Hall/General-Local-Election"
+    out_dir: elections
+    filename: cnv_election_landing.html
+    format: HTML
+    geographic_level: municipality
+    coverage: "City of North Vancouver"
+    notes: "Source for voting-place lists and advance-voting locations."
+
+  # ---------------------------------------------------------------------------
+  # CNV reference PDFs (preserved; vector equivalents preferred)
+  # ---------------------------------------------------------------------------
+  - source_id: cnv_pdf_genzoning
+    organization: "City of North Vancouver"
+    dataset: "General Zoning Map (PDF)"
+    handler: http_file
+    url: "https://gisext2.cnv.org/PDFMaps/CNV_GenZoning48x36.pdf"
+    download_url: "https://gisext2.cnv.org/PDFMaps/CNV_GenZoning48x36.pdf"
+    out_dir: cnv
+    filename: CNV_GenZoning48x36.pdf
+    format: PDF
+    coverage: "City of North Vancouver"
+    expect_magic: pdf
+    reference_only: true
+
+  - source_id: cnv_pdf_neighbourhoods
+    organization: "City of North Vancouver"
+    dataset: "Neighbourhoods Map (PDF)"
+    handler: http_file
+    url: "https://gisext2.cnv.org/PDFMaps/CNV_Neighbourhoods.pdf"
+    download_url: "https://gisext2.cnv.org/PDFMaps/CNV_Neighbourhoods.pdf"
+    out_dir: cnv
+    filename: CNV_Neighbourhoods.pdf
+    format: PDF
+    coverage: "City of North Vancouver"
+    expect_magic: pdf
+    reference_only: true
+    notes: "Used only to validate neighbourhood names against the vector layer."
+
+  - source_id: cnv_pdf_citymap
+    organization: "City of North Vancouver"
+    dataset: "City Map (PDF)"
+    handler: http_file
+    url: "https://gisext2.cnv.org/PDFMaps/CNV_CityMap.pdf"
+    download_url: "https://gisext2.cnv.org/PDFMaps/CNV_CityMap.pdf"
+    out_dir: cnv
+    filename: CNV_CityMap.pdf
+    format: PDF
+    coverage: "City of North Vancouver"
+    expect_magic: pdf
+    reference_only: true
+
+  - source_id: cnv_pdf_landuse
+    organization: "City of North Vancouver"
+    dataset: "Schedule A Land Use (PDF)"
+    handler: http_file
+    url: "https://gisext2.cnv.org/PDFMaps/Schedule%20A%20Land%20Use_11x17.pdf"
+    download_url: "https://gisext2.cnv.org/PDFMaps/Schedule%20A%20Land%20Use_11x17.pdf"
+    out_dir: cnv
+    filename: Schedule_A_Land_Use_11x17.pdf
+    format: PDF
+    coverage: "City of North Vancouver"
+    expect_magic: pdf
+    reference_only: true
+
+  - source_id: cnv_pdf_regional_context
+    organization: "City of North Vancouver"
+    dataset: "Schedule E Regional Context Map (PDF)"
+    handler: http_file
+    url: "https://gisext2.cnv.org/PDFMaps/Schedule%20E%20RegionalContextMap_11x17.pdf"
+    download_url: "https://gisext2.cnv.org/PDFMaps/Schedule%20E%20RegionalContextMap_11x17.pdf"
+    out_dir: cnv
+    filename: Schedule_E_RegionalContextMap_11x17.pdf
+    format: PDF
+    coverage: "City of North Vancouver"
+    expect_magic: pdf
+    reference_only: true
+
+  - source_id: cnv_community_statistics
+    organization: "City of North Vancouver"
+    dataset: "Community Facts & Statistics"
+    handler: html_page
+    url: "https://www.cnv.org/City-Hall/About/community-statistics"
+    out_dir: cnv
+    filename: cnv_community_statistics.html
+    format: HTML
+    coverage: "City of North Vancouver"
+    notes: "Municipal summary statistics; used for cross-validation only, not as a primary source."
+
+  - source_id: cnv_traffic_signals_page
+    organization: "City of North Vancouver"
+    dataset: "Traffic Signals information page"
+    handler: html_page
+    url: "https://www.cnv.org/Streets-Transportation/Traffic/Traffic-Signals"
+    out_dir: cnv
+    filename: cnv_traffic_signals_page.html
+    format: HTML
+    coverage: "City of North Vancouver"
+    notes: "Checked for any published signal timing / coordination information."
+
+  # ---------------------------------------------------------------------------
+  # NORTH VANCOUVER GEOWEB (District-hosted; regional coverage varies)
+  # ---------------------------------------------------------------------------
+  - source_id: geoweb_streets
+    organization: "District of North Vancouver - GEOweb"
+    dataset: "Street Centrelines (District and City of North Vancouver)"
+    handler: http_file
+    url: "https://geoweb.dnv.org/data/"
+    download_url: "https://geoweb.dnv.org/Products/Data/SHP/TrnStreets_shp.zip"
+    out_dir: dnv_geoweb
+    filename: TrnStreets_shp.zip
+    format: "Shapefile (zip)"
+    geographic_level: street_segment
+    coverage: "District AND City of North Vancouver (per dataset description)"
+    expect_magic: zip
+    notes: "Explicitly covers both municipalities. Must still be clipped to the CNV boundary."
+
+  - source_id: geoweb_intersections
+    organization: "District of North Vancouver - GEOweb"
+    dataset: "Street Intersections"
+    handler: http_file
+    url: "https://geoweb.dnv.org/data/"
+    download_url: "https://geoweb.dnv.org/Products/Data/SHP/TrnIntersection_shp.zip"
+    out_dir: dnv_geoweb
+    filename: TrnIntersection_shp.zip
+    format: "Shapefile (zip)"
+    geographic_level: intersection
+    coverage: "North Shore"
+    expect_magic: zip
+    notes: "Ready-made intersection points; cross-checked against intersections derived from CNV centrelines."
+
+  - source_id: geoweb_parking_restrictions
+    organization: "District of North Vancouver - GEOweb"
+    dataset: "Parking Restrictions"
+    handler: http_file
+    url: "https://geoweb.dnv.org/data/"
+    download_url: "https://geoweb.dnv.org/Products/Data/SHP/TrnParkingRestrictions_shp.zip"
+    out_dir: dnv_geoweb
+    filename: TrnParkingRestrictions_shp.zip
+    format: "Shapefile (zip)"
+    geographic_level: street_segment
+    coverage: "District of North Vancouver (verify CNV coverage)"
+    expect_magic: zip
+
+  - source_id: geoweb_parking_lots
+    organization: "District of North Vancouver - GEOweb"
+    dataset: "Parking Lots"
+    handler: http_file
+    url: "https://geoweb.dnv.org/data/"
+    download_url: "https://geoweb.dnv.org/Products/Data/SHP/RodParkingLot_shp.zip"
+    out_dir: dnv_geoweb
+    filename: RodParkingLot_shp.zip
+    format: "Shapefile (zip)"
+    geographic_level: polygon
+    coverage: "District of North Vancouver (verify CNV coverage)"
+    expect_magic: zip
+
+  - source_id: geoweb_sidewalks
+    organization: "District of North Vancouver - GEOweb"
+    dataset: "Sidewalks"
+    handler: http_file
+    url: "https://geoweb.dnv.org/data/"
+    download_url: "https://geoweb.dnv.org/Products/Data/SHP/RodSidewalk_shp.zip"
+    out_dir: dnv_geoweb
+    filename: RodSidewalk_shp.zip
+    format: "Shapefile (zip)"
+    geographic_level: sidewalk
+    coverage: "District of North Vancouver (verify CNV coverage)"
+    expect_magic: zip
+
+  - source_id: geoweb_metrovan_municipalities
+    organization: "District of North Vancouver - GEOweb"
+    dataset: "Metro Vancouver Municipalities"
+    handler: http_file
+    url: "https://geoweb.dnv.org/data/"
+    download_url: "https://geoweb.dnv.org/Products/Data/SHP/RegBoundaryMetroVan_shp.zip"
+    out_dir: dnv_geoweb
+    filename: RegBoundaryMetroVan_shp.zip
+    format: "Shapefile (zip)"
+    geographic_level: municipality
+    coverage: "Metro Vancouver"
+    expect_magic: zip
+    notes: "Boundary cross-check only. The BC ABMS layer remains the authoritative CNV boundary."
+
+  # ---------------------------------------------------------------------------
+  # SAFETY / COLLISIONS
+  # ---------------------------------------------------------------------------
+  - source_id: icbc_crashes_north_vancouver
+    organization: "Insurance Corporation of British Columbia (ICBC)"
+    dataset: "Lower Mainland Crashes - filtered to NORTH VANCOUVER"
+    handler: http_file
+    url: "https://public.tableau.com/app/profile/icbc/viz/LowerMainlandCrashes/LMDashboard"
+    download_url: "https://public.tableau.com/views/LowerMainlandCrashes/LMDashboard.csv?:showVizHome=no&Municipality=NORTH%20VANCOUVER"
+    out_dir: safety
+    filename: icbc_crashes_north_vancouver.csv
+    format: CSV
+    geographic_level: intersection_or_block_name
+    coverage: "North Vancouver (City AND District combined - see notes)"
+    license: "Open Data Licence for ICBC Information"
+    notes: >
+      Retrieved through Tableau Public's built-in CSV export for a publicly published
+      dashboard (the sanctioned download path; no access control is bypassed). Two
+      material limitations: (1) ICBC's 'NORTH VANCOUVER' municipality value covers BOTH
+      the City and the District, so records must be disambiguated by matching location
+      strings to CNV street pairs; (2) records are location NAME strings with no
+      coordinates, so geocoding to the CNV intersection layer is name-based and
+      approximate. Crash counts are aggregate; no individual or personal data.
+
+  - source_id: icbc_crashes_lower_mainland_all
+    organization: "Insurance Corporation of British Columbia (ICBC)"
+    dataset: "Lower Mainland Crashes - unfiltered regional extract"
+    handler: http_file
+    url: "https://public.tableau.com/app/profile/icbc/viz/LowerMainlandCrashes/LMDashboard"
+    download_url: "https://public.tableau.com/views/LowerMainlandCrashes/LMDashboard.csv?:showVizHome=no"
+    out_dir: safety
+    filename: icbc_crashes_lower_mainland.csv
+    format: CSV
+    geographic_level: intersection_or_block_name
+    coverage: "Metro Vancouver / Lower Mainland"
+    license: "Open Data Licence for ICBC Information"
+    notes: "Regional baseline used to check how CNV compares and to detect name collisions."

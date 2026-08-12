@@ -1,0 +1,20 @@
+{
+  "source_id": "cnv_pdf_neighbourhoods",
+  "organization": "City of North Vancouver",
+  "dataset": "Neighbourhoods Map (PDF)",
+  "source_url": "https://gisext2.cnv.org/PDFMaps/CNV_Neighbourhoods.pdf",
+  "download_url": "https://gisext2.cnv.org/PDFMaps/CNV_Neighbourhoods.pdf",
+  "handler": "http_file",
+  "format": "PDF",
+  "geographic_level": null,
+  "coverage": "City of North Vancouver",
+  "version": null,
+  "license": null,
+  "download_date": "2026-08-12T07:14:54+00:00",
+  "sha256": "70aac026883f9e16847ac03e1a84001adce4548fd96a8a829d6d0156e0c9e8c7",
+  "notes": "Used only to validate neighbourhood names against the vector layer.",
+  "http_content_type": "application/pdf",
+  "http_content_disposition": null,
+  "bytes": 1249952,
+  "validation": "ok"
+}

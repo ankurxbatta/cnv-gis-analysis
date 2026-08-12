@@ -1,0 +1,20 @@
+{
+  "source_id": "translink_gtfs",
+  "organization": "TransLink (South Coast British Columbia Transportation Authority)",
+  "dataset": "GTFS static feed",
+  "source_url": "https://www.translink.ca/about-us/doing-business-with-translink/app-developer-resources/gtfs/gtfs-data",
+  "download_url": "https://gtfs-static.translink.ca/gtfs/google_transit.zip",
+  "handler": "http_file",
+  "format": "GTFS (zip)",
+  "geographic_level": "regional",
+  "coverage": "Metro Vancouver (regional - clipped to CNV during processing)",
+  "version": null,
+  "license": "TransLink Open Data / GTFS terms of use",
+  "download_date": "2026-08-12T07:14:52+00:00",
+  "sha256": "3f2378ac89714afe233192933ca9f4ce5d6e82fecd41815f585858e450804ca1",
+  "notes": "Authoritative transit source: stops, routes, trips, stop_times, shapes, calendar.",
+  "http_content_type": "application/octet-stream",
+  "http_content_disposition": null,
+  "bytes": 16266069,
+  "validation": "ok"
+}

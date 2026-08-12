@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>City of North Vancouver — GIS Data Analysis Report</title>
+<style>
+:root{--fg:#1a1a1a;--muted:#5f6b76;--line:#e3e7ea;--accent:#0b6e99;--warn:#c1121f;--bg:#fff}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Georgia,serif;color:var(--fg);background:var(--bg)}
+.wrap{max-width:1080px;margin:0 auto;padding:48px 28px 90px}
+h1{font-size:34px;line-height:1.2;margin:0 0 6px}
+h2{font-size:24px;margin:52px 0 12px;padding-bottom:7px;border-bottom:2px solid var(--line)}
+h3{font-size:18px;margin:30px 0 8px}
+.lede{font-size:18px;color:var(--muted);margin:0 0 26px}
+.muted{color:var(--muted);font-size:13.5px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:13px;margin:26px 0}
+.kpi{border:1px solid var(--line);border-radius:9px;padding:14px 16px}
+.kpi .n{font-size:26px;font-weight:700;letter-spacing:-.02em}
+.kpi .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:3px}
+.tw{overflow-x:auto;margin:14px 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;padding:7px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#f6f8f9;font-weight:600;white-space:nowrap}
+.note{border-left:4px solid var(--accent);background:#f4f9fc;padding:13px 17px;margin:18px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.warn{border-left-color:var(--warn);background:#fdf4f4}
+figure{margin:26px 0} figure img{width:100%;border:1px solid var(--line);border-radius:7px}
+figcaption{font-size:13px;color:var(--muted);margin-top:7px}
+.sev{padding:2px 8px;border-radius:11px;font-size:11.5px;font-weight:600;white-space:nowrap}
+.sev-high{background:#fde2e2;color:#8b1a1a} .sev-medium{background:#fdf0d5;color:#8a5a00}
+.sev-low{background:#e6f4ea;color:#1d6b33} .sev-structural{background:#e8e6fd;color:#3b2f8a}
+.sev-resolved{background:#e6f4ea;color:#1d6b33}
+code{background:#f2f4f5;padding:1.5px 5px;border-radius:4px;font-size:13px}
+ol.toc{columns:2;font-size:14.5px} ol.toc li{margin:3px 0;break-inside:avoid}
+@media print{.wrap{max-width:none} h2{page-break-after:avoid} figure{page-break-inside:avoid}}
+</style></head><body><div class="wrap">
+
+<h1>City of North Vancouver — GIS Data Analysis Report</h1>
+<p class="lede">A reproducible civic-geography analysis of population, housing, transportation
+and public space in the City of North Vancouver, British Columbia.</p>
+<p class="muted">Generated 2026-08-12 14:56 UTC ·
+Analysis CRS EPSG:26910 (NAD83 / UTM zone 10N) · Census year 2021 ·
+Study area CSDUID 5915051</p>
+
+<div class="note warn">
+<strong>Terminology and scope.</strong> Population aged 18+ is reported as
+<code>adult_population_18plus_proxy</code>, a demographic proxy for potential electorate
+size. It is <em>not</em> a count of eligible or registered electors. This report contains no
+individual-level data, and the public-space score contains no political variable of any
+kind and makes no inference from demographics to political preference.
+</div>
+
+<h2>1. Executive summary</h2>
+<div class="kpis">
+<div class="kpi"><div class="n">58,120</div><div class="l">Population 2021</div></div>
+<div class="kpi"><div class="n">49,248</div><div class="l">Adults 18+ (proxy)</div></div>
+<div class="kpi"><div class="n">41,130</div><div class="l">Citizens 18+</div></div>
+<div class="kpi"><div class="n">10,180</div><div class="l">Seniors 65+</div></div>
+<div class="kpi"><div class="n">27,293</div><div class="l">Occupied dwellings</div></div>
+<div class="kpi"><div class="n">4,930</div><div class="l">Persons / km²</div></div>
+<div class="kpi"><div class="n">79</div><div class="l">Dissemination areas</div></div>
+<div class="kpi"><div class="n">503</div><div class="l">Intersections scored</div></div>
+</div>
+
+<p>The City of North Vancouver houses 58,120 residents on 11.79 km² of land, giving
+an overall density of 4,930 persons per km² — among the highest in the province
+outside the City of Vancouver. It is overwhelmingly a multi-unit city:
+85.8%
+of occupied private dwellings are apartments, row houses or duplexes, and only
+10.6%
+are single-detached.</p>
+
+<p>Density is concentrated sharply along the Lonsdale Avenue spine. Lower Lonsdale and
+Central Lonsdale together hold
+61%
+of the city's population on a small fraction of its land, and the highest-density
+dissemination area reaches 25,960 persons per km².
+The same corridor dominates the public-space analysis: the twenty highest-scoring
+intersections are almost all on or adjacent to Lonsdale Avenue.</p>
+
+<p>A notable validation emerged from the electoral analysis. The 2021 Census counted
+41,130 Canadian citizens aged 18 and over in the city, while the City recorded
+41,325 registered electors for the 2022 general local election — a difference of
+0.5%. This is a useful consistency check on the
+citizenship-based proxy, though the two measures are not the same thing and are not
+presented as such.</p>
+
+<h2>2. Contents</h2>
+<ol class="toc">
+<li>Executive summary</li><li>Contents</li><li>Study area</li><li>Data sources</li>
+<li>Data acquisition</li><li>Data cleaning and validation</li><li>Census methodology</li>
+<li>Housing methodology</li><li>Electoral and polling methodology</li>
+<li>Transportation methodology</li><li>Traffic methodology</li><li>Transit methodology</li>
+<li>Parking methodology</li><li>Safety and visibility methodology</li><li>GIS methods</li>
+<li>Results</li><li>Ranked tables</li><li>Maps</li><li>Data limitations</li>
+<li>Privacy and ethics</li><li>Reproducibility</li>
+</ol>
+
+<h2>3. Study area</h2>
+<p>The study area is the <strong>City of North Vancouver</strong> (BC ABMS
+<code>LGL_ADMIN_AREA_ID = 114</code>; Statistics Canada <code>CSDUID 5915051</code>, type CY).
+It is deliberately distinguished from the District of North Vancouver
+(<code>5915046</code>, type DM), the North Vancouver electoral districts, Metro Vancouver
+and the informal "North Shore".</p>
+
+<div class="note">
+<strong>Legal boundary versus land area.</strong> The BC ABMS legal boundary encloses
+14.92 km² because it extends into Burrard Inlet. Statistics Canada reports the city's land
+area as 11.83 km², and the 79 constituent dissemination areas sum to 11.79 km².
+<strong>All densities in this report divide by land area</strong>, never the legal boundary
+area. Using the legal boundary would understate density by roughly 26%.
+</div>
+
+<h2>4. Data sources</h2>
+<p>72 sources were audited and downloaded. The complete inventory with endpoints,
+licences and SHA256 hashes is in <code>DATA_SOURCES.md</code> and
+<code>outputs/tables/data_inventory.csv</code>.</p>
+<div class='tw'><table><thead><tr><th>source_id</th><th>organization</th><th>dataset</th><th>format</th><th>status</th></tr></thead><tbody><tr><td>bc_cnv_boundary</td><td>Province of BC - GeoBC / BC Data Catalogue</td><td>Municipalities - Legally Defined Administrative Areas of BC (ABMS)</td><td>GeoJSON</td><td>cached</td></tr><tr><td>bc_northshore_municipalities</td><td>Province of BC - GeoBC</td><td>ABMS Municipalities - North Shore context</td><td>GeoJSON</td><td>cached</td></tr><tr><td>statcan_da_boundaries_2021</td><td>Statistics Canada</td><td>2021 Census - Dissemination Areas cartographic boundary file (92-169-X)</td><td>Shapefile (zip)</td><td>cached</td></tr><tr><td>statcan_db_boundaries_2021</td><td>Statistics Canada</td><td>2021 Census - Dissemination Blocks cartographic boundary file (92-163-X)</td><td>Shapefile (zip)</td><td>cached</td></tr><tr><td>statcan_csd_boundaries_2021</td><td>Statistics Canada</td><td>2021 Census - Census Subdivisions cartographic boundary file</td><td>Shapefile (zip)</td><td>cached</td></tr><tr><td>statcan_census_profile_bc_da</td><td>Statistics Canada</td><td>Census Profile, 2021 - British Columbia, dissemination areas (98-401-X2021006)</td><td>CSV (zip)</td><td>cached</td></tr><tr><td>statcan_census_profile_bc_csd</td><td>Statistics Canada</td><td>Census Profile, 2021 - British Columbia, census subdivisions (98-401-X2021006)</td><td>CSV (zip)</td><td>cached</td></tr><tr><td>cnv_neighbourhoods</td><td>City of North Vancouver</td><td>Neighbourhoods</td><td>GeoJSON</td><td>cached</td></tr><tr><td>cnv_named_areas</td><td>City of North Vancouver</td><td>Named Areas</td><td>GeoJSON</td><td>cached</td></tr><tr><td>cnv_street_centreline</td><td>City of North Vancouver</td><td>Street Centre Line</td><td>GeoJSON</td><td>cached</td></tr><tr><td>cnv_buildings</td><td>City of North Vancouver</td><td>Building footprints</td><td>GeoJSON</td><td>cached</td></tr><tr><td>cnv_legal_parcels</td><td>City of North Vancouver</td><td>Legal parcels</td><td>GeoJSON</td><td>cached</td></tr><tr><td>cnv_walkways</td><td>City of North Vancouver</td><td>Walkways</td><td>GeoJSON</td><td>cached</td></tr><tr><td>cnv_highrise_buildings</td><td>City of North Vancouver</td><td>High Rise Buildings (&gt;18 m)</td><td>GeoJSON</td><td>cached</td></tr><tr><td>cnv_affordable_housing</td><td>City of North Vancouver</td><td>Affordable Housing</td><td>GeoJSON</td><td>cached</td></tr><tr><td>cnv_population_by_parcel_2021</td><td>City of North Vancouver</td><td>2021 Population by Parcel (modelled)</td><td>GeoJSON</td><td>cached</td></tr><tr><td>cnv_zoning</td><td>City of North Vancouver</td><td>Zoning boundaries</td><td>GeoJSON</td><td>cached</td></tr><tr><td>cnv_ocp_landuse</td><td>City of North Vancouver</td><td>2014 OCP Land Use</td><td>GeoJSON</td><td>cached</td></tr><tr><td>cnv_dissemination_blocks</td><td>City of North Vancouver (Statistics Canada source data)</td><td>Dissemination Block population 2021/2016</td><td>GeoJSON</td><td>cached</td></tr><tr><td>cnv_db_population_2021</td><td>City of North Vancouver (Statistics Canada source data)</td><td>2021 Population by Dissemination Block</td><td>GeoJSON</td><td>cached</td></tr></tbody></table></div><p class='muted'>Showing 20 of 72 rows; the full table is in outputs/tables/.</p>
+
+<h3>Principal sources</h3>
+<ul>
+<li><strong>Statistics Canada</strong> — 2021 Census Profile 98-401-X2021006, British
+Columbia dissemination-area file (the BC-only comprehensive CSV, 293 MB, rather than the
+2.2 GB national file), plus the 2021 DA, DB and CSD cartographic boundary files.</li>
+<li><strong>City of North Vancouver</strong> — the public ArcGIS REST server at
+<code>gisext2.cnv.org</code>, whose <code>TransportMAP</code> service alone exposes 230
+layers covering roads, signals, parking, sidewalks, zoning and land use.</li>
+<li><strong>Province of BC</strong> — ABMS legal municipal boundaries via WFS; BC MoTI
+traffic count stations via the GeoServer WFS at <code>maps.th.gov.bc.ca/geoV05/ows</code>.</li>
+<li><strong>TransLink</strong> — GTFS static feed for transit stops, routes and frequency.</li>
+<li><strong>ICBC</strong> — Lower Mainland crash counts via the Tableau Public dashboard's
+own CSV export.</li>
+</ul>
+
+<h2>5. Data acquisition</h2>
+<p><code>scripts/01_download.py</code> reads <code>config/sources.yaml</code> and downloads
+every source into <code>data/raw/</code>. Raw files are never overwritten unless
+<code>--force</code> is given. Each download receives a SHA256 hash and a
+<code>.meta.json</code> sidecar recording the source URL, licence, retrieval timestamp and
+record count. Downloads are validated so that an HTML error page cannot masquerade as a ZIP
+or CSV.</p>
+<p>Two acquisition problems were encountered and resolved rather than worked around. The
+CNV road-classification layer contains eleven features the ArcGIS endpoint cannot
+serialise; the downloader bisects around them, retrieving 507 of 518 and recording the
+unreadable OBJECTIDs. Separately, the GEOweb download URL pattern initially assumed was
+wrong and was corrected against the page's own HTML before any run.</p>
+
+<h2>6. Data cleaning and validation</h2>
+<p><code>scripts/02_validate_sources.py</code> re-hashes every raw file, verifies container
+integrity and confirms that vector payloads parse and carry a CRS. All 72 sources
+validate. The automated QA suite in <code>tests/</code> then enforces CRS consistency,
+geometry validity, identifier uniqueness, population plausibility, spatial containment and
+the project's privacy and terminology constraints.</p>
+
+<div class="note">
+<strong>Validation that changed a result.</strong> The parking occupancy layer pairs an
+occupied-vehicle count with a published percentage for each surveyed period, but the field
+naming differs between weekday and weekend blocks. An initial pairing agreed with the
+City's published percentages for only 71–78% of segments. Investigation showed the pairing
+was in fact correct and the disagreement was one-vehicle rounding on very short segments,
+where <code>Supply</code> is a small integer estimate of a continuous capacity. With a
+tolerance of one vehicle on the segment's own supply, agreement is 99.8–100%. The City's
+published percentage is used as authoritative and the recomputed ratio is retained as a
+cross-check.
+</div>
+
+<h2>7. Census methodology</h2>
+<p>The BC dissemination-area Census Profile is a 3.6 GB long-format CSV. Rather than parse
+it in full, the pipeline uses Statistics Canada's own line-number index to seek directly to
+the 79 CNV dissemination areas, extracting them in about ten seconds. Every extracted row is
+verified against <code>ALT_GEO_CODE</code> to prove the index alignment is correct — an
+off-by-one at the block boundary was caught this way.</p>
+<p>DA membership in the city is determined by representative-point containment within the
+CNV census subdivision polygon, because the cartographic DA file carries no CSDUID. The
+result reconciles exactly with the published CSD totals: population 58,120 against
+58,120 published, and occupied private dwellings 27,293 against 27,293 published.</p>
+
+<h3>The 18+ proxy</h3>
+<p>The Census publishes ages 15–19 as a single band, so the 18–19 portion is apportioned as
+two-fifths of that band under a uniform-age assumption:</p>
+<p><code>adult_population_18plus_proxy = population_2021 − age_0_14 − (3/5 × age_15_19)</code></p>
+<p>A second and closer measure, <code>canadian_citizens_18plus</code>, is taken directly from
+the Census citizenship table. Because BC municipal elections require Canadian citizenship,
+this is materially closer to elector eligibility, and it lands within
+0.5% of the official registered-elector count. Neither
+field is ever labelled "eligible voters"; an automated test fails the build if that term
+appears as a column anywhere in the outputs.</p>
+
+<h2>8. Housing methodology</h2>
+<p>Dwelling structure type comes from the Census at DA level and is complete. Building-level
+attributes are not: the City's 11,833 footprints carry only status and name, and only the
+separate high-rise layer publishes height, unit counts and year built. Coverage is therefore
+0.9% for height, 0.7% for unit counts and 0.9% for year built. Buildings are classified from
+published evidence only, with the evidence recorded in
+<code>classification_basis</code>; 98.6% are honestly labelled <code>UNKNOWN</code>, which
+means the City publishes nothing about them, not that they are non-residential.</p>
+<p>Condominium tenure is recorded <em>only</em> where the City's own <code>Occupancy</code>
+attribute contains <code>STRATA</code>. It is never inferred from building form or height.</p>
+
+<h2>9. Electoral and polling methodology</h2>
+<p>All electoral figures are aggregate and officially published. CNV runs
+<strong>"any voting place" elections</strong>: an elector may vote at any location in the
+city. There are therefore no polling-division catchments, and no polling-division boundary
+dataset exists in any format — a structural absence rather than a data gap that could be
+filled.</p>
+<div class='tw'><table><thead><tr><th>year</th><th>registered_voters</th><th>turnout_pct</th></tr></thead><tbody><tr><td>2022</td><td>41325.0</td><td>22.64</td></tr><tr><td>2018</td><td>38163.0</td><td>34.0</td></tr><tr><td>2014</td><td>34127.0</td><td>30.0</td></tr><tr><td>2011</td><td>33415.0</td><td>21.2</td></tr><tr><td>2008</td><td>31352.0</td><td>17.67</td></tr><tr><td>2005</td><td>30327.0</td><td>22.37</td></tr><tr><td>2002</td><td>24983.0</td><td>26.13</td></tr><tr><td>1999</td><td>23193.0</td><td>25.99</td></tr><tr><td>1996</td><td></td><td>18.79</td></tr><tr><td>1993</td><td></td><td>18.89</td></tr></tbody></table></div>
+<p>Votes by voting place are published for 2022 and are included, but because electors may
+vote anywhere, <strong>votes cast at a place cannot be attributed to residents near that
+place</strong>. Resident counts within 400/800/1600 m of each voting place are provided as
+context only.</p>
+<div class='tw'><table><thead><tr><th>rank</th><th>place_name</th><th>address</th><th>place_type</th><th>mayoral_votes_2022</th></tr></thead><tbody><tr><td>1</td><td>Ridgeway Elementary School</td><td>420 East 8th St</td><td>General</td><td>1117.0</td></tr><tr><td>2</td><td>Queen Mary Elementary School</td><td>230 West Keith Rd</td><td>General</td><td>1021.0</td></tr><tr><td>3</td><td>The Pipe Shop</td><td>115 Victory Ship Way</td><td>General</td><td>946.0</td></tr><tr><td>4</td><td>North Shore Neighbourhood House</td><td>225 East 2nd St</td><td>General</td><td>742.0</td></tr><tr><td>5</td><td>Sutherland Secondary School</td><td>1860 Sutherland Ave</td><td>General</td><td>725.0</td></tr><tr><td>6</td><td>Carson Graham Secondary School</td><td>2145 Jones Ave</td><td>General</td><td>703.0</td></tr><tr><td>7</td><td>Memorial Recreation Centre</td><td>125 East 23rd St</td><td>General</td><td>594.0</td></tr><tr><td>8</td><td>Westview Elementary School</td><td>641 West 17th St</td><td>General</td><td>479.0</td></tr><tr><td>9</td><td>Larson Elementary School</td><td>2605 Larson Rd</td><td>General</td><td>376.0</td></tr><tr><td>10</td><td>North Vancouver City Hall (Conference Room A)</td><td>141 West 14th St</td><td>Advance</td><td></td></tr></tbody></table></div>
+
+<h2>10–14. Transportation, traffic, transit, parking, safety</h2>
+<p>The road network comprises 941 centreline segments totalling
+139 km. Intersections are derived by clustering centreline
+endpoints at a 5 m tolerance; a node qualifies when it joins two or more distinct street
+names or three or more segment ends. This yields 503 intersections, of which 91%
+lie within 25 m of an intersection in the independently published District of North
+Vancouver GEOweb intersection layer — a strong external validation.</p>
+<p><strong>Traffic.</strong> No AADT is published for any CNV municipal street. The BC
+Traffic Data Program covers provincial highways only, and its ten in-city stations are all
+on Highway 1 with counts no more recent than 2016. The City publishes directional volumes
+for just 38 of 941 segments. Only 40 of 503 intersections have a measured volume
+within the 150 m association distance, so <code>traffic_score</code> is primarily a
+road-hierarchy measure and is labelled as such.</p>
+<p><strong>Signals.</strong> The signal layer is a pole/asset inventory of 569 assets, not a
+list of intersections. Clustering at 40 m yields 133 signalised locations, of which 79 have
+at least one Full Signal and 54 are pedestrian-signal or special-crosswalk only. No cycle
+length or phase timing is published anywhere; the City releases it on request. Every
+signalised location carries <code>signal_timing_status = REQUEST_REQUIRED</code> and
+<strong>no timing value is estimated</strong>.</p>
+<p><strong>Transit.</strong> 172
+TransLink stops lie inside the city, carrying
+15,961
+scheduled departures on a representative weekday across 15 routes.</p>
+<p><strong>Parking.</strong> 1,169 on-street segments were surveyed across eight time
+periods, with a total supply of 8,498 spaces.
+502 segments (43%)
+reach 85% occupancy or more at some point. This is <strong>survey data collected by Bunt &amp;
+Associates in December 2022 and January–February 2023</strong>, not a real-time feed.</p>
+<p><strong>Safety.</strong> ICBC publishes crash counts against location name strings with no
+coordinates, and its "NORTH VANCOUVER" value covers both the City and the District.
+Attribution required at least two named CNV streets forming a pair present in the CNV
+intersection layer, matching 288 intersections and 5,296 crashes. Intersections without a
+match are recorded as <strong>unknown, not zero</strong>, and receive no safety score.</p>
+
+<h2>15. GIS methods</h2>
+<p>All analysis is performed in EPSG:26910 (NAD83 / UTM zone 10N), the CNV server's native
+projected CRS, so areas and distances are metric throughout. EPSG:4326 is used only for web
+export; no area or distance is ever computed in degrees. Population within intersection
+buffers is areally interpolated from dissemination areas, which assumes uniform distribution
+within each DA — recorded on the output layer as an estimate, not a count.</p>
+
+<h2>16. Results — the public-space score</h2>
+<p>The score is a neutral measure of how visible, accessible and feasible each intersection
+is as a public space. Seven components are computed as 0–100 percentile ranks and kept
+separate; the composite is their unweighted mean. Missing inputs stay missing rather than
+scoring as zero.</p>
+<div class='tw'><table><thead><tr><th>composite_rank</th><th>street_names</th><th>neighbourhood</th><th>public_space_composite</th><th>traffic_score</th><th>transit_score</th><th>pedestrian_proxy_score</th><th>parking_access_score</th><th>safety_score</th></tr></thead><tbody><tr><td>1.0</td><td>E KEITH RD / LONSDALE AVE / W KEITH RD</td><td>Lower Lonsdale</td><td>79.08</td><td>87.48</td><td>68.35</td><td>83.4</td><td>68.58</td><td></td></tr><tr><td>2.0</td><td>E 15TH ST / LONSDALE AVE / W 15TH ST</td><td>Central Lonsdale</td><td>77.4</td><td>87.48</td><td>95.32</td><td>94.55</td><td>88.23</td><td>2.08</td></tr><tr><td>3.0</td><td>E 12TH ST / LONSDALE AVE / W 12TH ST</td><td>Central Lonsdale</td><td>76.73</td><td>87.48</td><td>84.35</td><td>92.12</td><td>81.9</td><td>19.97</td></tr><tr><td>4.0</td><td>E 11TH ST / LONSDALE AVE / W 8TH ST</td><td>Lower Lonsdale</td><td>75.99</td><td>87.48</td><td>80.92</td><td>87.9</td><td>80.86</td><td>27.26</td></tr><tr><td>5.0</td><td>E 4TH ST / LONSDALE AVE / W 4TH ST</td><td>Lower Lonsdale</td><td>75.91</td><td>87.48</td><td>94.74</td><td>90.86</td><td>70.38</td><td>17.19</td></tr><tr><td>6.0</td><td>E 3RD ST / LONSDALE AVE / W 3RD ST</td><td>Lower Lonsdale</td><td>75.85</td><td>87.48</td><td>97.57</td><td>95.88</td><td>74.61</td><td>2.43</td></tr><tr><td>7.0</td><td>E 13TH ST / LONSDALE AVE / W 13TH ST</td><td>Central Lonsdale</td><td>75.7</td><td>87.48</td><td>88.15</td><td>90.72</td><td>87.17</td><td>3.12</td></tr><tr><td>8.0</td><td>CHESTERFIELD AVE / W ESPLANADE</td><td>Lower Lonsdale</td><td>74.7</td><td>87.48</td><td>97.29</td><td>91.65</td><td>66.02</td><td>16.15</td></tr><tr><td>9.0</td><td>E 17TH ST / LONSDALE AVE / W 17TH ST</td><td>Central Lonsdale</td><td>74.06</td><td>87.48</td><td>91.76</td><td>89.35</td><td>74.13</td><td>3.99</td></tr><tr><td>10.0</td><td>E ESPLANADE / LONSDALE AVE / W ESPLANADE</td><td>Lower Lonsdale</td><td>73.73</td><td>87.48</td><td>97.6</td><td>86.79</td><td>59.25</td><td>9.9</td></tr><tr><td>11.0</td><td>E 5TH ST / LONSDALE AVE / W 5TH ST</td><td>Lower Lonsdale</td><td>73.29</td><td>87.48</td><td>86.08</td><td>84.44</td><td>70.28</td><td>27.95</td></tr><tr><td>12.0</td><td>E UPPER LEVELS HWY / LONSDALE AVE / UPPER LEVELS RAMP</td><td>Central Lonsdale</td><td>73.18</td><td>87.48</td><td>65.83</td><td>70.87</td><td>72.72</td><td></td></tr><tr><td>13.0</td><td>E 6TH ST / LONSDALE AVE / W 6TH ST</td><td>Lower Lonsdale</td><td>72.62</td><td>87.48</td><td>85.67</td><td>84.15</td><td>67.13</td><td>31.94</td></tr><tr><td>14.0</td><td>CHESTERFIELD AVE / W 13TH ST</td><td>Central Lonsdale</td><td>72.57</td><td>87.48</td><td>76.06</td><td>86.48</td><td>89.06</td><td>9.03</td></tr><tr><td>15.0</td><td>E 2ND ST / LONSDALE AVE / W 2ND ST</td><td>Lower Lonsdale</td><td>72.5</td><td>87.48</td><td>95.09</td><td>95.69</td><td>69.96</td><td>12.67</td></tr><tr><td>16.0</td><td>E 21ST ST / LONSDALE AVE / W 21ST ST</td><td>Central Lonsdale</td><td>72.28</td><td>87.48</td><td>87.18</td><td>83.16</td><td>73.51</td><td>3.47</td></tr><tr><td>17.0</td><td>ROGERS AVE / W ESPLANADE</td><td>Lower Lonsdale</td><td>72.06</td><td>87.48</td><td>99.95</td><td>87.06</td><td>60.62</td><td>38.89</td></tr><tr><td>18.0</td><td>MAHON AVE / W 13TH ST</td><td>Central Lonsdale</td><td>71.51</td><td>87.48</td><td>69.14</td><td>71.67</td><td>83.59</td><td></td></tr><tr><td>19.0</td><td>CARRIE CATES CRT / ROGERS AVE</td><td>Lower Lonsdale</td><td>71.41</td><td>68.69</td><td>98.65</td><td>81.04</td><td>59.43</td><td>88.89</td></tr><tr><td>20.0</td><td>E 18TH ST / LONSDALE AVE / W 18TH ST</td><td>Central Lonsdale</td><td>71.36</td><td>87.48</td><td>77.27</td><td>83.9</td><td>70.61</td><td>9.9</td></tr></tbody></table></div>
+
+<h3>Neighbourhood profile</h3>
+<div class='tw'><table><thead><tr><th>neighbourhood</th><th>population_2021</th><th>adult_population_18plus_proxy</th><th>senior_population_65plus</th><th>population_density</th><th>housing_density</th><th>apartment_share</th></tr></thead><tbody><tr><td>Lower Lonsdale</td><td>18645.27198000501</td><td>16644.64857039797</td><td>3452.647005808763</td><td>11134.055645176744</td><td>6167.757465700017</td><td>0.9000007761848646</td></tr><tr><td>Central Lonsdale</td><td>16874.355506881784</td><td>14529.138504466888</td><td>3535.5510125563046</td><td>9190.549185001091</td><td>4604.385969047362</td><td>0.7752526248606441</td></tr><tr><td>Marine-Hamilton</td><td>4883.414532734198</td><td>3956.3190292447916</td><td>498.2196057902664</td><td>3038.8673340295463</td><td>1178.9359392174574</td><td>0.5828295751696067</td></tr><tr><td>Grand Boulevard</td><td>4847.724172464689</td><td>3806.6212416248954</td><td>831.1799783814354</td><td>2504.5744929832226</td><td>901.1069582782443</td><td>0.03669720459752934</td></tr><tr><td>Moodyville</td><td>3851.253854082882</td><td>3144.6056938881243</td><td>455.4220152381837</td><td>1741.5777616962748</td><td>693.8577615777274</td><td>0.2806236391669029</td></tr><tr><td>Mahon</td><td>3460.6039146501353</td><td>2778.939596312635</td><td>548.0377293950772</td><td>2869.760908857728</td><td>1074.7515643273555</td><td>0.21600786021160687</td></tr><tr><td>Westview</td><td>2373.6226626076004</td><td>1913.1976261239786</td><td>393.02233623731547</td><td>4766.674754919666</td><td>1886.96295259834</td><td>0.3759617658170759</td></tr><tr><td>Tempe</td><td>2217.239483250821</td><td>1775.8500114852473</td><td>392.6986491062646</td><td>3892.140967031434</td><td>1367.752274716444</td><td>0.10480396145762197</td></tr><tr><td>Cedar Village</td><td>813.495209159576</td><td>580.1770828116385</td><td>64.23664547294428</td><td>3886.069710435286</td><td>1293.6558215647572</td><td>0.0</td></tr><tr><td>Squamish Nation (Mission IR 1)</td><td>31.322341189664794</td><td>27.214878909113313</td><td>4.445835424340617</td><td>5757.3184120928645</td><td>2846.200185921511</td><td>0.8863693084124218</td></tr></tbody></table></div>
+
+<h2>17. Ranked tables</h2>
+<p>Every ranking table carries rank, feature identifier, metric, value, source and a
+methodology note. All are in <code>outputs/tables/</code> and are downloadable from the
+interactive map.</p>
+
+<h2>18. Maps</h2>
+<figure><img src='../maps/map_01_population_density.png' alt='map_01_population_density'><figcaption>map 01 population density</figcaption></figure><figure><img src='../maps/map_02_adult_population_proxy.png' alt='map_02_adult_population_proxy'><figcaption>map 02 adult population proxy</figcaption></figure><figure><img src='../maps/map_03_age_distribution.png' alt='map_03_age_distribution'><figcaption>map 03 age distribution</figcaption></figure><figure><img src='../maps/map_04_housing_structure.png' alt='map_04_housing_structure'><figcaption>map 04 housing structure</figcaption></figure><figure><img src='../maps/map_04b_highrise_share.png' alt='map_04b_highrise_share'><figcaption>map 04b highrise share</figcaption></figure><figure><img src='../maps/map_05_building_density.png' alt='map_05_building_density'><figcaption>map 05 building density</figcaption></figure><figure><img src='../maps/map_06_seniors_residences.png' alt='map_06_seniors_residences'><figcaption>map 06 seniors residences</figcaption></figure><figure><img src='../maps/map_07_voting_locations.png' alt='map_07_voting_locations'><figcaption>map 07 voting locations</figcaption></figure><figure><img src='../maps/map_08_roads.png' alt='map_08_roads'><figcaption>map 08 roads</figcaption></figure><figure><img src='../maps/map_09_traffic.png' alt='map_09_traffic'><figcaption>map 09 traffic</figcaption></figure><figure><img src='../maps/map_10_transit.png' alt='map_10_transit'><figcaption>map 10 transit</figcaption></figure><figure><img src='../maps/map_11_parking.png' alt='map_11_parking'><figcaption>map 11 parking</figcaption></figure><figure><img src='../maps/map_12_safety.png' alt='map_12_safety'><figcaption>map 12 safety</figcaption></figure><figure><img src='../maps/map_13_combined.png' alt='map_13_combined'><figcaption>map 13 combined</figcaption></figure>
+
+<h2>19. Data limitations</h2>
+<p>Thirteen gaps are documented in full in <code>DATA_GAPS.md</code>. The three that most
+constrain interpretation are the absence of municipal traffic counts, the absence of any
+published signal timing, and the absence of pedestrian counts.</p>
+<div class="tw"><table><thead><tr><th>#</th><th>Dataset</th><th>Severity</th>
+<th>Proxy used</th><th>Coverage achieved</th></tr></thead><tbody><tr><td>1</td><td>Traffic volumes on CNV municipal streets</td><td><span class='sev sev-high'>High</span></td><td>Road classification (70%) plus sparse published volumes (30%)</td><td>40 of 503 intersections have a measured volume</td></tr><tr><td>2</td><td>Traffic signal cycle and phase timing</td><td><span class='sev sev-high'>High</span></td><td>None - no timing estimated</td><td>0% (signal_timing_status=REQUEST_REQUIRED)</td></tr><tr><td>3</td><td>Pedestrian counts at intersections</td><td><span class='sev sev-high'>High</span></td><td>Documented composite pedestrian_proxy_score</td><td>0% measured</td></tr><tr><td>4</td><td>Polling / voting division boundaries</td><td><span class='sev sev-structural'>Structural</span></td><td>Voting-place points plus 400/800/1600 m context buffers</td><td></td></tr><tr><td>5</td><td>Ballots cast per voting place 2022</td><td><span class='sev sev-medium'>Medium</span></td><td>Mayoral votes per place as a lower bound</td><td>9 of 9 general voting places</td></tr><tr><td>6</td><td>Eligible electors by small geography</td><td><span class='sev sev-medium'>Medium</span></td><td>adult_population_18plus_proxy and canadian_citizens_18plus</td><td>City-wide</td></tr><tr><td>7</td><td>Real-time parking availability</td><td><span class='sev sev-low'>Low</span></td><td>The survey itself with survey_period recorded</td><td>1169 segments</td></tr><tr><td>8</td><td>Building height unit counts and year built</td><td><span class='sev sev-high'>High</span></td><td>Census dwelling structure type at DA level</td><td>height 109/11833 (0.9%); units 88 (0.7%); year 109 (0.9%)</td></tr><tr><td>9</td><td>Condominium / strata tenure</td><td><span class='sev sev-medium'>Medium</span></td><td>City STRATA attribute only - never inferred from form</td><td>High-rise layer only</td></tr><tr><td>10</td><td>Licensed seniors care facilities in CNV</td><td><span class='sev sev-high'>High</span></td><td>11 seniors-eligible affordable-housing sites from City 55+ eligibility</td><td>11 sites</td></tr><tr><td>11</td><td>ICBC collision geography</td><td><span class='sev sev-medium'>Medium</span></td><td>Conservative street-pair name matching against the CNV intersection layer</td><td>288 of 503 intersections (57%); 5296 crashes</td></tr><tr><td>12</td><td>Municipal land area vs legal boundary</td><td><span class='sev sev-resolved'>Resolved</span></td><td>StatCan land area used for all densities</td><td>100%</td></tr><tr><td>13</td><td>Road classification polygons</td><td><span class='sev sev-low'>Low</span></td><td>Centreline ROADCLASS which is complete</td><td>507 of 518</td></tr></tbody></table></div>
+
+<h2>20. Privacy and ethical considerations</h2>
+<ul>
+<li>No individual-level data of any kind is collected, derived or stored. The smallest
+geography used is the dissemination area or block.</li>
+<li>No voter identity, address, contact detail or political preference is collected. Only
+aggregate published election results are used.</li>
+<li>Population aged 18+ is a demographic proxy and is never described as eligible or
+registered electors. The field name <code>adult_population_18plus_proxy</code> is enforced
+by an automated test, as is the absence of the term "eligible voters" from all outputs.</li>
+<li>The public-space score contains no political variable — no party, candidate or voting
+history — and makes no inference from demographics to political preference. A test asserts
+that no such field exists.</li>
+<li>Because CNV electors may vote at any location, votes at a voting place are never
+attributed to the residents living near it.</li>
+<li>No dataset was obtained by bypassing authentication, CAPTCHAs, rate limits or robots
+restrictions. Where a source was unavailable by those means (CivicInfo BC's bot challenge,
+VCH's directory) it was recorded as unavailable rather than circumvented.</li>
+</ul>
+
+<h2>21. Reproducibility</h2>
+<p>The full pipeline runs with <code>python run_pipeline.py --all</code>, or stage by stage
+from <code>scripts/01_download.py</code> through <code>scripts/20_generate_report.py</code>.
+Raw downloads are cached and hash-verified, so re-runs are deterministic given stable
+upstream sources. Run <code>python -m pytest</code> before regenerating this report.</p>
+
+<p class="muted" style="margin-top:44px;border-top:1px solid var(--line);padding-top:16px">
+Contains information licensed under the Statistics Canada Open Licence, the Open Government
+Licence – British Columbia, the Open Data Licence for ICBC Information, City of North
+Vancouver open data terms and TransLink's GTFS terms of use. See
+<code>LICENSES_AND_ATTRIBUTION.md</code>.</p>
+
+</div></body></html>

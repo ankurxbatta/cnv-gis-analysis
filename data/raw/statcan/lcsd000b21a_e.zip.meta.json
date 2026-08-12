@@ -1,0 +1,20 @@
+{
+  "source_id": "statcan_csd_boundaries_2021",
+  "organization": "Statistics Canada",
+  "dataset": "2021 Census - Census Subdivisions cartographic boundary file",
+  "source_url": "https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm",
+  "download_url": "https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/files-fichiers/lcsd000b21a_e.zip",
+  "handler": "http_file",
+  "format": "Shapefile (zip)",
+  "geographic_level": "census_subdivision",
+  "coverage": "Canada",
+  "version": null,
+  "license": "Statistics Canada Open Licence",
+  "download_date": "2026-08-12T07:11:34+00:00",
+  "sha256": "f98d955bff9a8151d002bb07c5fc50775b624d4f2f4052dbe05fe54d58f3bbe8",
+  "notes": "Used to confirm the CNV CSD (CSDUID 5915051) and validate DA membership.",
+  "http_content_type": "application/x-zip-compressed",
+  "http_content_disposition": null,
+  "bytes": 155981521,
+  "validation": "ok"
+}

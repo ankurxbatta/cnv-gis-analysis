@@ -1,0 +1,20 @@
+{
+  "source_id": "geoweb_streets",
+  "organization": "District of North Vancouver - GEOweb",
+  "dataset": "Street Centrelines (District and City of North Vancouver)",
+  "source_url": "https://geoweb.dnv.org/data/",
+  "download_url": "https://geoweb.dnv.org/Products/Data/SHP/TrnStreets_shp.zip",
+  "handler": "http_file",
+  "format": "Shapefile (zip)",
+  "geographic_level": "street_segment",
+  "coverage": "District AND City of North Vancouver (per dataset description)",
+  "version": null,
+  "license": null,
+  "download_date": "2026-08-12T07:14:56+00:00",
+  "sha256": "a9a8ca427c3ba72dec3b8c5caf3f70f1c0682f7b00c3c08abb42d4d86092ad1e",
+  "notes": "Explicitly covers both municipalities. Must still be clipped to the CNV boundary.",
+  "http_content_type": "application/x-zip-compressed",
+  "http_content_disposition": null,
+  "bytes": 1938228,
+  "validation": "ok"
+}

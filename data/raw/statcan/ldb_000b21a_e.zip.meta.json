@@ -1,0 +1,20 @@
+{
+  "source_id": "statcan_db_boundaries_2021",
+  "organization": "Statistics Canada",
+  "dataset": "2021 Census - Dissemination Blocks cartographic boundary file (92-163-X)",
+  "source_url": "https://www150.statcan.gc.ca/n1/en/catalogue/92-163-X2021001",
+  "download_url": "https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/files-fichiers/ldb_000b21a_e.zip",
+  "handler": "http_file",
+  "format": "Shapefile (zip)",
+  "geographic_level": "dissemination_block",
+  "coverage": "Canada",
+  "version": null,
+  "license": "Statistics Canada Open Licence",
+  "download_date": "2026-08-12T07:10:34+00:00",
+  "sha256": "1ed137476d6c071472177e4c47e9a45020a28b3f580d6c60dabd2341b083f14c",
+  "notes": "Finer geography for population/dwelling counts only (DB profiles are suppressed for most variables).",
+  "http_content_type": "application/x-zip-compressed",
+  "http_content_disposition": null,
+  "bytes": 317391964,
+  "validation": "ok"
+}

@@ -1,0 +1,1931 @@
+icbc_location,crash_count,reason
+DOLLARTON HWY & DOLLARTON HWY OFFRAMP & DOLLARTON HWY ONRAMP & IRONWORKERS MEMORIAL BRIDGE & MAIN ST & MAIN ST OFFRAMP & MAIN ST ONRAMP & PHIBBS EXCHANGE & TRANS-CANADA HWY & EMERGENCY LANE & HIGHWAY RAMP & TURNING LANE,1043,fewer than 2 of the named streets are CNV streets
+MOSQUITO CREEK BRIDGE & TRANS-CANADA HWY & WESTVIEW DR & WESTVIEW DR OFFRAMP & WESTVIEW DR ONRAMP & TURNING LANE,618,fewer than 2 of the named streets are CNV streets
+BOWSER AVE & CAPILANO RD & CAPILANO RD OFFRAMP & CAPILANO RD ONRAMP & KEITH RD & TRANS-CANADA HWY & TURNING LANE,586,fewer than 2 of the named streets are CNV streets
+CAPILANO RD & MARINE DR & MATHIAS RD & TURNING LANE,477,fewer than 2 of the named streets are CNV streets
+MOUNTAIN HWY & MOUNTAIN HWY OFFRAMP & MOUNTAIN HWY ONRAMP & TRANS-CANADA HWY & TRANS-CANADA HWY ONRAMP & TURNING LANE,419,fewer than 2 of the named streets are CNV streets
+MAIN ST & MOUNTAIN HWY,242,fewer than 2 of the named streets are CNV streets
+MARINE DR & PEMBERTON AVE,146,fewer than 2 of the named streets are CNV streets
+MT SEYMOUR PKY & RIVERSIDE DR & TURNING LANE,139,fewer than 2 of the named streets are CNV streets
+E KEITH RD & LILLOOET RD & LILLOOET RD OFFRAMP & MT SEYMOUR PKY & TURNING LANE,121,fewer than 2 of the named streets are CNV streets
+HARBOUR AVE & MAIN ST,101,fewer than 2 of the named streets are CNV streets
+LYNN AVE & MAIN ST,100,fewer than 2 of the named streets are CNV streets
+LYNN VALLEY RD & MOUNTAIN HWY & TURNING LANE & UNNAMED LANE,97,fewer than 2 of the named streets are CNV streets
+MT SEYMOUR PKY & SEYMOUR BLVD & TURNING LANE,95,fewer than 2 of the named streets are CNV streets
+IRONWORKERS MEMORIAL BRIDGE,91,fewer than 2 street names parsed (mid-block record)
+GARDEN AVE & MARINE DR,84,fewer than 2 of the named streets are CNV streets
+MARINE DR & PHILIP AVE,70,fewer than 2 of the named streets are CNV streets
+BRIDGMAN AVE & MARINE DR,65,fewer than 2 of the named streets are CNV streets
+DOLLARTON HWY & RIVERSIDE DR,65,fewer than 2 of the named streets are CNV streets
+LYNN VALLEY RD & WILLIAM AVE,65,CNV street names but no matching CNV intersection
+BERKLEY RD & MT SEYMOUR PKY & TURNING LANE,62,fewer than 2 of the named streets are CNV streets
+DELBROOK AVE & W QUEENS RD & WESTVIEW DR,61,fewer than 2 of the named streets are CNV streets
+LLOYD AVE & MARINE DR,59,fewer than 2 of the named streets are CNV streets
+MARINE DR & TATLOW AVE,55,fewer than 2 of the named streets are CNV streets
+AMHERST AVE & DOLLARTON HWY & OLD DOLLARTON RD,52,fewer than 2 of the named streets are CNV streets
+ARBORLYNN DR & MOUNTAIN HWY,51,fewer than 2 of the named streets are CNV streets
+LYTTON ST & MT SEYMOUR PKY,50,fewer than 2 of the named streets are CNV streets
+E 29TH ST & LONSDALE AVE & W 29TH ST,49,CNV street names but no matching CNV intersection
+LONSDALE AVE & W QUEENS RD & UNNAMED LANE,46,fewer than 2 of the named streets are CNV streets
+CAPILANO RD & CURLING RD,45,fewer than 2 of the named streets are CNV streets
+CAPILANO RD & FULLERTON AVE,42,fewer than 2 of the named streets are CNV streets
+E 20TH ST & KIRKSTONE RD & MOUNTAIN HWY,42,fewer than 2 of the named streets are CNV streets
+MT SEYMOUR PKY & MT SEYMOUR RD & ROCHE POINT DR,40,fewer than 2 of the named streets are CNV streets
+PEMBERTON AVE & WELCH ST,40,fewer than 2 of the named streets are CNV streets
+CAPILANO CRES & CAPILANO RD & RIDGEWOOD DR,37,fewer than 2 of the named streets are CNV streets
+E 27TH ST & FROMME RD & LYNN VALLEY RD,36,CNV street names but no matching CNV intersection
+E 29TH ST & LYNN VALLEY RD & VALLEY CENTRE AVE,33,fewer than 2 of the named streets are CNV streets
+BOWSER AVE & MARINE DR,32,fewer than 2 of the named streets are CNV streets
+MACGOWAN AVE & MARINE DR,32,fewer than 2 of the named streets are CNV streets
+PEMBERTON AVE & W 1ST ST,32,fewer than 2 of the named streets are CNV streets
+LILLOOET RD & PURCELL WAY,30,fewer than 2 of the named streets are CNV streets
+E KEITH RD & HENDRY AVE,29,CNV street names but no matching CNV intersection
+EDGEMONT BLVD & HIGHLAND BLVD,29,fewer than 2 of the named streets are CNV streets
+E KEITH RD & LYNNMOUTH AVE,28,fewer than 2 of the named streets are CNV streets
+LILLOOET RD & OLD LILLOOET RD & TURNING LANE,28,fewer than 2 of the named streets are CNV streets
+APEX AVE & MT SEYMOUR PKY,27,fewer than 2 of the named streets are CNV streets
+CAPILANO RD & GARDEN AVE,27,fewer than 2 of the named streets are CNV streets
+MARINE DR & MCGUIRE AVE,26,fewer than 2 of the named streets are CNV streets
+CAPILANO RD & EDGEMONT BLVD,24,fewer than 2 of the named streets are CNV streets
+DOLLARTON HWY & RAVEN WOODS DR,24,fewer than 2 of the named streets are CNV streets
+E KEITH RD & GRAND BLVD E,24,fewer than 2 of the named streets are CNV streets
+DEEP COVE RD & MT SEYMOUR PKY & N DOLLARTON HWY,23,fewer than 2 of the named streets are CNV streets
+KIRKSTONE RD & LYNN VALLEY RD,23,fewer than 2 of the named streets are CNV streets
+VICTORY SHIP WAY # 000112 TO 000155,22,fewer than 2 street names parsed (mid-block record)
+E 29TH ST & FROMME RD,21,fewer than 2 of the named streets are CNV streets
+MARINE DR # 001960 TO 001998 even,21,fewer than 2 street names parsed (mid-block record)
+PHILIP AVE & W 1ST ST & ACCESS ROAD,21,fewer than 2 of the named streets are CNV streets
+BARROW ST & MOUNTAIN HWY,20,fewer than 2 of the named streets are CNV streets
+EMERSON WAY & MT SEYMOUR PKY,20,fewer than 2 of the named streets are CNV streets
+LYNN VALLEY RD & MORGAN RD,20,fewer than 2 of the named streets are CNV streets
+MT SEYMOUR PKY & PARKGATE AVE,20,fewer than 2 of the named streets are CNV streets
+CAPILANO RD & W 21ST ST,19,fewer than 2 of the named streets are CNV streets
+CROWN ST & MOUNTAIN HWY,19,fewer than 2 of the named streets are CNV streets
+CAPILANO RD & ELDON RD,18,fewer than 2 of the named streets are CNV streets
+EDGEMONT BLVD # 003100 TO 003150,18,fewer than 2 street names parsed (mid-block record)
+PEMBERTON AVE & W 15TH ST,18,fewer than 2 of the named streets are CNV streets
+CAPILANO RD & PAISLEY RD,17,fewer than 2 of the named streets are CNV streets
+E 13TH ST & GRAND BLVD E,17,fewer than 2 of the named streets are CNV streets
+E 27TH ST & MOUNTAIN HWY,17,fewer than 2 of the named streets are CNV streets
+E KEITH RD & LILLOOET RD OFFRAMP & MOUNTAIN HWY ONRAMP & TRANS-CANADA HWY & TRANS-CANADA HWY ONRAMP,17,fewer than 2 of the named streets are CNV streets
+EDGEMONT BLVD & RIDGEWOOD DR,17,fewer than 2 of the named streets are CNV streets
+EDGEMONT BLVD & W QUEENS RD,17,fewer than 2 of the named streets are CNV streets
+MOUNTAIN HWY & ROSS RD,17,fewer than 2 of the named streets are CNV streets
+DEMPSEY RD & MOUNTAIN HWY,16,fewer than 2 of the named streets are CNV streets
+E 17TH ST & GRAND BLVD E,16,fewer than 2 of the named streets are CNV streets
+BROADVIEW DR & MT SEYMOUR PKY,15,fewer than 2 of the named streets are CNV streets
+CAPILANO RD & WOODS DR & UNNAMED LANE,15,fewer than 2 of the named streets are CNV streets
+E 24TH ST & EMERY PL & MOUNTAIN HWY,15,fewer than 2 of the named streets are CNV streets
+E WINDSOR RD & LONSDALE AVE & W WINDSOR RD & ACCESS ROAD,15,fewer than 2 of the named streets are CNV streets
+GALLANT AVE & PANORAMA DR,15,fewer than 2 of the named streets are CNV streets
+LLOYD AVE & W 1ST ST,15,fewer than 2 of the named streets are CNV streets
+MARINE DR # 001300 TO 001399,15,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY & ELLIS ST,14,fewer than 2 of the named streets are CNV streets
+DOLLARTON HWY & FORESTER ST & TURNING LANE,14,fewer than 2 of the named streets are CNV streets
+E 13TH ST # 000100 TO 000199,14,fewer than 2 street names parsed (mid-block record)
+E OSBORNE RD & LONSDALE AVE & SANDRINGHAM CRES & W OSBORNE RD,14,fewer than 2 of the named streets are CNV streets
+FREDERICK RD & MOUNTAIN HWY,14,fewer than 2 of the named streets are CNV streets
+MARINE DR # 000901 TO 000969 odd,14,fewer than 2 street names parsed (mid-block record)
+MCCARTNEY LANE & MT SEYMOUR PKY & TOLLCROSS RD,14,fewer than 2 of the named streets are CNV streets
+MOUNTAIN HWY & OXFORD ST,14,fewer than 2 of the named streets are CNV streets
+PEMBERTON AVE & W 16TH ST,14,fewer than 2 of the named streets are CNV streets
+DEL RIO DR & W QUEENS RD & SERVICE ROAD,13,fewer than 2 of the named streets are CNV streets
+E 29TH ST & REGENT AVE,13,fewer than 2 of the named streets are CNV streets
+E KEITH RD & SUTHERLAND AVE,13,CNV street names but no matching CNV intersection
+E KINGS RD & LONSDALE AVE & W KINGS RD,13,fewer than 2 of the named streets are CNV streets
+GARDEN AVE & WELCH ST,13,fewer than 2 of the named streets are CNV streets
+GLADWIN DR & LLOYD AVE & TRANS-CANADA HWY & TURNING LANE,13,fewer than 2 of the named streets are CNV streets
+PANORAMA DR # 002396 TO 002901,13,fewer than 2 street names parsed (mid-block record)
+W 15TH ST # 000120 TO 000175,13,fewer than 2 street names parsed (mid-block record)
+W 2ND ST # 000120 TO 000199,13,fewer than 2 street names parsed (mid-block record)
+W QUEENS RD & WOODBINE DR,13,fewer than 2 of the named streets are CNV streets
+CARRIE CATES CRT # 000113 TO 000149,12,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY # 002000 TO 002198 even,12,fewer than 2 street names parsed (mid-block record)
+E 14TH ST # 000121 TO 000199,12,fewer than 2 street names parsed (mid-block record)
+E 15TH ST & GRAND BLVD E,12,fewer than 2 of the named streets are CNV streets
+E 29TH ST & WILLIAM AVE,12,fewer than 2 of the named streets are CNV streets
+LONSDALE AVE # 002000 TO 002099,12,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 000801 TO 000899 odd,12,fewer than 2 street names parsed (mid-block record)
+MONTROYAL BLVD & RANGER AVE,12,fewer than 2 of the named streets are CNV streets
+MOUNTAIN HWY & RUPERT ST,12,fewer than 2 of the named streets are CNV streets
+MT SEYMOUR PKY & NORTHLANDS DR & TURNING LANE,12,fewer than 2 of the named streets are CNV streets
+MT SEYMOUR PKY & STRATHAVEN DR,12,fewer than 2 of the named streets are CNV streets
+3RD ST E & COTTON RD & LOW LEVEL RD,11,CNV street names but no matching CNV intersection
+BERKLEY RD # 000900 TO 000999,11,fewer than 2 street names parsed (mid-block record)
+E 29TH ST & ROYAL AVE & TEMPE GLEN DR,11,fewer than 2 of the named streets are CNV streets
+E KEITH RD & GRAND BLVD W,11,fewer than 2 of the named streets are CNV streets
+MT SEYMOUR PKY & PLYMOUTH DR,11,fewer than 2 of the named streets are CNV streets
+W 3RD ST # 000600 TO 000699,11,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD & MONTROYAL BLVD,10,fewer than 2 of the named streets are CNV streets
+CONNAUGHT CRES & EDGEMONT BLVD,10,fewer than 2 of the named streets are CNV streets
+CRESCENTVIEW DR & EDGEMONT BLVD,10,fewer than 2 of the named streets are CNV streets
+DOLLARTON HWY & SLEIL-WAUTUTH RD,10,fewer than 2 of the named streets are CNV streets
+E 29TH ST & ST GEORGES AVE,10,fewer than 2 of the named streets are CNV streets
+GROUSEWOODS DR & NANCY GREENE WAY,10,fewer than 2 of the named streets are CNV streets
+HUNTER ST & MOUNTAIN HWY,10,fewer than 2 of the named streets are CNV streets
+LONSDALE AVE # 001600 TO 001699,10,fewer than 2 street names parsed (mid-block record)
+VICTORY SHIP WAY # 000156 TO 000199,10,fewer than 2 street names parsed (mid-block record)
+W 1ST ST # 000116 TO 000139,10,fewer than 2 street names parsed (mid-block record)
+W QUEENS RD # 000850 TO 000869,10,fewer than 2 street names parsed (mid-block record)
+WESTVIEW DR # 002600 TO 002639,10,fewer than 2 street names parsed (mid-block record)
+BEACHVIEW DR # 000600 TO 000999,9,fewer than 2 street names parsed (mid-block record)
+CALEDONIA AVE # 002200 TO 002599,9,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD & HANDSWORTH RD,9,fewer than 2 of the named streets are CNV streets
+E 13TH ST & GRAND BLVD W,9,fewer than 2 of the named streets are CNV streets
+E 15TH ST # 000214 TO 000235,9,fewer than 2 street names parsed (mid-block record)
+E 19TH ST & MOODY AVE,9,CNV street names but no matching CNV intersection
+E 3RD ST # 000700 TO 000799,9,fewer than 2 street names parsed (mid-block record)
+E ESPLANADE # 000200 TO 000263,9,fewer than 2 street names parsed (mid-block record)
+E OSBORNE RD & ST GEORGES AVE,9,fewer than 2 of the named streets are CNV streets
+EDGEMONT BLVD # 003000 TO 003060,9,fewer than 2 street names parsed (mid-block record)
+EDGEMONT BLVD # 003200 TO 003269,9,fewer than 2 street names parsed (mid-block record)
+GARDEN AVE & HOPE RD,9,fewer than 2 of the named streets are CNV streets
+GARDEN AVE & W 1ST ST & ACCESS ROAD,9,fewer than 2 of the named streets are CNV streets
+INDIAN RIVER DR & MT SEYMOUR RD,9,fewer than 2 of the named streets are CNV streets
+LONSDALE AVE # 001100 TO 001199,9,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD & ROSS RD,9,fewer than 2 of the named streets are CNV streets
+MAIN ST # 001500 TO 001519,9,fewer than 2 street names parsed (mid-block record)
+OXFORD ST # 001500 TO 001589,9,fewer than 2 street names parsed (mid-block record)
+PEMBERTON AVE # 000000 TO 000050,9,fewer than 2 street names parsed (mid-block record)
+SEYMOUR BLVD # 000315 TO 000399,9,fewer than 2 street names parsed (mid-block record)
+ALLAN RD & LYNN VALLEY RD,8,fewer than 2 of the named streets are CNV streets
+BROOKSBANK AVE # 000300 TO 000349,8,fewer than 2 street names parsed (mid-block record)
+BROWNING PL & MT SEYMOUR PKY,8,fewer than 2 of the named streets are CNV streets
+CAPILANO RD # 002650 TO 002699,8,fewer than 2 street names parsed (mid-block record)
+COLWOOD DR & HIGHLAND BLVD & RIDGEWOOD DR,8,fewer than 2 of the named streets are CNV streets
+COLWOOD DR & W QUEENS RD,8,fewer than 2 of the named streets are CNV streets
+E 14TH ST & MOUNTAIN HWY & UNNAMED LANE,8,fewer than 2 of the named streets are CNV streets
+E 15TH ST & GRAND BLVD W,8,fewer than 2 of the named streets are CNV streets
+E 16TH ST & MOUNTAIN HWY,8,fewer than 2 of the named streets are CNV streets
+E BRAEMAR RD & LONSDALE AVE & W BRAEMAR RD,8,fewer than 2 of the named streets are CNV streets
+E OSBORNE RD & REGENT AVE,8,fewer than 2 of the named streets are CNV streets
+FERN ST & MOUNTAIN HWY,8,fewer than 2 of the named streets are CNV streets
+LLOYD AVE & ROOSEVELT CRES & W 15TH ST,8,fewer than 2 of the named streets are CNV streets
+LONSDALE AVE # 001300 TO 001399,8,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 001500 TO 001599,8,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD & PETERS RD,8,fewer than 2 of the named streets are CNV streets
+MARINE DR # 001042 TO 001099,8,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 001700 TO 001799,8,fewer than 2 street names parsed (mid-block record)
+MONTROYAL BLVD & SKYLINE DR,8,fewer than 2 of the named streets are CNV streets
+MOUNTAIN HWY # 001076 TO 001399,8,fewer than 2 street names parsed (mid-block record)
+PEMBERTON AVE # 000150 TO 000299,8,fewer than 2 street names parsed (mid-block record)
+BEAUFORT RD & MT SEYMOUR PKY,7,fewer than 2 of the named streets are CNV streets
+BEWICKE AVE & W QUEENS RD,7,fewer than 2 of the named streets are CNV streets
+CAPILANO PARK RD & CAPILANO RD & MOUNT CROWN RD,7,fewer than 2 of the named streets are CNV streets
+CAPILANO RD # 002500 TO 002581,7,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD # 003486 TO 003859,7,fewer than 2 street names parsed (mid-block record)
+CHADWICK CRT # 000130 TO 000199,7,fewer than 2 street names parsed (mid-block record)
+CHARLOTTE RD & MOUNTAIN HWY,7,fewer than 2 of the named streets are CNV streets
+CHESTERFIELD AVE & W QUEENS RD,7,fewer than 2 of the named streets are CNV streets
+COTTON RD & MAIN ST,7,fewer than 2 of the named streets are CNV streets
+DEEP COVE RD & STRATHCONA RD,7,fewer than 2 of the named streets are CNV streets
+DELBROOK AVE & EVERGREEN PL,7,fewer than 2 of the named streets are CNV streets
+DOVERCOURT RD & HOSKINS RD & LYNN VALLEY RD,7,fewer than 2 of the named streets are CNV streets
+E 18TH ST & MOUNTAIN HWY,7,fewer than 2 of the named streets are CNV streets
+E 1ST ST # 000100 TO 000119,7,fewer than 2 street names parsed (mid-block record)
+E 1ST ST # 000200 TO 000299,7,fewer than 2 street names parsed (mid-block record)
+E 3RD ST # 000600 TO 000699,7,fewer than 2 street names parsed (mid-block record)
+LIBRARY LANE # 002630 TO 002670,7,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 001200 TO 001234 even,7,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD & MOLLIE NYE WAY,7,fewer than 2 of the named streets are CNV streets
+MAIN ST # 001340 TO 001399,7,fewer than 2 street names parsed (mid-block record)
+MAIN ST # 001400 TO 001499,7,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 000900 TO 000970 even,7,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 001100 TO 001199,7,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR RD # 001684 TO 001700,7,fewer than 2 street names parsed (mid-block record)
+OLD DOLLARTON RD & SEYMOUR RIVER PL,7,fewer than 2 of the named streets are CNV streets
+ORWELL ST # 000260 TO 000299,7,fewer than 2 street names parsed (mid-block record)
+PEMBERTON AVE & W 3RD ST,7,fewer than 2 of the named streets are CNV streets
+PROSPECT RD # 004150 TO 004549,7,fewer than 2 street names parsed (mid-block record)
+SEYLYNN CRES # 000600 TO 000699,7,fewer than 2 street names parsed (mid-block record)
+W 22ND ST & W KEITH RD,7,CNV street names but no matching CNV intersection
+W 3RD ST # 000300 TO 000399,7,fewer than 2 street names parsed (mid-block record)
+3RD ST E & COTTON RD & LOWER LEVEL RD,6,fewer than 2 of the named streets are CNV streets
+ALPINE CRT # 000500 TO 000599,6,fewer than 2 street names parsed (mid-block record)
+AYR AVE & RIDGEWOOD DR,6,fewer than 2 of the named streets are CNV streets
+CAPILANO CRES & CAPILANO RD & UNSIGNED,6,fewer than 2 of the named streets are CNV streets
+CROWN ST & HARBOUR AVE,6,fewer than 2 of the named streets are CNV streets
+DELBROOK AVE & MONTROYAL BLVD & TURNING LANE,6,fewer than 2 of the named streets are CNV streets
+E 1ST ST # 000120 TO 000199,6,fewer than 2 street names parsed (mid-block record)
+E 3RD ST # 000300 TO 000399,6,fewer than 2 street names parsed (mid-block record)
+E 4TH ST # 000600 TO 000699,6,fewer than 2 street names parsed (mid-block record)
+E ESPLANADE # 000100 TO 000199,6,fewer than 2 street names parsed (mid-block record)
+E QUEENS RD & LONSDALE AVE & UNNAMED LANE,6,fewer than 2 of the named streets are CNV streets
+GARIBALDI DR # 003550 TO 003635,6,fewer than 2 street names parsed (mid-block record)
+HARBOURSIDE DR # 000850 TO 000949,6,fewer than 2 street names parsed (mid-block record)
+HAROLD RD & INSTITUTE RD & LYNN VALLEY RD,6,fewer than 2 of the named streets are CNV streets
+LLOYD AVE & W 3RD ST,6,fewer than 2 of the named streets are CNV streets
+LONSDALE AVE # 001200 TO 001299,6,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 001700 TO 001799,6,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 001800 TO 001899,6,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE & TRANS-CANADA HWY,6,fewer than 2 of the named streets are CNV streets
+LOW LEVEL RD # 001000 TO 001003,6,fewer than 2 street names parsed (mid-block record)
+LYNN AVE # 000300 TO 000399,6,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 000701 TO 000775 odd,6,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 002000 TO 002098 even,6,fewer than 2 street names parsed (mid-block record)
+MCKEEN AVE & PHILIP AVE,6,fewer than 2 of the named streets are CNV streets
+MOUNTAIN HWY # 002700 TO 002800,6,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 003200 TO 003499,6,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 003492 TO 003698 even,6,fewer than 2 street names parsed (mid-block record)
+OLD DOLLARTON RD & RIVERSIDE DR,6,fewer than 2 of the named streets are CNV streets
+TATLOW AVE & W 15TH ST,6,fewer than 2 of the named streets are CNV streets
+W 1ST ST # 000100 TO 000115,6,fewer than 2 street names parsed (mid-block record)
+W 1ST ST # 000140 TO 000199,6,fewer than 2 street names parsed (mid-block record)
+W 1ST ST # 000900 TO 000999,6,fewer than 2 street names parsed (mid-block record)
+W 2ND ST # 000200 TO 000299,6,fewer than 2 street names parsed (mid-block record)
+WESTVIEW DR # 002500 TO 002549,6,fewer than 2 street names parsed (mid-block record)
+ANNE MACDONALD WAY & MT SEYMOUR RD & ACCESS ROAD,5,fewer than 2 of the named streets are CNV streets
+ARBORLYNN DR & HOSKINS RD,5,fewer than 2 of the named streets are CNV streets
+AYR AVE & CRESCENTVIEW DR & WOODBINE DR,5,fewer than 2 of the named streets are CNV streets
+BARROW ST & HARBOUR AVE,5,fewer than 2 of the named streets are CNV streets
+BEAVER RD & PROSPECT RD,5,fewer than 2 of the named streets are CNV streets
+BERKLEY RD & CARNATION ST,5,fewer than 2 of the named streets are CNV streets
+BROOKSBANK AVE # 000500 TO 000699,5,fewer than 2 street names parsed (mid-block record)
+CALEDONIA AVE & DEEP COVE CRES & DEEP COVE RD,5,fewer than 2 of the named streets are CNV streets
+CAPILANO RD # 001700 TO 001799,5,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD & EDGEWOOD RD,5,fewer than 2 of the named streets are CNV streets
+CAPILANO RD & HOPE RD,5,fewer than 2 of the named streets are CNV streets
+CHURCHILL CRES # 001050 TO 001099,5,fewer than 2 street names parsed (mid-block record)
+CLIFFRIDGE AVE & MONTROYAL BLVD,5,fewer than 2 of the named streets are CNV streets
+COLUMBIA ST # 001631 TO 001699,5,fewer than 2 street names parsed (mid-block record)
+DEERCREST DR # 003600 TO 003629,5,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY # 002001 TO 002199 odd,5,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY & ROCHE POINT DR,5,fewer than 2 of the named streets are CNV streets
+DOMINION ST & MOUNTAIN HWY & RICHMOND ST,5,fewer than 2 of the named streets are CNV streets
+DONAGHY AVE # 000100 TO 000299,5,fewer than 2 street names parsed (mid-block record)
+DUVAL RD & PETERS RD,5,fewer than 2 of the named streets are CNV streets
+E 13TH ST & SUTHERLAND AVE,5,CNV street names but no matching CNV intersection
+E 17TH ST # 000120 TO 000139,5,fewer than 2 street names parsed (mid-block record)
+E 17TH ST # 000140 TO 000152,5,fewer than 2 street names parsed (mid-block record)
+E 17TH ST & GRAND BLVD W,5,fewer than 2 of the named streets are CNV streets
+E 19TH ST # 000300 TO 000399,5,fewer than 2 street names parsed (mid-block record)
+E 27TH ST # 001110 TO 001199,5,fewer than 2 street names parsed (mid-block record)
+E 9TH ST & GRAND BLVD E,5,fewer than 2 of the named streets are CNV streets
+EDGEMONT BLVD & SUNSET BLVD,5,fewer than 2 of the named streets are CNV streets
+EDGEMONT BLVD & TRANS-CANADA HWY,5,fewer than 2 of the named streets are CNV streets
+EVELYN ST & MOUNTAIN HWY,5,fewer than 2 of the named streets are CNV streets
+FAIRWAY DR & MT SEYMOUR PKY,5,fewer than 2 of the named streets are CNV streets
+FULLERTON AVE # 002000 TO 002007,5,fewer than 2 street names parsed (mid-block record)
+FULLERTON AVE # 002008 TO 002019,5,fewer than 2 street names parsed (mid-block record)
+HIGHLAND BLVD # 003220 TO 003285,5,fewer than 2 street names parsed (mid-block record)
+KILMER RD # 001000 TO 001299,5,fewer than 2 street names parsed (mid-block record)
+LARKHALL CRES # 001550 TO 001599,5,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 002301 TO 002449 odd,5,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 001000 TO 001098 even,5,fewer than 2 street names parsed (mid-block record)
+MAIN ST # 001751 TO 001799 odd,5,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 001224 TO 001299,5,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 001400 TO 001449,5,fewer than 2 street names parsed (mid-block record)
+MCKEEN AVE # 001200 TO 001349,5,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 003499 TO 003699 odd,5,fewer than 2 street names parsed (mid-block record)
+PREMIER ST # 000782 TO 001078,5,fewer than 2 street names parsed (mid-block record)
+RAEBURN ST & ROCKCLIFF RD,5,fewer than 2 of the named streets are CNV streets
+RAVEN WOODS DR # 000500 TO 000555,5,fewer than 2 street names parsed (mid-block record)
+ROBINSON RD # 003138 TO 003299,5,fewer than 2 street names parsed (mid-block record)
+SALAL DR # 003595 TO 003596,5,fewer than 2 street names parsed (mid-block record)
+VICTORY SHIP WAY # 000100 TO 000115,5,fewer than 2 street names parsed (mid-block record)
+W 14TH ST # 000700 TO 000799,5,fewer than 2 street names parsed (mid-block record)
+W 15TH ST # 000710 TO 000779,5,fewer than 2 street names parsed (mid-block record)
+W 15TH ST # 000800 TO 000899,5,fewer than 2 street names parsed (mid-block record)
+W 28TH ST # 000500 TO 000558,5,fewer than 2 street names parsed (mid-block record)
+W ESPLANADE # 000100 TO 000123,5,fewer than 2 street names parsed (mid-block record)
+W KEITH RD # 000100 TO 000168 even,5,fewer than 2 street names parsed (mid-block record)
+W QUEENS RD # 000600 TO 000699,5,fewer than 2 street names parsed (mid-block record)
+ADDERLEY ST # 001200 TO 001299,4,fewer than 2 street names parsed (mid-block record)
+ALDERLYNN DR & APPIN RD & AYLESLYNN DR,4,fewer than 2 of the named streets are CNV streets
+ALPINE CRT # 000600 TO 000719,4,fewer than 2 street names parsed (mid-block record)
+ANNE MACDONALD WAY # 003400 TO 003493,4,fewer than 2 street names parsed (mid-block record)
+AUTOMALL DR # 000831 TO 000847 odd,4,fewer than 2 street names parsed (mid-block record)
+BENDALE RD & BERKLEY RD,4,fewer than 2 of the named streets are CNV streets
+BERKLEY AVE & HYANNIS DR,4,fewer than 2 of the named streets are CNV streets
+BONITA DR & MONTROYAL BLVD,4,fewer than 2 of the named streets are CNV streets
+BRAND ST & E 29TH ST & PRINCESS AVE,4,fewer than 2 of the named streets are CNV streets
+BROOKSBANK AVE # 000400 TO 000449,4,fewer than 2 street names parsed (mid-block record)
+CACTUS CRT # 002600 TO 002659,4,fewer than 2 street names parsed (mid-block record)
+CALVERHALL ST & E KEITH RD,4,fewer than 2 of the named streets are CNV streets
+CAPILANO RD # 001800 TO 001849,4,fewer than 2 street names parsed (mid-block record)
+CATES PARK RD & DOLLARTON HWY & TURNING LANE,4,fewer than 2 of the named streets are CNV streets
+CHURCHILL CRES & LLOYD AVE,4,fewer than 2 of the named streets are CNV streets
+CLEMENTS AVE # 000900 TO 000959,4,fewer than 2 street names parsed (mid-block record)
+CLIFFMONT RD & DEEP COVE RD,4,fewer than 2 of the named streets are CNV streets
+COLUMBIA ST & ORWELL ST,4,fewer than 2 of the named streets are CNV streets
+CROYDON PL # 000600 TO 000649,4,fewer than 2 street names parsed (mid-block record)
+DEMPSEY RD # 000900 TO 000999,4,fewer than 2 street names parsed (mid-block record)
+DEMPSEY RD # 001300 TO 001421,4,fewer than 2 street names parsed (mid-block record)
+DEMPSEY RD & LYNN VALLEY RD,4,fewer than 2 of the named streets are CNV streets
+DOLLARTON HWY # 002630 TO 002679,4,fewer than 2 street names parsed (mid-block record)
+E 12TH ST # 000100 TO 000129,4,fewer than 2 street names parsed (mid-block record)
+E 15TH ST # 000136 TO 000199,4,fewer than 2 street names parsed (mid-block record)
+E 18TH ST & GRAND BLVD E,4,fewer than 2 of the named streets are CNV streets
+E 27TH ST & LIBRARY LANE,4,fewer than 2 of the named streets are CNV streets
+E 27TH ST & VALLEY CENTRE AVE,4,fewer than 2 of the named streets are CNV streets
+E 29TH ST & TEMPE CRES,4,fewer than 2 of the named streets are CNV streets
+E 3RD ST # 000100 TO 000121,4,fewer than 2 street names parsed (mid-block record)
+E 3RD ST # 000200 TO 000299,4,fewer than 2 street names parsed (mid-block record)
+E 9TH ST & GRAND BLVD W,4,fewer than 2 of the named streets are CNV streets
+E KEITH RD & SHAVINGTON ST,4,CNV street names but no matching CNV intersection
+E QUEENS RD & REGENT AVE,4,fewer than 2 of the named streets are CNV streets
+E ROCKLAND RD & LONSDALE AVE & W ROCKLAND RD & UNNAMED LANE,4,fewer than 2 of the named streets are CNV streets
+E ST JAMES RD # 000200 TO 000399,4,fewer than 2 street names parsed (mid-block record)
+E ST JAMES RD & LONSDALE AVE & W ST JAMES RD,4,fewer than 2 of the named streets are CNV streets
+FRAMES PL # 003910 TO 003999,4,fewer than 2 street names parsed (mid-block record)
+FREDERICK RD & LYNN VALLEY RD,4,fewer than 2 of the named streets are CNV streets
+FRIAR CRES & LIMA RD & MT SEYMOUR PKY,4,fewer than 2 of the named streets are CNV streets
+FROMME RD & ROSS RD,4,fewer than 2 of the named streets are CNV streets
+GRIFFIN PL & W QUEENS RD,4,fewer than 2 of the named streets are CNV streets
+HIGHLAND BLVD & WOODBINE DR,4,fewer than 2 of the named streets are CNV streets
+HOSKINS RD & KILMER RD,4,fewer than 2 of the named streets are CNV streets
+HUNTER ST # 001400 TO 001499,4,fewer than 2 street names parsed (mid-block record)
+INDIAN RIVER CRES & INDIAN RIVER DR,4,fewer than 2 of the named streets are CNV streets
+INDIAN RIVER DR & SUNSHINE FALLS LANE,4,fewer than 2 of the named streets are CNV streets
+INTER RIVER PARK RD & LILLOOET RD,4,fewer than 2 of the named streets are CNV streets
+LLOYD AVE # 001650 TO 001699,4,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 000100 TO 000150 even,4,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 000101 TO 000199 odd,4,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 000500 TO 000599,4,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 001410 TO 001499,4,fewer than 2 street names parsed (mid-block record)
+LYNN CREEK BRIDGE & TRANS-CANADA HWY,4,fewer than 2 of the named streets are CNV streets
+LYNN VALLEY RD # 001101 TO 001199 odd,4,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 001500 TO 001529,4,fewer than 2 street names parsed (mid-block record)
+MADEIRA CRT # 005150 TO 005199,4,fewer than 2 street names parsed (mid-block record)
+MAIN ST # 001320 TO 001339,4,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 001900 TO 001959,4,fewer than 2 street names parsed (mid-block record)
+MCKEEN AVE & SENATOR RD,4,fewer than 2 of the named streets are CNV streets
+MICHENER CRT # 003900 TO 003999,4,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 002900 TO 002979,4,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY & WELLINGTON DR,4,fewer than 2 of the named streets are CNV streets
+MT SEYMOUR PKY # 004000 TO 004099,4,fewer than 2 street names parsed (mid-block record)
+NORCROSS WAY & RIDGEWOOD DR,4,fewer than 2 of the named streets are CNV streets
+PEMBERTON AVE & W 14TH ST,4,fewer than 2 of the named streets are CNV streets
+PHILIP AVE & WELCH ST,4,fewer than 2 of the named streets are CNV streets
+RIVERSIDE DR # 000000 TO 000079,4,fewer than 2 street names parsed (mid-block record)
+RIVERSIDE DR # 000300 TO 000499,4,fewer than 2 street names parsed (mid-block record)
+ROXBURY PL # 001624 TO 001678 even,4,fewer than 2 street names parsed (mid-block record)
+W 13TH ST # 000126 TO 000199,4,fewer than 2 street names parsed (mid-block record)
+W 14TH ST # 000104 TO 000150 even,4,fewer than 2 street names parsed (mid-block record)
+W 16TH ST # 000800 TO 000925,4,fewer than 2 street names parsed (mid-block record)
+W 1ST ST # 000251 TO 000299 odd,4,fewer than 2 street names parsed (mid-block record)
+W 22ND ST # 000124 TO 000199,4,fewer than 2 street names parsed (mid-block record)
+W 3RD ST # 000100 TO 000121,4,fewer than 2 street names parsed (mid-block record)
+W ESPLANADE # 000150 TO 000199,4,fewer than 2 street names parsed (mid-block record)
+W QUEENS RD # 000100 TO 000199,4,fewer than 2 street names parsed (mid-block record)
+WELLINGTON DR # 000760 TO 000917,4,fewer than 2 street names parsed (mid-block record)
+4TH ST & FORBES AVE & W 4TH LANE,3,fewer than 2 of the named streets are CNV streets
+ALLAN RD & WESTOVER RD,3,fewer than 2 of the named streets are CNV streets
+ANITA CRT & E 21ST ST,3,fewer than 2 of the named streets are CNV streets
+APEX AVE & GARIBALDI DR,3,fewer than 2 of the named streets are CNV streets
+APPIN RD & ARBORLYNN DR,3,fewer than 2 of the named streets are CNV streets
+APPIN RD & E 15TH ST,3,fewer than 2 of the named streets are CNV streets
+ARGYLE RD & MOUNTAIN HWY,3,fewer than 2 of the named streets are CNV streets
+AUTOMALL DR # 000808 TO 000828,3,fewer than 2 street names parsed (mid-block record)
+BADGER RD # 002050 TO 002329,3,fewer than 2 street names parsed (mid-block record)
+BANFF CRT # 003600 TO 003669,3,fewer than 2 street names parsed (mid-block record)
+BARROW ST # 001500 TO 001599,3,fewer than 2 street names parsed (mid-block record)
+BAYCREST DR # 000600 TO 000999,3,fewer than 2 street names parsed (mid-block record)
+BEAVER RD # 000300 TO 000349,3,fewer than 2 street names parsed (mid-block record)
+BEWICKE AVE # 000020 TO 000091,3,fewer than 2 street names parsed (mid-block record)
+BOWRON CRT # 000900 TO 001051,3,fewer than 2 street names parsed (mid-block record)
+BOWSER AVE & WELCH ST,3,fewer than 2 of the named streets are CNV streets
+BROCKTON CRES & MT SEYMOUR PKY,3,fewer than 2 of the named streets are CNV streets
+CANTERBURY CRES & HANDSWORTH RD & RIALTO PL,3,fewer than 2 of the named streets are CNV streets
+CAPILANO RD # 001600 TO 001699,3,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD # 002100 TO 002288,3,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD # 003300 TO 003406,3,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD # 004100 TO 004329,3,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD # 004621 TO 004799,3,fewer than 2 street names parsed (mid-block record)
+CARDINAL CRES # 001900 TO 002079,3,fewer than 2 street names parsed (mid-block record)
+CARMARIA CRT # 002000 TO 002449,3,fewer than 2 street names parsed (mid-block record)
+CARNATION ST & EMERSON WAY,3,fewer than 2 of the named streets are CNV streets
+CARTELIER RD & DELBROOK AVE,3,fewer than 2 of the named streets are CNV streets
+CHAUCER AVE # 003100 TO 003399,3,fewer than 2 street names parsed (mid-block record)
+CHESTERFIELD AVE # 000083 TO 000099,3,fewer than 2 street names parsed (mid-block record)
+CHURCH ST & LYNN VALLEY RD,3,fewer than 2 of the named streets are CNV streets
+CLIFFRIDGE AVE # 005160 TO 005299,3,fewer than 2 street names parsed (mid-block record)
+COLEMAN ST # 001370 TO 001447,3,fewer than 2 street names parsed (mid-block record)
+COLWOOD DR & THORNCLIFFE DR,3,fewer than 2 of the named streets are CNV streets
+CONNAUGHT AVE & E 29TH ST,3,fewer than 2 of the named streets are CNV streets
+CONNAUGHT CRES # 003200 TO 003299,3,fewer than 2 street names parsed (mid-block record)
+CRESCENTVIEW DR # 002700 TO 002999,3,fewer than 2 street names parsed (mid-block record)
+CURLING RD # 002020 TO 002041,3,fewer than 2 street names parsed (mid-block record)
+DOLLAR RD # 004065 TO 004109,3,fewer than 2 street names parsed (mid-block record)
+DOLLAR RD & FAIRWAY DR,3,fewer than 2 of the named streets are CNV streets
+DOLLARTON HWY # 002301 TO 002619 odd,3,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY # 002718 TO 002899,3,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY # 002900 TO 003074,3,fewer than 2 street names parsed (mid-block record)
+DORAN RD & FROMME RD,3,fewer than 2 of the named streets are CNV streets
+DRAYCOTT RD # 001382 TO 001399,3,fewer than 2 street names parsed (mid-block record)
+DRAYTON ST & E 9TH ST & HENDRY AVE,3,CNV street names but no matching CNV intersection
+E 11TH ST # 000200 TO 000299,3,fewer than 2 street names parsed (mid-block record)
+E 11TH ST & HENDRY AVE,3,CNV street names but no matching CNV intersection
+E 12TH ST # 000400 TO 000499,3,fewer than 2 street names parsed (mid-block record)
+E 15TH ST # 000120 TO 000135,3,fewer than 2 street names parsed (mid-block record)
+E 17TH ST & MOUNTAIN HWY,3,fewer than 2 of the named streets are CNV streets
+E 18TH ST # 000200 TO 000299,3,fewer than 2 street names parsed (mid-block record)
+E 20TH ST # 001520 TO 001559,3,fewer than 2 street names parsed (mid-block record)
+E 21ST ST & WILLIAM AVE,3,CNV street names but no matching CNV intersection
+E 24TH LANE & LONSDALE AVE ONRAMP & ST GEORGES AVE & TURNING LANE,3,fewer than 2 of the named streets are CNV streets
+E 29TH ST # 000467 TO 000678,3,fewer than 2 street names parsed (mid-block record)
+E 29TH ST & EASTERN AVE,3,fewer than 2 of the named streets are CNV streets
+E 4TH ST # 000122 TO 000199,3,fewer than 2 street names parsed (mid-block record)
+E 5TH ST # 000200 TO 000299,3,fewer than 2 street names parsed (mid-block record)
+E 9TH ST # 000500 TO 000539,3,fewer than 2 street names parsed (mid-block record)
+E ESPLANADE # 000342 TO 000399,3,fewer than 2 street names parsed (mid-block record)
+E KEITH RD # 000200 TO 000298 even,3,fewer than 2 street names parsed (mid-block record)
+E KEITH RD # 000350 TO 000399,3,fewer than 2 street names parsed (mid-block record)
+E ST JAMES RD # 000485 TO 000599,3,fewer than 2 street names parsed (mid-block record)
+EASTERN AVE # 001500 TO 001547,3,fewer than 2 street names parsed (mid-block record)
+EDDYSTONE CRES # 002900 TO 002974,3,fewer than 2 street names parsed (mid-block record)
+EDGEMONT BLVD # 002400 TO 002449,3,fewer than 2 street names parsed (mid-block record)
+EDGEMONT BLVD & EMERALD DR,3,fewer than 2 of the named streets are CNV streets
+EDGEWATER LANE # 001450 TO 001599,3,fewer than 2 street names parsed (mid-block record)
+ELIZABETH WAY & LYNDENE RD,3,fewer than 2 of the named streets are CNV streets
+FELL AVE # 000100 TO 000299,3,fewer than 2 street names parsed (mid-block record)
+FELL AVE # 001400 TO 001499,3,fewer than 2 street names parsed (mid-block record)
+FERN ST # 001540 TO 001579,3,fewer than 2 street names parsed (mid-block record)
+FINTRY PL # 001397 TO 001464,3,fewer than 2 street names parsed (mid-block record)
+FOREST HILLS DR & HIGHLAND BLVD,3,fewer than 2 of the named streets are CNV streets
+FREDERICK RD & FROMME RD,3,fewer than 2 of the named streets are CNV streets
+FROMME RD # 002500 TO 002699,3,fewer than 2 street names parsed (mid-block record)
+FROMME RD & VINEY RD,3,fewer than 2 of the named streets are CNV streets
+FRONT ST & OLD DOLLARTON RD,3,fewer than 2 of the named streets are CNV streets
+FULLERTON AVE & LIONS GATE LANE & UNNAMED LANE,3,fewer than 2 of the named streets are CNV streets
+GARDEN AVE # 001570 TO 001599,3,fewer than 2 street names parsed (mid-block record)
+GLENAIRE DR # 002000 TO 002079,3,fewer than 2 street names parsed (mid-block record)
+GRAND BLVD E # 001700 TO 001798 even,3,fewer than 2 street names parsed (mid-block record)
+GRANTHAM PL & RIVERSIDE DR,3,fewer than 2 of the named streets are CNV streets
+GROUSEWOODS CRES # 005700 TO 005879,3,fewer than 2 street names parsed (mid-block record)
+HARBOUR AVE & RUPERT ST,3,fewer than 2 of the named streets are CNV streets
+HAROLD RD & MOUNTAIN HWY,3,fewer than 2 of the named streets are CNV streets
+HEYWOOD ST # 001100 TO 001299,3,fewer than 2 street names parsed (mid-block record)
+HIGHLAND BLVD # 003050 TO 003099,3,fewer than 2 street names parsed (mid-block record)
+HIGHLAND BLVD # 003100 TO 003149,3,fewer than 2 street names parsed (mid-block record)
+HOSKINS RD # 002450 TO 002699,3,fewer than 2 street names parsed (mid-block record)
+HOSKINS RD # 004671 TO 004735 odd,3,fewer than 2 street names parsed (mid-block record)
+INLET CRES # 003980 TO 003987,3,fewer than 2 street names parsed (mid-block record)
+JONES AVE & W QUEENS RD,3,fewer than 2 of the named streets are CNV streets
+KILMER RD & MOUNTAIN HWY,3,fewer than 2 of the named streets are CNV streets
+KIRKSTONE RD # 002250 TO 002309,3,fewer than 2 street names parsed (mid-block record)
+LARKHALL CRES # 001600 TO 001999,3,fewer than 2 street names parsed (mid-block record)
+LILLOOET RD & MONASHEE DR,3,fewer than 2 of the named streets are CNV streets
+LIMA RD # 001000 TO 001199,3,fewer than 2 street names parsed (mid-block record)
+LLOYD AVE & W 22ND ST,3,fewer than 2 of the named streets are CNV streets
+LOCKEHAVEN PL # 004600 TO 004699,3,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 000001 TO 000049 odd,3,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 000051 TO 000099 odd,3,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 000201 TO 000299 odd,3,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 000300 TO 000399,3,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 000400 TO 000499,3,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 001400 TO 001409,3,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 002100 TO 002199,3,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 002513 TO 002599 odd,3,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 003700 TO 003799,3,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 001100 TO 001198 even,3,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD & ST CHRISTOPHERS RD,3,fewer than 2 of the named streets are CNV streets
+MACKAY AVE # 001940 TO 002083,3,fewer than 2 street names parsed (mid-block record)
+MAHON AVE & W QUEENS RD,3,fewer than 2 of the named streets are CNV streets
+MARINE DR # 000700 TO 000730 even,3,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 000800 TO 000858 even,3,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 001600 TO 001651,3,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 001862 TO 001899,3,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 001961 TO 001999 odd,3,fewer than 2 street names parsed (mid-block record)
+MARINEVIEW CRES & MONTROYAL BLVD,3,fewer than 2 of the named streets are CNV streets
+MONTROYAL BLVD & PROSPECT RD & W ROCKLAND RD & BUS LANE,3,fewer than 2 of the named streets are CNV streets
+MOUNTAIN HWY # 000180 TO 000199,3,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 001000 TO 001059,3,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR RD # 001132 TO 001199,3,fewer than 2 street names parsed (mid-block record)
+NEWDALE CRT # 000356 TO 000459,3,fewer than 2 street names parsed (mid-block record)
+OSTLER CRT # 001500 TO 001559,3,fewer than 2 street names parsed (mid-block record)
+PARKGATE AVE # 001154 TO 001281,3,fewer than 2 street names parsed (mid-block record)
+PARKSIDE LANE # 001900 TO 002199,3,fewer than 2 street names parsed (mid-block record)
+PEMBERTON AVE # 001500 TO 001599,3,fewer than 2 street names parsed (mid-block record)
+PEMBERTON AVE # 001600 TO 001627,3,fewer than 2 street names parsed (mid-block record)
+PROSPECT AVE # 001017 TO 001199,3,fewer than 2 street names parsed (mid-block record)
+QUARRY CRT # 004100 TO 004199,3,fewer than 2 street names parsed (mid-block record)
+RANGER AVE & RANGER CRES & TUDOR AVE,3,fewer than 2 of the named streets are CNV streets
+RAVEN WOODS DR # 000556 TO 000582,3,fewer than 2 street names parsed (mid-block record)
+RIDGEWOOD DR # 001100 TO 001159,3,fewer than 2 street names parsed (mid-block record)
+RIDGEWOOD DR # 001300 TO 001399,3,fewer than 2 street names parsed (mid-block record)
+RIVERSIDE DR # 000130 TO 000199,3,fewer than 2 street names parsed (mid-block record)
+ROSS RD # 001300 TO 001499,3,fewer than 2 street names parsed (mid-block record)
+ROYAL AVE # 002900 TO 003099,3,fewer than 2 street names parsed (mid-block record)
+RUFUS DR # 001722 TO 001899,3,fewer than 2 street names parsed (mid-block record)
+RUPERT ST # 001400 TO 001499,3,fewer than 2 street names parsed (mid-block record)
+RUSSELL AVE # 001200 TO 001249,3,fewer than 2 street names parsed (mid-block record)
+SEYMOUR BLVD # 000850 TO 000999,3,fewer than 2 street names parsed (mid-block record)
+SHAVINGTON ST # 001201 TO 001290,3,fewer than 2 street names parsed (mid-block record)
+SKYLINE DR # 004810 TO 004965,3,fewer than 2 street names parsed (mid-block record)
+ST GEORGES AVE # 001400 TO 001423,3,fewer than 2 street names parsed (mid-block record)
+ST MARYS AVE # 003400 TO 003449,3,fewer than 2 street names parsed (mid-block record)
+SUNSET BLVD & VIRGINIA CRES,3,fewer than 2 of the named streets are CNV streets
+TIMBERLINE PL # 004500 TO 004599,3,fewer than 2 street names parsed (mid-block record)
+TOBRUCK AVE # 000800 TO 000939,3,fewer than 2 street names parsed (mid-block record)
+W 13TH ST # 000100 TO 000125,3,fewer than 2 street names parsed (mid-block record)
+W 15TH ST # 000700 TO 000727,3,fewer than 2 street names parsed (mid-block record)
+W 15TH ST # 001218 TO 001297,3,fewer than 2 street names parsed (mid-block record)
+W 16TH ST # 000100 TO 000118,3,fewer than 2 street names parsed (mid-block record)
+W 16TH ST # 000117 TO 000159,3,fewer than 2 street names parsed (mid-block record)
+W 1ST ST # 000201 TO 000249 odd,3,fewer than 2 street names parsed (mid-block record)
+W 22ND ST # 001300 TO 001399,3,fewer than 2 street names parsed (mid-block record)
+W 23RD ST # 000140 TO 000199,3,fewer than 2 street names parsed (mid-block record)
+W 27TH ST # 000200 TO 000299,3,fewer than 2 street names parsed (mid-block record)
+W 3RD ST # 000900 TO 000999,3,fewer than 2 street names parsed (mid-block record)
+W KEITH RD # 000500 TO 000598 even,3,fewer than 2 street names parsed (mid-block record)
+W KEITH RD # 001030 TO 001129,3,fewer than 2 street names parsed (mid-block record)
+W KINGS RD # 000100 TO 000199,3,fewer than 2 street names parsed (mid-block record)
+W QUEENS RD # 000500 TO 000571,3,fewer than 2 street names parsed (mid-block record)
+W QUEENS RD # 000766 TO 000799,3,fewer than 2 street names parsed (mid-block record)
+WESTVIEW CRES # 000807 TO 000878,3,fewer than 2 street names parsed (mid-block record)
+WESTVIEW DR # 002700 TO 002799,3,fewer than 2 street names parsed (mid-block record)
+WEYMOUTH DR & WILLIAM AVE,3,CNV street names but no matching CNV intersection
+WHITELEY CRT # 002550 TO 002563,3,fewer than 2 street names parsed (mid-block record)
+WICKENDEN RD # 004600 TO 004699,3,fewer than 2 street names parsed (mid-block record)
+WILLIAM AVE # 002430 TO 002589,3,fewer than 2 street names parsed (mid-block record)
+WINDRIDGE DR # 002190 TO 002419,3,fewer than 2 street names parsed (mid-block record)
+ADDERLEY ST & GLADSTONE AVE,2,CNV street names but no matching CNV intersection
+ALDERCREST DR & RAVEN WOODS DR & FIRE LANE,2,fewer than 2 of the named streets are CNV streets
+ALDERLYNN DR & E 18TH ST & UNNAMED LANE,2,fewer than 2 of the named streets are CNV streets
+ARBORLYNN DR # 001370 TO 001528 even,2,fewer than 2 street names parsed (mid-block record)
+ARBORLYNN DR # 001651 TO 001849,2,fewer than 2 street names parsed (mid-block record)
+ARBORLYNN DR & CARMARIA CRT & E 20TH ST,2,fewer than 2 of the named streets are CNV streets
+ARGYLE SECONDARY SCHOOL ACCESS & BAIRD RD & FREDERICK RD,2,fewer than 2 of the named streets are CNV streets
+AUTOMALL DR # 000849 TO 000851 odd,2,fewer than 2 street names parsed (mid-block record)
+BADGER RD & DEEP COVE RD,2,fewer than 2 of the named streets are CNV streets
+BAIRD RD # 003050 TO 003174,2,fewer than 2 street names parsed (mid-block record)
+BAIRD RD & ROSS RD,2,fewer than 2 of the named streets are CNV streets
+BAKER VIEW ST & N DOLLARTON HWY,2,fewer than 2 of the named streets are CNV streets
+BANBURY RD # 002100 TO 002199,2,fewer than 2 street names parsed (mid-block record)
+BANBURY RD & CLIFFMONT RD & COVE CLIFF ELEMENTARY SCHOOL ACCESS,2,fewer than 2 of the named streets are CNV streets
+BANBURY RD & GALLANT AVE,2,fewer than 2 of the named streets are CNV streets
+BANBURY RD & NAUGHTON AVE,2,fewer than 2 of the named streets are CNV streets
+BEACONSFIELD RD & HIGHLAND BLVD,2,fewer than 2 of the named streets are CNV streets
+BEAUFORT PL # 004100 TO 004159,2,fewer than 2 street names parsed (mid-block record)
+BELVEDERE DR & MAPLERIDGE DR,2,fewer than 2 of the named streets are CNV streets
+BELVISTA CRES # 000920 TO 000999,2,fewer than 2 street names parsed (mid-block record)
+BENDALE RD & CARNABY PL,2,fewer than 2 of the named streets are CNV streets
+BERKLEY AVE & SECHELT DR,2,fewer than 2 of the named streets are CNV streets
+BERKLEY RD & SWINBURNE AVE,2,fewer than 2 of the named streets are CNV streets
+BERMON PL # 003190 TO 003299,2,fewer than 2 street names parsed (mid-block record)
+BEVERLEY CRES & HIGHLAND BLVD,2,fewer than 2 of the named streets are CNV streets
+BEWICKE AVE # 000326 TO 000351,2,fewer than 2 street names parsed (mid-block record)
+BEWICKE AVE # 001500 TO 001599,2,fewer than 2 street names parsed (mid-block record)
+BISHOP PL # 003800 TO 003859,2,fewer than 2 street names parsed (mid-block record)
+BLUEBONNET RD # 003470 TO 003749,2,fewer than 2 street names parsed (mid-block record)
+BLYTHWOOD DR # 000700 TO 000799,2,fewer than 2 street names parsed (mid-block record)
+BOND ST & MOUNTAIN HWY,2,fewer than 2 of the named streets are CNV streets
+BORTHWICK RD # 001300 TO 001399,2,fewer than 2 street names parsed (mid-block record)
+BOSWELL AVE # 002500 TO 002569,2,fewer than 2 street names parsed (mid-block record)
+BOULEVARD CRES # 001900 TO 002009,2,fewer than 2 street names parsed (mid-block record)
+BOWSER AVE # 001515 TO 001599,2,fewer than 2 street names parsed (mid-block record)
+BOWSER AVE # 001640 TO 001799,2,fewer than 2 street names parsed (mid-block record)
+BRACKNELL CRES # 001160 TO 001269,2,fewer than 2 street names parsed (mid-block record)
+BRIDGMAN AVE & W 22ND ST,2,fewer than 2 of the named streets are CNV streets
+BROOKSBANK AVE & CLOVERLEY ST,2,CNV street names but no matching CNV intersection
+BROWNING PL # 000550 TO 000559,2,fewer than 2 street names parsed (mid-block record)
+BURR PL # 002430 TO 002499,2,fewer than 2 street names parsed (mid-block record)
+BURRILL AVE # 001500 TO 001599,2,fewer than 2 street names parsed (mid-block record)
+CALEDONIA AVE & MT SEYMOUR PKY,2,fewer than 2 of the named streets are CNV streets
+CALVERHALL ST # 000900 TO 000999,2,fewer than 2 street names parsed (mid-block record)
+CALVERHALL ST # 001000 TO 001099,2,fewer than 2 street names parsed (mid-block record)
+CANFIELD CRES # 003100 TO 003201,2,fewer than 2 street names parsed (mid-block record)
+CAPILANO CRES # 003115 TO 003155 odd,2,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD # 002900 TO 003099,2,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD & CLEMENTS AVE,2,fewer than 2 of the named streets are CNV streets
+CAPILANO RD & GRAVELEY ST,2,fewer than 2 of the named streets are CNV streets
+CAPILANO RD & NANCY GREENE WAY & PROSPECT AVE & PARKING LOT & SERVICE ROAD,2,fewer than 2 of the named streets are CNV streets
+CAPILANO RD & PATTERDALE DR,2,fewer than 2 of the named streets are CNV streets
+CAPILANO RIVER OVERPASS,2,fewer than 2 street names parsed (mid-block record)
+CARISBROOKE CRES # 000236 TO 000299,2,fewer than 2 street names parsed (mid-block record)
+CARRIE CATES CRT & LONSDALE QUAY,2,fewer than 2 of the named streets are CNV streets
+CARSON CRT # 002002 TO 002022 even,2,fewer than 2 street names parsed (mid-block record)
+CHAMBERLAIN DR # 000950 TO 001099,2,fewer than 2 street names parsed (mid-block record)
+CHAUCER AVE & SHAKESPEARE AVE,2,fewer than 2 of the named streets are CNV streets
+CHESTERFIELD AVE # 000300 TO 000349,2,fewer than 2 street names parsed (mid-block record)
+CHESTERFIELD AVE # 001300 TO 001349,2,fewer than 2 street names parsed (mid-block record)
+CHESTERFIELD AVE # 001404 TO 001499,2,fewer than 2 street names parsed (mid-block record)
+CHESTERFIELD AVE # 001500 TO 001599,2,fewer than 2 street names parsed (mid-block record)
+CHESTERFIELD AVE # 001700 TO 001799,2,fewer than 2 street names parsed (mid-block record)
+CHESTERFIELD AVE # 002334 TO 002399,2,fewer than 2 street names parsed (mid-block record)
+CHESTERFIELD AVE # 002800 TO 002899,2,fewer than 2 street names parsed (mid-block record)
+CHESTERFIELD AVE & W 3RD LANE,2,fewer than 2 of the named streets are CNV streets
+CHESTERFIELD AVE & W OSBORNE RD,2,fewer than 2 of the named streets are CNV streets
+CHESTERFIELD AVE & W WINDSOR RD,2,fewer than 2 of the named streets are CNV streets
+CHESTERFIELD PL # 000000 TO 000039,2,fewer than 2 street names parsed (mid-block record)
+CLEGG PL # 001200 TO 001289,2,fewer than 2 street names parsed (mid-block record)
+CLIFFRIDGE AVE # 005000 TO 005099,2,fewer than 2 street names parsed (mid-block record)
+CLOVERLEY ST # 001000 TO 001069,2,fewer than 2 street names parsed (mid-block record)
+COLWOOD DR # 002820 TO 002999,2,fewer than 2 street names parsed (mid-block record)
+COLWOOD DR # 003100 TO 003185,2,fewer than 2 street names parsed (mid-block record)
+CRAYFORD CLOSE & MOUNTAIN HWY,2,fewer than 2 of the named streets are CNV streets
+CROWN ST # 001340 TO 001424,2,fewer than 2 street names parsed (mid-block record)
+CROWN ST # 001500 TO 001539,2,fewer than 2 street names parsed (mid-block record)
+CRYSTAL CRT # 000800 TO 000829,2,fewer than 2 street names parsed (mid-block record)
+CURLING RD # 002042 TO 002099,2,fewer than 2 street names parsed (mid-block record)
+CURLING RD & GLENAIRE DR & KLAHANIE CRT,2,fewer than 2 of the named streets are CNV streets
+CURLING RD & LIONS GATE LANE,2,fewer than 2 of the named streets are CNV streets
+DEEP COVE RD # 001000 TO 001169,2,fewer than 2 street names parsed (mid-block record)
+DEEP COVE RD # 001200 TO 001799,2,fewer than 2 street names parsed (mid-block record)
+DEEP COVE RD # 001800 TO 002009,2,fewer than 2 street names parsed (mid-block record)
+DEMPSEY RD # 001050 TO 001299,2,fewer than 2 street names parsed (mid-block record)
+DEMPSEY RD & E BRAEMAR RD,2,fewer than 2 of the named streets are CNV streets
+DEMPSEY RD & UNDERWOOD AVE,2,fewer than 2 of the named streets are CNV streets
+DOLLAR RD # 004170 TO 004299,2,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY # 003143 TO 003599,2,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY # 004130 TO 004149,2,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY # 004160 TO 004199,2,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY ONRAMP & TRANS-CANADA HWY,2,fewer than 2 street names parsed (mid-block record)
+DONEGAL PL # 000700 TO 000759,2,fewer than 2 street names parsed (mid-block record)
+DORAN RD # 000990 TO 001099,2,fewer than 2 street names parsed (mid-block record)
+DORAN RD & MOUNTAIN HWY,2,fewer than 2 of the named streets are CNV streets
+DUCHESS AVE & E 29TH ST,2,fewer than 2 of the named streets are CNV streets
+DUVAL RD # 003300 TO 003498,2,fewer than 2 street names parsed (mid-block record)
+DUVAL RD # 003457 TO 003599,2,fewer than 2 street names parsed (mid-block record)
+DYCK RD # 001100 TO 001299,2,fewer than 2 street names parsed (mid-block record)
+E 12TH ST # 000200 TO 000299,2,fewer than 2 street names parsed (mid-block record)
+E 12TH ST # 000300 TO 000357,2,fewer than 2 street names parsed (mid-block record)
+E 12TH ST # 000700 TO 000798,2,fewer than 2 street names parsed (mid-block record)
+E 12TH ST & GRAND BLVD E,2,fewer than 2 of the named streets are CNV streets
+E 12TH ST & HENDRY AVE,2,CNV street names but no matching CNV intersection
+E 12TH ST & SUTHERLAND AVE,2,CNV street names but no matching CNV intersection
+E 13TH LANE & LIONS GATE HOSPITAL & ST GEORGES AVE,2,fewer than 2 of the named streets are CNV streets
+E 13TH ST # 000317 TO 000399,2,fewer than 2 street names parsed (mid-block record)
+E 13TH ST & HENDRY AVE,2,CNV street names but no matching CNV intersection
+E 14TH ST # 000100 TO 000120,2,fewer than 2 street names parsed (mid-block record)
+E 15TH ST # 001300 TO 001399,2,fewer than 2 street names parsed (mid-block record)
+E 15TH ST & MOUNTAIN HWY,2,fewer than 2 of the named streets are CNV streets
+E 16TH ST # 000200 TO 000235,2,fewer than 2 street names parsed (mid-block record)
+E 16TH ST # 000300 TO 000319,2,fewer than 2 street names parsed (mid-block record)
+E 16TH ST & GRAND BLVD E,2,fewer than 2 of the named streets are CNV streets
+E 1ST ST # 000300 TO 000399,2,fewer than 2 street names parsed (mid-block record)
+E 1ST ST # 000400 TO 000499,2,fewer than 2 street names parsed (mid-block record)
+E 27TH ST # 001210 TO 001279,2,fewer than 2 street names parsed (mid-block record)
+E 27TH ST & WHITELEY CRT,2,fewer than 2 of the named streets are CNV streets
+E 28TH ST # 000300 TO 000319,2,fewer than 2 street names parsed (mid-block record)
+E 29TH ST # 000200 TO 000298,2,fewer than 2 street names parsed (mid-block record)
+E 29TH ST # 000700 TO 000749,2,fewer than 2 street names parsed (mid-block record)
+E 29TH ST # 001000 TO 001099,2,fewer than 2 street names parsed (mid-block record)
+E 2ND ST # 000120 TO 000199,2,fewer than 2 street names parsed (mid-block record)
+E 2ND ST # 000500 TO 000599,2,fewer than 2 street names parsed (mid-block record)
+E 3RD ST # 000122 TO 000199,2,fewer than 2 street names parsed (mid-block record)
+E 3RD ST # 001126 TO 001160 even,2,fewer than 2 street names parsed (mid-block record)
+E 5TH ST # 000122 TO 000199,2,fewer than 2 street names parsed (mid-block record)
+E 5TH ST # 000300 TO 000399,2,fewer than 2 street names parsed (mid-block record)
+E 6TH ST # 000300 TO 000399,2,fewer than 2 street names parsed (mid-block record)
+E 7TH ST # 000800 TO 000899,2,fewer than 2 street names parsed (mid-block record)
+E BRAEMAR RD # 000200 TO 000429,2,fewer than 2 street names parsed (mid-block record)
+E KEITH RD # 000100 TO 000154 even,2,fewer than 2 street names parsed (mid-block record)
+E KEITH RD & OLD LILLOOET RD,2,fewer than 2 of the named streets are CNV streets
+E KENSINGTON RD & KENSINGTON CRES & LONSDALE AVE,2,fewer than 2 of the named streets are CNV streets
+E KINGS RD # 000118 TO 000199,2,fewer than 2 street names parsed (mid-block record)
+E ST JAMES RD # 000750 TO 000774,2,fewer than 2 street names parsed (mid-block record)
+E ST JAMES RD & ST GEORGES AVE,2,fewer than 2 of the named streets are CNV streets
+E WINDSOR RD & ST GEORGES AVE,2,fewer than 2 of the named streets are CNV streets
+EASTERN AVE # 002700 TO 002899,2,fewer than 2 street names parsed (mid-block record)
+EASTLEIGH LANE # 001900 TO 002099,2,fewer than 2 street names parsed (mid-block record)
+EASTVIEW RD # 001200 TO 001299,2,fewer than 2 street names parsed (mid-block record)
+EDGEMONT BLVD # 003500 TO 003749,2,fewer than 2 street names parsed (mid-block record)
+EDGEMONT BLVD # 003750 TO 003771,2,fewer than 2 street names parsed (mid-block record)
+EDGEMONT BLVD & THORNCLIFFE DR,2,fewer than 2 of the named streets are CNV streets
+EDGEWOOD RD # 001020 TO 001049,2,fewer than 2 street names parsed (mid-block record)
+ELLIS ST & PLYMOUTH DR,2,fewer than 2 of the named streets are CNV streets
+EMERALD DR # 003600 TO 003999,2,fewer than 2 street names parsed (mid-block record)
+EVELYN ST & UNDERWOOD AVE,2,fewer than 2 of the named streets are CNV streets
+FAIRWAY DR # 000500 TO 000699,2,fewer than 2 street names parsed (mid-block record)
+FERN ST # 001500 TO 001539,2,fewer than 2 street names parsed (mid-block record)
+FERN ST & SEYLYNN CRES,2,fewer than 2 of the named streets are CNV streets
+FORESTER ST # 000050 TO 000258,2,fewer than 2 street names parsed (mid-block record)
+FREDERICK RD # 001128 TO 001199,2,fewer than 2 street names parsed (mid-block record)
+FREDERICK RD & INSTITUTE RD,2,fewer than 2 of the named streets are CNV streets
+FROMME RD # 003600 TO 003645,2,fewer than 2 street names parsed (mid-block record)
+FROMME RD & WELLINGTON DR,2,fewer than 2 of the named streets are CNV streets
+FULLERTON AVE # 002020 TO 002029,2,fewer than 2 street names parsed (mid-block record)
+FULLERTON AVE & GLENAIRE DR,2,fewer than 2 of the named streets are CNV streets
+GALLANT AVE # 004360 TO 004399,2,fewer than 2 street names parsed (mid-block record)
+GARDEN AVE # 000100 TO 000149,2,fewer than 2 street names parsed (mid-block record)
+GLADWIN DR # 001100 TO 001198 even,2,fewer than 2 street names parsed (mid-block record)
+GLENAIRE DR # 001801 TO 001999,2,fewer than 2 street names parsed (mid-block record)
+GLENHAVEN CRES # 004170 TO 004239,2,fewer than 2 street names parsed (mid-block record)
+GREYLYNN CRES # 002170 TO 002299,2,fewer than 2 street names parsed (mid-block record)
+HAMBER PL & MT SEYMOUR RD,2,fewer than 2 of the named streets are CNV streets
+HAMILTON AVE # 001600 TO 001625,2,fewer than 2 street names parsed (mid-block record)
+HARBOUR AVE # 000170 TO 000179,2,fewer than 2 street names parsed (mid-block record)
+HARBOURSIDE DR # 000800 TO 000849,2,fewer than 2 street names parsed (mid-block record)
+HARBOURSIDE DR # 000957 TO 000999,2,fewer than 2 street names parsed (mid-block record)
+HARDY CRES # 002600 TO 002749,2,fewer than 2 street names parsed (mid-block record)
+HENDERSON AVE # 003600 TO 003699,2,fewer than 2 street names parsed (mid-block record)
+HENDRY AVE # 000700 TO 000725,2,fewer than 2 street names parsed (mid-block record)
+HIGHLAND BLVD # 003000 TO 003049,2,fewer than 2 street names parsed (mid-block record)
+HIGHLAND BLVD # 004150 TO 004199,2,fewer than 2 street names parsed (mid-block record)
+HIGHLAND BLVD # 004600 TO 004799,2,fewer than 2 street names parsed (mid-block record)
+HIGHLAND BLVD & MONTROYAL BLVD,2,fewer than 2 of the named streets are CNV streets
+HIGHLAND BLVD & NEWMARKET DR,2,fewer than 2 of the named streets are CNV streets
+HILLCREST AVE & SUNSET BLVD,2,fewer than 2 of the named streets are CNV streets
+HOPE RD & TATLOW AVE,2,fewer than 2 of the named streets are CNV streets
+HOSKINS RD # 002000 TO 002119,2,fewer than 2 street names parsed (mid-block record)
+HOSKINS RD # 004500 TO 004599,2,fewer than 2 street names parsed (mid-block record)
+HOSKINS RD # 004601 TO 004639 odd,2,fewer than 2 street names parsed (mid-block record)
+HOSKINS RD # 004670 TO 004799,2,fewer than 2 street names parsed (mid-block record)
+INDIAN RIVER CRES # 001902 TO 001944,2,fewer than 2 street names parsed (mid-block record)
+INDIAN RIVER DR # 003901 TO 003964,2,fewer than 2 street names parsed (mid-block record)
+INDIAN RIVER DR # 004054 TO 004099,2,fewer than 2 street names parsed (mid-block record)
+INDIAN RIVER DR # 005608 TO 005690 even,2,fewer than 2 street names parsed (mid-block record)
+INLET CRES # 004000 TO 004009,2,fewer than 2 street names parsed (mid-block record)
+JONES AVE # 001900 TO 001999,2,fewer than 2 street names parsed (mid-block record)
+JONES AVE # 002143 TO 002224,2,fewer than 2 street names parsed (mid-block record)
+KEATS RD # 002500 TO 002599,2,fewer than 2 street names parsed (mid-block record)
+KENNARD AVE & WHITCHURCH ST,2,fewer than 2 of the named streets are CNV streets
+KILMARNOCK CRES # 002300 TO 002429,2,fewer than 2 street names parsed (mid-block record)
+KILMER RD # 001330 TO 001439,2,fewer than 2 street names parsed (mid-block record)
+KIRKSTONE RD & MAGNUSSEN PL & MOLLIE NYE WAY,2,fewer than 2 of the named streets are CNV streets
+LAING DR # 001400 TO 001549,2,fewer than 2 street names parsed (mid-block record)
+LARSON RD & W QUEENS RD,2,fewer than 2 of the named streets are CNV streets
+LAURALYNN DR # 002500 TO 002699,2,fewer than 2 street names parsed (mid-block record)
+LILE DR # 000602 TO 000602 even,2,fewer than 2 street names parsed (mid-block record)
+LILLOOET RD # 001100 TO 001199,2,fewer than 2 street names parsed (mid-block record)
+LILLOOET RD & SKEENA RD,2,fewer than 2 of the named streets are CNV streets
+LIONS AVE # 004200 TO 004299,2,fewer than 2 street names parsed (mid-block record)
+LIONS AVE # 004370 TO 004399,2,fewer than 2 street names parsed (mid-block record)
+LIONS GATE LANE # 001700 TO 001899,2,fewer than 2 street names parsed (mid-block record)
+LISGAR CRT # 000900 TO 000969,2,fewer than 2 street names parsed (mid-block record)
+LLOYD AVE # 001300 TO 001349,2,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 000200 TO 000298 even,2,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 002900 TO 002985,2,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 003000 TO 003049,2,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 003200 TO 003249,2,fewer than 2 street names parsed (mid-block record)
+LOW LEVEL RD # 000370 TO 000991,2,fewer than 2 street names parsed (mid-block record)
+LOWRY LANE # 000600 TO 000650,2,fewer than 2 street names parsed (mid-block record)
+LYNN AVE & MANSFIELD PL,2,fewer than 2 of the named streets are CNV streets
+LYNN VALLEY RD # 000730 TO 000798 even,2,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 000900 TO 000998 even,2,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 000901 TO 000999 odd,2,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD & UPTON RD,2,fewer than 2 of the named streets are CNV streets
+LYTTON ST # 000800 TO 000949,2,fewer than 2 street names parsed (mid-block record)
+MACGOWAN AVE # 001500 TO 001569,2,fewer than 2 street names parsed (mid-block record)
+MACKAY AVE # 001620 TO 001699,2,fewer than 2 street names parsed (mid-block record)
+MACKAY RD # 000150 TO 000223,2,fewer than 2 street names parsed (mid-block record)
+MAHON AVE # 003350 TO 003479,2,fewer than 2 street names parsed (mid-block record)
+MAHON AVE & MOUNTAINSIDE SECONDARY SCHOOL ACCESS & W OSBORNE RD,2,fewer than 2 of the named streets are CNV streets
+MAHON AVE & W WINDSOR RD,2,fewer than 2 of the named streets are CNV streets
+MAIN ST # 001520 TO 001588 even,2,fewer than 2 street names parsed (mid-block record)
+MAIN ST & TRANS-CANADA HWY,2,fewer than 2 of the named streets are CNV streets
+MAPLERIDGE DR & MONTROYAL BLVD,2,fewer than 2 of the named streets are CNV streets
+MARINE DR # 001200 TO 001223,2,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 001500 TO 001599,2,fewer than 2 street names parsed (mid-block record)
+MARINEVIEW CRES # 004500 TO 004599,2,fewer than 2 street names parsed (mid-block record)
+MCEWEN AVE & PETERS RD,2,fewer than 2 of the named streets are CNV streets
+MCGUIRE AVE # 001638 TO 001799,2,fewer than 2 street names parsed (mid-block record)
+MCKEEN AVE & PEMBERTON AVE,2,fewer than 2 of the named streets are CNV streets
+MCNAIR DR # 001516 TO 001576 even,2,fewer than 2 street names parsed (mid-block record)
+MELBOURNE AVE # 000950 TO 000999,2,fewer than 2 street names parsed (mid-block record)
+MONTERAY AVE # 000280 TO 000349,2,fewer than 2 street names parsed (mid-block record)
+MONTROYAL BLVD # 000600 TO 000699,2,fewer than 2 street names parsed (mid-block record)
+MONTROYAL BLVD # 000951 TO 000999,2,fewer than 2 street names parsed (mid-block record)
+MONTROYAL BLVD # 001074 TO 001099,2,fewer than 2 street names parsed (mid-block record)
+MONTROYAL BLVD & STARLIGHT WAY,2,fewer than 2 of the named streets are CNV streets
+MOUNTAIN HWY # 000216 TO 000225,2,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 001696 TO 001799,2,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 002058 TO 002299,2,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 002552 TO 002699,2,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 002980 TO 002999,2,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY & ST STEPHENS PL,2,fewer than 2 of the named streets are CNV streets
+MT SEYMOUR PKY # 002072 TO 002198 even,2,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 002600 TO 002748 even,2,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 002601 TO 002749 odd,2,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 003300 TO 003398 even,2,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 003700 TO 003778 even,2,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 003800 TO 003999,2,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR RD # 001270 TO 001610,2,fewer than 2 street names parsed (mid-block record)
+MUNSTER AVE & SEYMOUR RIVER PL,2,fewer than 2 of the named streets are CNV streets
+N DOLLARTON HWY # 000600 TO 000699,2,fewer than 2 street names parsed (mid-block record)
+NANCY GREENE WAY # 006371 TO 006401,2,fewer than 2 street names parsed (mid-block record)
+NORTHLANDS DR # 001001 TO 001018,2,fewer than 2 street names parsed (mid-block record)
+OAKWOOD CRES # 001300 TO 001339,2,fewer than 2 street names parsed (mid-block record)
+OLD LILLOOET RD # 000992 TO 001138 even,2,fewer than 2 street names parsed (mid-block record)
+OLD LILLOOET RD & PREMIER ST & PARKING LOT,2,fewer than 2 of the named streets are CNV streets
+ORWELL ST # 000000 TO 000060,2,fewer than 2 street names parsed (mid-block record)
+ORWELL ST # 000700 TO 000779,2,fewer than 2 street names parsed (mid-block record)
+OSPREY CRT # 003600 TO 003669,2,fewer than 2 street names parsed (mid-block record)
+PAISLEY RD & RIDGEWOOD DR & SUNSET BLVD,2,fewer than 2 of the named streets are CNV streets
+PEMBERTON AVE # 000051 TO 000129,2,fewer than 2 street names parsed (mid-block record)
+PEMBERTON AVE # 001300 TO 001399,2,fewer than 2 street names parsed (mid-block record)
+PEMBERTON AVE & W 26TH ST,2,fewer than 2 of the named streets are CNV streets
+PETERS RD # 001600 TO 001725,2,fewer than 2 street names parsed (mid-block record)
+PHILIP AVE # 000090 TO 000149,2,fewer than 2 street names parsed (mid-block record)
+PHILIP AVE & W 15TH ST,2,fewer than 2 of the named streets are CNV streets
+PHILIP AVE & W 22ND ST,2,fewer than 2 of the named streets are CNV streets
+PLATT CRES # 001600 TO 001729,2,fewer than 2 street names parsed (mid-block record)
+PLYMOUTH DR # 003030 TO 003099,2,fewer than 2 street names parsed (mid-block record)
+PREMIER ST # 000600 TO 000768,2,fewer than 2 street names parsed (mid-block record)
+PREMIER ST # 000723 TO 000831,2,fewer than 2 street names parsed (mid-block record)
+PREMIER ST # 001170 TO 001236 even,2,fewer than 2 street names parsed (mid-block record)
+PRINCESS AVE # 002900 TO 002999,2,fewer than 2 street names parsed (mid-block record)
+PRINCESS AVE # 003700 TO 003805,2,fewer than 2 street names parsed (mid-block record)
+PROSPECT AVE & RANGER AVE,2,fewer than 2 of the named streets are CNV streets
+PURCELL WAY # 001804 TO 001988 even,2,fewer than 2 street names parsed (mid-block record)
+RANGER AVE # 005100 TO 005299,2,fewer than 2 street names parsed (mid-block record)
+REDONDA DR # 005060 TO 005159,2,fewer than 2 street names parsed (mid-block record)
+REGAL CRES # 000788 TO 000899,2,fewer than 2 street names parsed (mid-block record)
+RIVERGROVE PL # 001900 TO 002049,2,fewer than 2 street names parsed (mid-block record)
+RIVERSIDE DR # 000500 TO 000599,2,fewer than 2 street names parsed (mid-block record)
+RIVERSIDE DR # 001600 TO 002170,2,fewer than 2 street names parsed (mid-block record)
+RIVERSIDE DR & WINDRIDGE DR,2,fewer than 2 of the named streets are CNV streets
+ROCHE POINT DR # 000232 TO 000269,2,fewer than 2 street names parsed (mid-block record)
+ROCKCLIFF RD # 001900 TO 002099,2,fewer than 2 street names parsed (mid-block record)
+ROSS RD # 001601 TO 001699,2,fewer than 2 street names parsed (mid-block record)
+RUSSELL CRT # 004100 TO 004199,2,fewer than 2 street names parsed (mid-block record)
+SASAMAT LANE # 000300 TO 000322,2,fewer than 2 street names parsed (mid-block record)
+SASAMAT LANE & SUNSHINE FALLS LANE,2,fewer than 2 of the named streets are CNV streets
+SAUVE CRT # 000860 TO 000949,2,fewer than 2 street names parsed (mid-block record)
+SENATOR RD # 000005 TO 000080,2,fewer than 2 street names parsed (mid-block record)
+SHAKESPEARE AVE & WILLIAM AVE,2,fewer than 2 of the named streets are CNV streets
+SHAVINGTON ST # 001000 TO 001119,2,fewer than 2 street names parsed (mid-block record)
+ST ALBANS AVE # 003900 TO 004099,2,fewer than 2 street names parsed (mid-block record)
+ST ALBANS AVE & ST PAULS AVE,2,fewer than 2 of the named streets are CNV streets
+ST GEORGES AVE # 000054 TO 000099,2,fewer than 2 street names parsed (mid-block record)
+ST GEORGES AVE # 000100 TO 000151,2,fewer than 2 street names parsed (mid-block record)
+ST GEORGES AVE # 000200 TO 000249,2,fewer than 2 street names parsed (mid-block record)
+ST MARYS AVE # 004000 TO 004199,2,fewer than 2 street names parsed (mid-block record)
+ST PAULS AVE # 004100 TO 004299,2,fewer than 2 street names parsed (mid-block record)
+STANLEY AVE # 003100 TO 003133,2,fewer than 2 street names parsed (mid-block record)
+STRATHAVEN DR # 000800 TO 000926,2,fewer than 2 street names parsed (mid-block record)
+STRATHAVEN DR # 001144 TO 001144 even,2,fewer than 2 street names parsed (mid-block record)
+STRATHAVEN LANE # 003140 TO 003299,2,fewer than 2 street names parsed (mid-block record)
+STRATHCONA RD # 004451 TO 004540,2,fewer than 2 street names parsed (mid-block record)
+STRATHCONA RD # 004700 TO 004899,2,fewer than 2 street names parsed (mid-block record)
+SUNSET BLVD # 003600 TO 003889,2,fewer than 2 street names parsed (mid-block record)
+SUTHERLAND AVE # 001821 TO 001870,2,fewer than 2 street names parsed (mid-block record)
+SYKES RD # 003600 TO 003699,2,fewer than 2 street names parsed (mid-block record)
+THORNCLIFFE DR & W QUEENS RD,2,fewer than 2 of the named streets are CNV streets
+TRANS-CANADA HWY # 001600 TO 001618 even,2,fewer than 2 street names parsed (mid-block record)
+TRANS-CANADA HWY # 002000 TO 002020 even,2,fewer than 2 street names parsed (mid-block record)
+TRANS-CANADA HWY # 002190 TO 002222 even,2,fewer than 2 street names parsed (mid-block record)
+VENTURA CRES # 000460 TO 000559,2,fewer than 2 street names parsed (mid-block record)
+VIOLET ST # 002600 TO 002749,2,fewer than 2 street names parsed (mid-block record)
+W 14TH ST # 000224 TO 000299,2,fewer than 2 street names parsed (mid-block record)
+W 14TH ST # 000312 TO 000399,2,fewer than 2 street names parsed (mid-block record)
+W 14TH ST # 001100 TO 001175,2,fewer than 2 street names parsed (mid-block record)
+W 15TH ST # 000211 TO 000259,2,fewer than 2 street names parsed (mid-block record)
+W 15TH ST # 001100 TO 001175,2,fewer than 2 street names parsed (mid-block record)
+W 16TH ST # 000226 TO 000273,2,fewer than 2 street names parsed (mid-block record)
+W 16TH ST # 000400 TO 000499,2,fewer than 2 street names parsed (mid-block record)
+W 17TH ST # 000100 TO 000121,2,fewer than 2 street names parsed (mid-block record)
+W 17TH ST # 000222 TO 000225,2,fewer than 2 street names parsed (mid-block record)
+W 18TH ST # 000122 TO 000175,2,fewer than 2 street names parsed (mid-block record)
+W 1ST ST # 000800 TO 000821,2,fewer than 2 street names parsed (mid-block record)
+W 1ST ST # 000822 TO 000849,2,fewer than 2 street names parsed (mid-block record)
+W 22ND ST # 000502 TO 000599,2,fewer than 2 street names parsed (mid-block record)
+W 22ND ST # 001200 TO 001299,2,fewer than 2 street names parsed (mid-block record)
+W 23RD ST # 000500 TO 000599,2,fewer than 2 street names parsed (mid-block record)
+W 25TH ST # 000300 TO 000398 even,2,fewer than 2 street names parsed (mid-block record)
+W 26TH ST # 000300 TO 000399,2,fewer than 2 street names parsed (mid-block record)
+W 26TH ST # 000400 TO 000499,2,fewer than 2 street names parsed (mid-block record)
+W 2ND ST # 000100 TO 000119,2,fewer than 2 street names parsed (mid-block record)
+W 3RD ST # 000717 TO 000787 odd,2,fewer than 2 street names parsed (mid-block record)
+W 4TH ST # 000200 TO 000299,2,fewer than 2 street names parsed (mid-block record)
+W 5TH ST # 000122 TO 000199,2,fewer than 2 street names parsed (mid-block record)
+W 6TH ST # 000122 TO 000199,2,fewer than 2 street names parsed (mid-block record)
+W ESPLANADE # 000124 TO 000149,2,fewer than 2 street names parsed (mid-block record)
+W ESPLANADE # 000200 TO 000249,2,fewer than 2 street names parsed (mid-block record)
+W ESPLANADE # 000250 TO 000259,2,fewer than 2 street names parsed (mid-block record)
+W KEITH RD # 000101 TO 000169 odd,2,fewer than 2 street names parsed (mid-block record)
+W ST JAMES RD # 000200 TO 000299,2,fewer than 2 street names parsed (mid-block record)
+W ST JAMES RD # 000400 TO 000529,2,fewer than 2 street names parsed (mid-block record)
+W VICTORIA PARK AVE # 000701 TO 000709 odd,2,fewer than 2 street names parsed (mid-block record)
+W WINDSOR RD # 000400 TO 000508,2,fewer than 2 street names parsed (mid-block record)
+W WINDSOR RD # 000501 TO 000599,2,fewer than 2 street names parsed (mid-block record)
+WELLINGTON CRES # 003400 TO 003471,2,fewer than 2 street names parsed (mid-block record)
+WELLINGTON DR & WELLINGTON PL,2,fewer than 2 of the named streets are CNV streets
+WEMBLEY DR # 002740 TO 002868,2,fewer than 2 street names parsed (mid-block record)
+WENDEL PL # 001100 TO 001179,2,fewer than 2 street names parsed (mid-block record)
+WESTHYDE PL # 000650 TO 000729,2,fewer than 2 street names parsed (mid-block record)
+WESTOVER RD # 001770 TO 001899,2,fewer than 2 street names parsed (mid-block record)
+WESTVIEW DR # 002100 TO 002199,2,fewer than 2 street names parsed (mid-block record)
+WOLFE ST # 001700 TO 001799,2,fewer than 2 street names parsed (mid-block record)
+ADDERLEY LANE & E 7TH LANE & HENDRY AVE,1,fewer than 2 of the named streets are CNV streets
+ADDERLEY ST & BROOKSBANK AVE,1,CNV street names but no matching CNV intersection
+AINTREE DR # 003300 TO 003521,1,fewer than 2 street names parsed (mid-block record)
+ALDERCREST DR # 003600 TO 003639,1,fewer than 2 street names parsed (mid-block record)
+ALDERLYNN DR # 001650 TO 001749,1,fewer than 2 street names parsed (mid-block record)
+ALLAN RD & DRAYCOTT RD,1,fewer than 2 of the named streets are CNV streets
+ALPINE CRT # 000721 TO 000749,1,fewer than 2 street names parsed (mid-block record)
+ALPINE CRT & SKYLINE DR,1,fewer than 2 of the named streets are CNV streets
+ANITA CRT # 002000 TO 002099,1,fewer than 2 street names parsed (mid-block record)
+ANNE MACDONALD WAY # 003494 TO 003599,1,fewer than 2 street names parsed (mid-block record)
+APPIN RD # 001400 TO 001499,1,fewer than 2 street names parsed (mid-block record)
+APPIN RD # 001500 TO 001543,1,fewer than 2 street names parsed (mid-block record)
+APPIN RD & E 14TH ST,1,fewer than 2 of the named streets are CNV streets
+ARBORLYNN DR # 001185 TO 001259,1,fewer than 2 street names parsed (mid-block record)
+ARBORLYNN DR # 001240 TO 001369,1,fewer than 2 street names parsed (mid-block record)
+ARBORLYNN DR # 001850 TO 001999,1,fewer than 2 street names parsed (mid-block record)
+ARBORLYNN DR & BIRCHLYNN PL,1,fewer than 2 of the named streets are CNV streets
+ARMOUR CRT & TOURNEY RD,1,fewer than 2 of the named streets are CNV streets
+ARROYO CRT & DERBYSHIRE WAY & SECHELT DR,1,fewer than 2 of the named streets are CNV streets
+ASHLEY CLOSE # 001617 TO 001629 odd,1,fewer than 2 street names parsed (mid-block record)
+AUTOMALL DR # 000853 TO 000855 odd,1,fewer than 2 street names parsed (mid-block record)
+AYR AVE # 003400 TO 003499,1,fewer than 2 street names parsed (mid-block record)
+BADGER RD # 002330 TO 002599,1,fewer than 2 street names parsed (mid-block record)
+BAIRD RD # 003151 TO 003199,1,fewer than 2 street names parsed (mid-block record)
+BAIRD RD # 003348 TO 003379,1,fewer than 2 street names parsed (mid-block record)
+BAIRD RD # 003600 TO 003649,1,fewer than 2 street names parsed (mid-block record)
+BAIRD RD & CROFT RD,1,fewer than 2 of the named streets are CNV streets
+BANBURY RD # 001650 TO 001699,1,fewer than 2 street names parsed (mid-block record)
+BANBURY RD # 001800 TO 001899,1,fewer than 2 street names parsed (mid-block record)
+BANBURY RD # 001950 TO 002099,1,fewer than 2 street names parsed (mid-block record)
+BANBURY RD & SUMMERSIDE LANE,1,fewer than 2 of the named streets are CNV streets
+BANFF CRT # 003670 TO 003690 even,1,fewer than 2 street names parsed (mid-block record)
+BANFF CRT & MT SEYMOUR RD,1,fewer than 2 of the named streets are CNV streets
+BARLYNN CRES & MOUNTAIN HWY,1,fewer than 2 of the named streets are CNV streets
+BAY ST & ORWELL ST,1,fewer than 2 of the named streets are CNV streets
+BEACHVIEW DR # 000300 TO 000399,1,fewer than 2 street names parsed (mid-block record)
+BEACHVIEW DR # 000500 TO 000599,1,fewer than 2 street names parsed (mid-block record)
+BEACONSFIELD RD & CANTERBURY CRES & SKYLINE DR,1,fewer than 2 of the named streets are CNV streets
+BEAUFORT PL & BEAUFORT RD,1,fewer than 2 of the named streets are CNV streets
+BEAUFORT RD & BROCKTON CRES,1,fewer than 2 of the named streets are CNV streets
+BEAUFORT RD & VIOLET ST,1,fewer than 2 of the named streets are CNV streets
+BEAUMONT DR # 000900 TO 000951,1,fewer than 2 street names parsed (mid-block record)
+BEAUMONT DR & HIGHLAND BLVD,1,fewer than 2 of the named streets are CNV streets
+BELLOC ST # 002500 TO 002609,1,fewer than 2 street names parsed (mid-block record)
+BELLOC ST & BERKLEY RD,1,fewer than 2 of the named streets are CNV streets
+BELMONT AVE # 000880 TO 000899,1,fewer than 2 street names parsed (mid-block record)
+BELMONT AVE # 000900 TO 000999,1,fewer than 2 street names parsed (mid-block record)
+BELMONT AVE # 001000 TO 001015,1,fewer than 2 street names parsed (mid-block record)
+BELMONT AVE & HIGHLAND BLVD,1,fewer than 2 of the named streets are CNV streets
+BELVEDERE DR # 000930 TO 000989,1,fewer than 2 street names parsed (mid-block record)
+BELVEDERE DR & HIGHLAND BLVD,1,fewer than 2 of the named streets are CNV streets
+BELVEDERE DR & MONTROYAL BLVD,1,fewer than 2 of the named streets are CNV streets
+BELVISTA CRES & HIGHLAND BLVD,1,fewer than 2 of the named streets are CNV streets
+BELVISTA CRES & LIONS AVE,1,fewer than 2 of the named streets are CNV streets
+BENDALE RD # 002483 TO 002499,1,fewer than 2 street names parsed (mid-block record)
+BERKLEY AVE & BERKLEY RD & LAYTON DR,1,fewer than 2 of the named streets are CNV streets
+BERKLEY RD & BYRON RD,1,fewer than 2 of the named streets are CNV streets
+BERMON PL & WESTOVER RD,1,fewer than 2 of the named streets are CNV streets
+BEVERLEY CRES # 003004 TO 003343,1,fewer than 2 street names parsed (mid-block record)
+BEWICKE AVE # 000300 TO 000325,1,fewer than 2 street names parsed (mid-block record)
+BEWICKE AVE # 001400 TO 001447,1,fewer than 2 street names parsed (mid-block record)
+BEWICKE AVE # 001600 TO 001699,1,fewer than 2 street names parsed (mid-block record)
+BEWICKE AVE & W 14TH LANE,1,fewer than 2 of the named streets are CNV streets
+BIRCHLYNN PL # 001610 TO 001664 even,1,fewer than 2 street names parsed (mid-block record)
+BLAIRVIEW AVE & HILL DR,1,fewer than 2 of the named streets are CNV streets
+BLANTYRE PL # 003900 TO 003999,1,fewer than 2 street names parsed (mid-block record)
+BLUE GROUSE WAY # 001080 TO 001099,1,fewer than 2 street names parsed (mid-block record)
+BLUE GROUSE WAY & BLUEBERRY LANE,1,fewer than 2 of the named streets are CNV streets
+BLUERIDGE AVE # 000695 TO 000769,1,fewer than 2 street names parsed (mid-block record)
+BLUERIDGE AVE & BONITA DR,1,fewer than 2 of the named streets are CNV streets
+BLUERIDGE AVE & SKYLINE DR,1,fewer than 2 of the named streets are CNV streets
+BLYTHWOOD DR & DELBROOK AVE,1,fewer than 2 of the named streets are CNV streets
+BOND ST # 001500 TO 001569,1,fewer than 2 street names parsed (mid-block record)
+BOND ST # 001570 TO 001599,1,fewer than 2 street names parsed (mid-block record)
+BORTHWICK RD & MOUNTAIN HWY,1,fewer than 2 of the named streets are CNV streets
+BOULEVARD CRES # 002011 TO 002061 odd,1,fewer than 2 street names parsed (mid-block record)
+BOWSER AVE # 000100 TO 000149,1,fewer than 2 street names parsed (mid-block record)
+BOWSER AVE # 002200 TO 002299,1,fewer than 2 street names parsed (mid-block record)
+BRACKNELL PL # 001254 TO 001276 even,1,fewer than 2 street names parsed (mid-block record)
+BRACKNELL PL # 001271 TO 001299,1,fewer than 2 street names parsed (mid-block record)
+BRAND LANE # 000372 TO 000435,1,fewer than 2 street names parsed (mid-block record)
+BRAND ST # 000300 TO 000448,1,fewer than 2 street names parsed (mid-block record)
+BRAND ST & E 29TH ST,1,fewer than 2 of the named streets are CNV streets
+BRANTWOOD RD & PAISLEY RD,1,fewer than 2 of the named streets are CNV streets
+BRIARLYNN CRES # 001320 TO 001409,1,fewer than 2 street names parsed (mid-block record)
+BRIARLYNN CRES # 001410 TO 001459,1,fewer than 2 street names parsed (mid-block record)
+BRIARLYNN CRES & E 20TH ST,1,fewer than 2 of the named streets are CNV streets
+BRIDGMAN AVE # 002000 TO 002099,1,fewer than 2 street names parsed (mid-block record)
+BRIDGMAN AVE & W 21ST ST,1,fewer than 2 of the named streets are CNV streets
+BRIXHAM RD & PLYMOUTH DR,1,fewer than 2 of the named streets are CNV streets
+BROADVIEW DR # 000931 TO 000933 odd,1,fewer than 2 street names parsed (mid-block record)
+BROCKTON CRES # 003810 TO 003835,1,fewer than 2 street names parsed (mid-block record)
+BROCKTON CRES # 003900 TO 004093,1,fewer than 2 street names parsed (mid-block record)
+BROCKTON CRES & ORLOHMA PL,1,fewer than 2 of the named streets are CNV streets
+BROCKTON PL # 003900 TO 003999,1,fewer than 2 street names parsed (mid-block record)
+BRONTE DR # 002500 TO 002651,1,fewer than 2 street names parsed (mid-block record)
+BROOKRIDGE DR & RIDGEWOOD DR,1,fewer than 2 of the named streets are CNV streets
+BROOKSBANK AVE & DRAYTON ST,1,fewer than 2 of the named streets are CNV streets
+BROOKSBANK AVE & SHAVINGTON ST,1,CNV street names but no matching CNV intersection
+BROWNING PL # 000670 TO 000793,1,fewer than 2 street names parsed (mid-block record)
+BROWNING PL # 000814 TO 000897,1,fewer than 2 street names parsed (mid-block record)
+BROWNING PL & WINDRIDGE DR,1,fewer than 2 of the named streets are CNV streets
+BURNS AVE # 002000 TO 002099,1,fewer than 2 street names parsed (mid-block record)
+BURNS AVE & NAUGHTON AVE & PANORAMA DR,1,fewer than 2 of the named streets are CNV streets
+BURRILL AVE # 001856 TO 001899,1,fewer than 2 street names parsed (mid-block record)
+BURRILL AVE & HOSKINS RD,1,fewer than 2 of the named streets are CNV streets
+BUSHNELL PL # 002800 TO 002899,1,fewer than 2 street names parsed (mid-block record)
+CACTUS CRT # 002660 TO 002710,1,fewer than 2 street names parsed (mid-block record)
+CADDY RD # 004100 TO 004169,1,fewer than 2 street names parsed (mid-block record)
+CALEDONIA AVE # 001000 TO 001169,1,fewer than 2 street names parsed (mid-block record)
+CALEDONIA AVE # 001200 TO 001219,1,fewer than 2 street names parsed (mid-block record)
+CALEDONIA AVE # 001864 TO 001995,1,fewer than 2 street names parsed (mid-block record)
+CALEDONIA AVE & DEEP COVE RD & GALLANT AVE,1,fewer than 2 of the named streets are CNV streets
+CALEDONIA AVE & STRATHCONA RD,1,fewer than 2 of the named streets are CNV streets
+CALVERHALL ST # 000800 TO 000899,1,fewer than 2 street names parsed (mid-block record)
+CALVERHALL ST & KENNARD AVE,1,fewer than 2 of the named streets are CNV streets
+CANFIELD CRES & HIGHLAND BLVD,1,fewer than 2 of the named streets are CNV streets
+CANFIELD CRES & WOODBINE DR,1,fewer than 2 of the named streets are CNV streets
+CANTERBURY CRES # 004370 TO 004500,1,fewer than 2 street names parsed (mid-block record)
+CANTERBURY CRES & PARLIAMENT CRES,1,fewer than 2 of the named streets are CNV streets
+CANTERBURY CRES & TUDOR AVE,1,fewer than 2 of the named streets are CNV streets
+CANYON BLVD # 000800 TO 000899,1,fewer than 2 street names parsed (mid-block record)
+CANYON BLVD # 000961 TO 001020,1,fewer than 2 street names parsed (mid-block record)
+CANYON BLVD # 001011 TO 001069,1,fewer than 2 street names parsed (mid-block record)
+CANYON BLVD & CAPILANO RD,1,fewer than 2 of the named streets are CNV streets
+CANYON BLVD & CEDARCREST AVE,1,fewer than 2 of the named streets are CNV streets
+CANYON BLVD & RANGER AVE,1,fewer than 2 of the named streets are CNV streets
+CAPILANO CRES # 003157 TO 003379 odd,1,fewer than 2 street names parsed (mid-block record)
+CAPILANO CRES # 003200 TO 003298 even,1,fewer than 2 street names parsed (mid-block record)
+CAPILANO PARK RD # 004000 TO 004403,1,fewer than 2 street names parsed (mid-block record)
+CAPILANO PARK RD # 004500 TO 004799,1,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD # 001850 TO 001969,1,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD # 002000 TO 002099,1,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD # 002300 TO 002499,1,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD # 003110 TO 003299,1,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD # 003860 TO 003997,1,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD # 004330 TO 004399,1,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD # 004500 TO 004565,1,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD # 004567 TO 004583 odd,1,fewer than 2 street names parsed (mid-block record)
+CAPILANO RD & FINTRY PL,1,fewer than 2 of the named streets are CNV streets
+CAPILANO RD & RYDAL AVE,1,fewer than 2 of the named streets are CNV streets
+CAPILANO RD & TEVIOT PL,1,fewer than 2 of the named streets are CNV streets
+CARISBROOKE CRES & E CARISBROOKE RD & LONSDALE AVE,1,fewer than 2 of the named streets are CNV streets
+CARISBROOKE CRES & RUNNYMEDE RD,1,fewer than 2 of the named streets are CNV streets
+CARNATION ST # 002653 TO 002749,1,fewer than 2 street names parsed (mid-block record)
+CARNATION ST & LENNOX ST,1,fewer than 2 of the named streets are CNV streets
+CAROLYN DR # 004320 TO 004399,1,fewer than 2 street names parsed (mid-block record)
+CAROLYN DR & EDGEWOOD RD,1,fewer than 2 of the named streets are CNV streets
+CAROLYN DR & TALL TREE LANE,1,fewer than 2 of the named streets are CNV streets
+CARRIE CATES CRT # 000100 TO 000112,1,fewer than 2 street names parsed (mid-block record)
+CARRIE CATES CRT & CHESTERFIELD PL & W ESPLANDE LANE,1,CNV street names but no matching CNV intersection
+CARTELIER PL # 000341 TO 000379 odd,1,fewer than 2 street names parsed (mid-block record)
+CASANO DR # 001900 TO 001999,1,fewer than 2 street names parsed (mid-block record)
+CATES LANDING WAY # 003871 TO 003887 odd,1,fewer than 2 street names parsed (mid-block record)
+CATES LANDING WAY # 003911 TO 003921 odd,1,fewer than 2 street names parsed (mid-block record)
+CATES LANDING WAY & DOLLARTON HWY,1,fewer than 2 of the named streets are CNV streets
+CEDAR VILLAGE CRES # 001910 TO 001929,1,fewer than 2 street names parsed (mid-block record)
+CEDAR VILLAGE CRES # 001930 TO 001949,1,fewer than 2 street names parsed (mid-block record)
+CEDAR VILLAGE CRES # 001961 TO 001999 odd,1,fewer than 2 street names parsed (mid-block record)
+CEDARCREST AVE # 004500 TO 004599,1,fewer than 2 street names parsed (mid-block record)
+CEDARCREST AVE & MONTROYAL BLVD,1,fewer than 2 of the named streets are CNV streets
+CHALET PL # 004810 TO 004908,1,fewer than 2 street names parsed (mid-block record)
+CHALET PL # 004907 TO 004935 odd,1,fewer than 2 street names parsed (mid-block record)
+CHAMBERLAIN DR # 001120 TO 001299,1,fewer than 2 street names parsed (mid-block record)
+CHAMBERLAIN DR # 001312 TO 001389,1,fewer than 2 street names parsed (mid-block record)
+CHAMBERLAIN DR # 001400 TO 001499,1,fewer than 2 street names parsed (mid-block record)
+CHAMBERLAIN DR & MOUNTAIN HWY,1,fewer than 2 of the named streets are CNV streets
+CHARLES ST & SPICER RD,1,fewer than 2 of the named streets are CNV streets
+CHAUCER AVE & FROMME RD & WENDEL PL,1,fewer than 2 of the named streets are CNV streets
+CHELSEA CRES & SKYLINE DR,1,fewer than 2 of the named streets are CNV streets
+CHESTERFIELD AVE # 000100 TO 000199,1,fewer than 2 street names parsed (mid-block record)
+CHESTERFIELD AVE # 000700 TO 000799,1,fewer than 2 street names parsed (mid-block record)
+CHESTERFIELD AVE # 001600 TO 001699,1,fewer than 2 street names parsed (mid-block record)
+CHESTERFIELD AVE # 001800 TO 001899,1,fewer than 2 street names parsed (mid-block record)
+CHESTERFIELD AVE # 002100 TO 002199,1,fewer than 2 street names parsed (mid-block record)
+CHESTERFIELD AVE # 003000 TO 003049,1,fewer than 2 street names parsed (mid-block record)
+CHESTERFIELD AVE # 003350 TO 003399,1,fewer than 2 street names parsed (mid-block record)
+CHESTERFIELD AVE & HOLYROOD RD,1,fewer than 2 of the named streets are CNV streets
+CHESTERFIELD AVE & W 23RD LANE,1,fewer than 2 of the named streets are CNV streets
+CHESTERFIELD AVE & W 2ND LANE,1,fewer than 2 of the named streets are CNV streets
+CHESTERFIELD AVE & W ST JAMES RD,1,fewer than 2 of the named streets are CNV streets
+CHESTERFIELD LANE & W 15TH ST,1,fewer than 2 of the named streets are CNV streets
+CHIEF JIMMY HARRY DR # 000462 TO 000470 even,1,fewer than 2 street names parsed (mid-block record)
+CHIEF JIMMY HARRY DR & HUNTER ST & ORWELL ST & UNNAMED LANE,1,fewer than 2 of the named streets are CNV streets
+CHIEF JOSEPH CRES & W 4TH ST,1,fewer than 2 of the named streets are CNV streets
+CHURCH ST # 003250 TO 003555,1,fewer than 2 street names parsed (mid-block record)
+CITADEL CRT & DEMPSEY RD & MICHENER WAY,1,fewer than 2 of the named streets are CNV streets
+CIVIC PLACE MEWS # 001300 TO 001329,1,fewer than 2 street names parsed (mid-block record)
+CLEMENTS AVE # 001009 TO 001069,1,fewer than 2 street names parsed (mid-block record)
+CLEMENTS AVE # 001068 TO 001199,1,fewer than 2 street names parsed (mid-block record)
+CLEMENTS AVE & SHIRLEY AVE,1,fewer than 2 of the named streets are CNV streets
+CLIFFRIDGE AVE # 005434 TO 005499,1,fewer than 2 street names parsed (mid-block record)
+CLIFFRIDGE AVE & SONORA DR,1,fewer than 2 of the named streets are CNV streets
+CLIFFWOOD RD # 001800 TO 001999,1,fewer than 2 street names parsed (mid-block record)
+CLOVERLEY LANE & E KEITH RD & UNNAMED LANE,1,fewer than 2 of the named streets are CNV streets
+CLOVERLEY ST # 001100 TO 001199,1,fewer than 2 street names parsed (mid-block record)
+COLDWELL RD # 001650 TO 001729,1,fewer than 2 street names parsed (mid-block record)
+COLEMAN CLOSE # 001200 TO 001299,1,fewer than 2 street names parsed (mid-block record)
+COLEMAN ST # 001221 TO 001251 odd,1,fewer than 2 street names parsed (mid-block record)
+COLEMAN ST # 001253 TO 001299,1,fewer than 2 street names parsed (mid-block record)
+COLEMAN ST # 001540 TO 001557,1,fewer than 2 street names parsed (mid-block record)
+COLEMAN ST & MOUNTAIN HWY,1,fewer than 2 of the named streets are CNV streets
+COLEMAN ST & PRIME ST,1,fewer than 2 of the named streets are CNV streets
+COLEMAN ST & UNDERWOOD AVE,1,fewer than 2 of the named streets are CNV streets
+COLEMAN ST & VALLEY RD,1,fewer than 2 of the named streets are CNV streets
+COLUMBIA ST # 001400 TO 001499,1,fewer than 2 street names parsed (mid-block record)
+COLUMBIA ST # 001500 TO 001541,1,fewer than 2 street names parsed (mid-block record)
+COLWOOD DR # 003224 TO 003299,1,fewer than 2 street names parsed (mid-block record)
+COLWOOD DR & EDGEMONT BLVD,1,fewer than 2 of the named streets are CNV streets
+COLWOOD DR & FAIRMONT RD,1,fewer than 2 of the named streets are CNV streets
+CONIFER ST # 001290 TO 001295,1,fewer than 2 street names parsed (mid-block record)
+CONIFER ST & MOUNTAIN HWY,1,fewer than 2 of the named streets are CNV streets
+CONNAUGHT AVE # 002900 TO 003048,1,fewer than 2 street names parsed (mid-block record)
+CONNAUGHT CRES & CRESCENTVIEW DR & NEWMARKET DR & UNNAMED LANE,1,fewer than 2 of the named streets are CNV streets
+COPPING ST # 000730 TO 000799,1,fewer than 2 street names parsed (mid-block record)
+CORTELL ST & PEMBERTON AVE & W KEITH RD,1,fewer than 2 of the named streets are CNV streets
+COTTON RD # 001300 TO 001315,1,fewer than 2 street names parsed (mid-block record)
+COVE CLIFF PL # 004854 TO 004889,1,fewer than 2 street names parsed (mid-block record)
+COVE CLIFF RD # 004600 TO 004749,1,fewer than 2 street names parsed (mid-block record)
+COVENTRY WAY # 004128 TO 004139,1,fewer than 2 street names parsed (mid-block record)
+COVENTRY WAY # 004140 TO 004213,1,fewer than 2 street names parsed (mid-block record)
+COVEY PL # 005600 TO 005699,1,fewer than 2 street names parsed (mid-block record)
+CRESTLYNN PL # 002800 TO 002852 even,1,fewer than 2 street names parsed (mid-block record)
+CRESTWOOD AVE & HERMOSA AVE,1,fewer than 2 of the named streets are CNV streets
+CRESTWOOD AVE & VALENCIA AVE,1,fewer than 2 of the named streets are CNV streets
+CROWN ST & MARIE PL,1,fewer than 2 of the named streets are CNV streets
+CROWN ST & ORWELL ST,1,fewer than 2 of the named streets are CNV streets
+CRYSTAL CRT # 000640 TO 000799,1,fewer than 2 street names parsed (mid-block record)
+CUMMINS PL # 004000 TO 004099,1,fewer than 2 street names parsed (mid-block record)
+DEL RIO DR # 003000 TO 003299,1,fewer than 2 street names parsed (mid-block record)
+DELBROOK AVE # 003000 TO 003149,1,fewer than 2 street names parsed (mid-block record)
+DELBROOK AVE # 003600 TO 003699,1,fewer than 2 street names parsed (mid-block record)
+DELBROOK AVE # 003700 TO 003769,1,fewer than 2 street names parsed (mid-block record)
+DELBROOK AVE # 003770 TO 003799,1,fewer than 2 street names parsed (mid-block record)
+DELBROOK AVE # 004020 TO 004069,1,fewer than 2 street names parsed (mid-block record)
+DELBROOK AVE # 004090 TO 004149,1,fewer than 2 street names parsed (mid-block record)
+DELBROOK AVE & DONEGAL PL & ST IVES CRES,1,fewer than 2 of the named streets are CNV streets
+DELBROOK AVE & GRANADA CRES,1,fewer than 2 of the named streets are CNV streets
+DELBROOK AVE & KERRY PL,1,fewer than 2 of the named streets are CNV streets
+DELBROOK AVE & W WINDSOR RD,1,fewer than 2 of the named streets are CNV streets
+DELBRUCK AVE # 001300 TO 001349,1,fewer than 2 street names parsed (mid-block record)
+DEMPSEY RD # 001614 TO 001689,1,fewer than 2 street names parsed (mid-block record)
+DEMPSEY RD & HOSKINS RD,1,fewer than 2 of the named streets are CNV streets
+DEMPSEY RD & NORDBY PL,1,fewer than 2 of the named streets are CNV streets
+DEMPSEY RD & NOTTINGHAM RD,1,fewer than 2 of the named streets are CNV streets
+DERWENT CRES # 001230 TO 001299,1,fewer than 2 street names parsed (mid-block record)
+DEVON RD & LIONS AVE & PRIVATE DRIVEWAY,1,fewer than 2 of the named streets are CNV streets
+DOGWOOD CRES # 001237 TO 001299,1,fewer than 2 street names parsed (mid-block record)
+DOLLAR RD # 004000 TO 004074,1,fewer than 2 street names parsed (mid-block record)
+DOLLAR RD # 004300 TO 004349,1,fewer than 2 street names parsed (mid-block record)
+DOLLAR RD & N DOLLARTON HWY,1,fewer than 2 of the named streets are CNV streets
+DOLLAR RD & ROSLYN BLVD,1,fewer than 2 of the named streets are CNV streets
+DOLLARTON HWY # 001800 TO 001818 even,1,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY # 001930 TO 001968 even,1,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY # 002200 TO 002298 even,1,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY # 002422 TO 002628 even,1,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY # 003896 TO 003999,1,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY # 004000 TO 004129,1,fewer than 2 street names parsed (mid-block record)
+DOLLARTON HWY # 004150 TO 004159,1,fewer than 2 street names parsed (mid-block record)
+DOLORES PL # 000550 TO 000589,1,fewer than 2 street names parsed (mid-block record)
+DOMINION ST & HARBOUR AVE & ACCESS ROAD,1,fewer than 2 of the named streets are CNV streets
+DONEGAL PL # 000760 TO 000799,1,fewer than 2 street names parsed (mid-block record)
+DORAN RD # 001300 TO 001318,1,fewer than 2 street names parsed (mid-block record)
+DOVERCOURT RD # 001325 TO 001399,1,fewer than 2 street names parsed (mid-block record)
+DOVERCOURT RD # 001500 TO 001599,1,fewer than 2 street names parsed (mid-block record)
+DRAYCOTT RD # 001300 TO 001381,1,fewer than 2 street names parsed (mid-block record)
+DRAYCOTT RD # 001500 TO 001669,1,fewer than 2 street names parsed (mid-block record)
+DRAYCOTT RD & HAROLD RD & UNNAMED LANE,1,fewer than 2 of the named streets are CNV streets
+DRAYCOTT RD & HOSKINS RD,1,fewer than 2 of the named streets are CNV streets
+DRAYCOTT RD & LYNN VALLEY RD,1,fewer than 2 of the named streets are CNV streets
+DRAYTON ST # 001000 TO 001039,1,fewer than 2 street names parsed (mid-block record)
+DRYDEN WAY # 003100 TO 003179,1,fewer than 2 street names parsed (mid-block record)
+DUCHESS AVE # 002946 TO 003099,1,fewer than 2 street names parsed (mid-block record)
+DUCHESS AVE # 003100 TO 003159,1,fewer than 2 street names parsed (mid-block record)
+DUDLEY RD & KENNEDY AVE,1,fewer than 2 of the named streets are CNV streets
+DUVAL RD & LYDDON RD,1,fewer than 2 of the named streets are CNV streets
+DUVAL RD & WESTOVER RD,1,fewer than 2 of the named streets are CNV streets
+E 10TH ST # 000160 TO 000199,1,fewer than 2 street names parsed (mid-block record)
+E 10TH ST # 000400 TO 000499,1,fewer than 2 street names parsed (mid-block record)
+E 10TH ST # 000800 TO 000869,1,fewer than 2 street names parsed (mid-block record)
+E 10TH ST & HENDRY AVE,1,CNV street names but no matching CNV intersection
+E 11TH LANE # 000300 TO 000379,1,fewer than 2 street names parsed (mid-block record)
+E 11TH ST # 000300 TO 000399,1,fewer than 2 street names parsed (mid-block record)
+E 11TH ST # 000500 TO 000533,1,fewer than 2 street names parsed (mid-block record)
+E 11TH ST # 000800 TO 000945,1,fewer than 2 street names parsed (mid-block record)
+E 11TH ST & GRAND BLVD W,1,fewer than 2 of the named streets are CNV streets
+E 11TH ST & SUTHERLAND AVE,1,CNV street names but no matching CNV intersection
+E 13TH ST & GLADSTONE AVE,1,CNV street names but no matching CNV intersection
+E 14TH ST # 000700 TO 000725,1,fewer than 2 street names parsed (mid-block record)
+E 14TH ST # 000718 TO 000759,1,fewer than 2 street names parsed (mid-block record)
+E 14TH ST # 000776 TO 000827,1,fewer than 2 street names parsed (mid-block record)
+E 14TH ST # 001200 TO 001268,1,fewer than 2 street names parsed (mid-block record)
+E 14TH ST # 001300 TO 001399,1,fewer than 2 street names parsed (mid-block record)
+E 14TH ST & HENDRY AVE,1,CNV street names but no matching CNV intersection
+E 15TH LANE # 000100 TO 000149,1,fewer than 2 street names parsed (mid-block record)
+E 15TH LANE # 000150 TO 000199,1,fewer than 2 street names parsed (mid-block record)
+E 15TH ST # 000114 TO 000119,1,fewer than 2 street names parsed (mid-block record)
+E 15TH ST # 000236 TO 000239,1,fewer than 2 street names parsed (mid-block record)
+E 15TH ST # 000400 TO 000450,1,fewer than 2 street names parsed (mid-block record)
+E 15TH ST # 000500 TO 000534,1,fewer than 2 street names parsed (mid-block record)
+E 15TH ST # 000700 TO 000710,1,fewer than 2 street names parsed (mid-block record)
+E 15TH ST # 001100 TO 001299,1,fewer than 2 street names parsed (mid-block record)
+E 16TH LANE # 000200 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+E 16TH LANE # 000800 TO 000899,1,fewer than 2 street names parsed (mid-block record)
+E 16TH ST # 000400 TO 000499,1,fewer than 2 street names parsed (mid-block record)
+E 16TH ST # 000600 TO 000615,1,fewer than 2 street names parsed (mid-block record)
+E 16TH ST # 001260 TO 001299,1,fewer than 2 street names parsed (mid-block record)
+E 16TH ST # 001300 TO 001399,1,fewer than 2 street names parsed (mid-block record)
+E 16TH ST & GRAND BLVD W,1,fewer than 2 of the named streets are CNV streets
+E 17TH ST # 000317 TO 000399,1,fewer than 2 street names parsed (mid-block record)
+E 18TH LANE # 000200 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+E 18TH ST # 000124 TO 000199,1,fewer than 2 street names parsed (mid-block record)
+E 18TH ST # 000500 TO 000533,1,fewer than 2 street names parsed (mid-block record)
+E 18TH ST & GRAND BLVD W,1,fewer than 2 of the named streets are CNV streets
+E 19TH LANE # 000100 TO 000199,1,fewer than 2 street names parsed (mid-block record)
+E 19TH ST # 000100 TO 000123,1,fewer than 2 street names parsed (mid-block record)
+E 19TH ST # 000124 TO 000129,1,fewer than 2 street names parsed (mid-block record)
+E 19TH ST # 000628 TO 000699,1,fewer than 2 street names parsed (mid-block record)
+E 20TH ST # 000128 TO 000143,1,fewer than 2 street names parsed (mid-block record)
+E 20TH ST # 000300 TO 000399,1,fewer than 2 street names parsed (mid-block record)
+E 20TH ST # 000522 TO 000599,1,fewer than 2 street names parsed (mid-block record)
+E 21ST LANE # 000600 TO 000699,1,fewer than 2 street names parsed (mid-block record)
+E 21ST LANE & ST GEORGES AVE,1,fewer than 2 of the named streets are CNV streets
+E 21ST ST # 000140 TO 000169,1,fewer than 2 street names parsed (mid-block record)
+E 21ST ST # 000708 TO 000799,1,fewer than 2 street names parsed (mid-block record)
+E 21ST ST # 000800 TO 000869,1,fewer than 2 street names parsed (mid-block record)
+E 21ST ST # 000870 TO 000949,1,fewer than 2 street names parsed (mid-block record)
+E 21ST ST & RUFUS DR,1,CNV street names but no matching CNV intersection
+E 22ND ST # 000100 TO 000148,1,fewer than 2 street names parsed (mid-block record)
+E 22ND ST # 000600 TO 000699,1,fewer than 2 street names parsed (mid-block record)
+E 23RD ST # 000100 TO 000199,1,fewer than 2 street names parsed (mid-block record)
+E 24TH ST # 000300 TO 000399,1,fewer than 2 street names parsed (mid-block record)
+E 25TH ST # 000300 TO 000398 even,1,fewer than 2 street names parsed (mid-block record)
+E 26TH ST # 000730 TO 000757,1,fewer than 2 street names parsed (mid-block record)
+E 27TH ST # 000200 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+E 27TH ST # 000300 TO 000369,1,fewer than 2 street names parsed (mid-block record)
+E 27TH ST & VIEWLYNN DR,1,fewer than 2 of the named streets are CNV streets
+E 29TH ST # 000407 TO 000598,1,fewer than 2 street names parsed (mid-block record)
+E 29TH ST # 001300 TO 001349,1,fewer than 2 street names parsed (mid-block record)
+E 29TH ST & SOMERSET ST,1,fewer than 2 of the named streets are CNV streets
+E 29TH ST & ST ANDREWS AVE,1,fewer than 2 of the named streets are CNV streets
+E 29TH ST & ST CHRISTOPHERS RD,1,fewer than 2 of the named streets are CNV streets
+E 29TH ST & ST KILDA AVE,1,fewer than 2 of the named streets are CNV streets
+E 29TH ST & ST MARYS AVE,1,fewer than 2 of the named streets are CNV streets
+E 2ND LANE # 000100 TO 000199,1,fewer than 2 street names parsed (mid-block record)
+E 2ND ST # 000100 TO 000119,1,fewer than 2 street names parsed (mid-block record)
+E 2ND ST # 000200 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+E 2ND ST # 000300 TO 000399,1,fewer than 2 street names parsed (mid-block record)
+E 2ND ST # 000400 TO 000499,1,fewer than 2 street names parsed (mid-block record)
+E 3RD LANE & ST GEORGES AVE,1,fewer than 2 of the named streets are CNV streets
+E 3RD ST # 000400 TO 000499,1,fewer than 2 street names parsed (mid-block record)
+E 3RD ST # 000500 TO 000599,1,fewer than 2 street names parsed (mid-block record)
+E 3RD ST # 000800 TO 000907,1,fewer than 2 street names parsed (mid-block record)
+E 4TH ST # 000100 TO 000121,1,fewer than 2 street names parsed (mid-block record)
+E 4TH ST # 000200 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+E 4TH ST # 000300 TO 000399,1,fewer than 2 street names parsed (mid-block record)
+E 4TH ST # 000800 TO 000899,1,fewer than 2 street names parsed (mid-block record)
+E 5TH LANE & ST ANDREWS AVE,1,fewer than 2 of the named streets are CNV streets
+E 5TH ST # 000500 TO 000599,1,fewer than 2 street names parsed (mid-block record)
+E 5TH ST # 000700 TO 000799,1,fewer than 2 street names parsed (mid-block record)
+E 6TH ST # 000122 TO 000199,1,fewer than 2 street names parsed (mid-block record)
+E 7TH ST # 000700 TO 000799,1,fewer than 2 street names parsed (mid-block record)
+E 8TH ST # 000108 TO 000129,1,fewer than 2 street names parsed (mid-block record)
+E 8TH ST # 000400 TO 000499,1,fewer than 2 street names parsed (mid-block record)
+E 9TH ST # 000300 TO 000399,1,fewer than 2 street names parsed (mid-block record)
+E 9TH ST # 000400 TO 000459,1,fewer than 2 street names parsed (mid-block record)
+E BRAEMAR RD # 000500 TO 000599,1,fewer than 2 street names parsed (mid-block record)
+E BRAEMAR RD # 000698 TO 000701,1,fewer than 2 street names parsed (mid-block record)
+E BRAEMAR RD # 004100 TO 004199,1,fewer than 2 street names parsed (mid-block record)
+E BRAEMAR RD & PRINCESS AVE,1,fewer than 2 of the named streets are CNV streets
+E BRAEMAR RD & ST GEORGES AVE,1,fewer than 2 of the named streets are CNV streets
+E CARISBROOKE RD # 000500 TO 000599,1,fewer than 2 street names parsed (mid-block record)
+E CARISBROOKE RD & ST GEORGES AVE,1,fewer than 2 of the named streets are CNV streets
+E ESPLANADE # 000300 TO 000341,1,fewer than 2 street names parsed (mid-block record)
+E KEITH LANE # 000200 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+E KEITH LANE & ST ANDREWS AVE,1,fewer than 2 of the named streets are CNV streets
+E KEITH RD # 000201 TO 000299 odd,1,fewer than 2 street names parsed (mid-block record)
+E KEITH RD # 000300 TO 000348 even,1,fewer than 2 street names parsed (mid-block record)
+E KEITH RD # 000400 TO 000499,1,fewer than 2 street names parsed (mid-block record)
+E KEITH RD # 000500 TO 000550,1,fewer than 2 street names parsed (mid-block record)
+E KEITH RD # 000800 TO 000819,1,fewer than 2 street names parsed (mid-block record)
+E KEITH RD # 001000 TO 001049,1,fewer than 2 street names parsed (mid-block record)
+E KEITH RD # 001200 TO 001299,1,fewer than 2 street names parsed (mid-block record)
+E KEITH RD # 001300 TO 001439,1,fewer than 2 street names parsed (mid-block record)
+E KEITH RD & SEYMOUR BLVD & UTILITY ACCESS,1,fewer than 2 of the named streets are CNV streets
+E KINGS RD # 000530 TO 000599,1,fewer than 2 street names parsed (mid-block record)
+E KINGS RD # 000600 TO 000649,1,fewer than 2 street names parsed (mid-block record)
+E KINGS RD & ST ANDREWS AVE,1,fewer than 2 of the named streets are CNV streets
+E KINGS RD & ST GEORGES AVE,1,fewer than 2 of the named streets are CNV streets
+E OSBORNE RD # 000100 TO 000184,1,fewer than 2 street names parsed (mid-block record)
+E OSBORNE RD # 000177 TO 000199,1,fewer than 2 street names parsed (mid-block record)
+E OSBORNE RD # 000400 TO 000499,1,fewer than 2 street names parsed (mid-block record)
+E OSBORNE RD # 000500 TO 000599,1,fewer than 2 street names parsed (mid-block record)
+E OSBORNE RD # 000600 TO 000699,1,fewer than 2 street names parsed (mid-block record)
+E OSBORNE RD & PRINCESS AVE,1,fewer than 2 of the named streets are CNV streets
+E OSBORNE RD & ST ANDREWS AVE,1,fewer than 2 of the named streets are CNV streets
+E OSBORNE RD & ST MARYS AVE,1,fewer than 2 of the named streets are CNV streets
+E QUEENS RD # 000100 TO 000199,1,fewer than 2 street names parsed (mid-block record)
+E QUEENS RD # 000270 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+E QUEENS RD # 000400 TO 000439,1,fewer than 2 street names parsed (mid-block record)
+E QUEENS RD & ST GEORGES AVE,1,fewer than 2 of the named streets are CNV streets
+E QUEENS RD & ST MARYS AVE,1,fewer than 2 of the named streets are CNV streets
+E ROCKLAND RD # 000100 TO 000149,1,fewer than 2 street names parsed (mid-block record)
+E ROCKLAND RD & ST PAULS AVE,1,fewer than 2 of the named streets are CNV streets
+E ST JAMES RD # 000700 TO 000749,1,fewer than 2 street names parsed (mid-block record)
+E ST JAMES RD & REGENT AVE,1,fewer than 2 of the named streets are CNV streets
+E WINDSOR RD # 000108 TO 000117,1,fewer than 2 street names parsed (mid-block record)
+E WINDSOR RD & ST ANDREWS AVE,1,fewer than 2 of the named streets are CNV streets
+EASTERN AVE # 001532 TO 001699,1,fewer than 2 street names parsed (mid-block record)
+EASTRIDGE RD # 004600 TO 004761,1,fewer than 2 street names parsed (mid-block record)
+EDGEMONT BLVD # 002200 TO 002229,1,fewer than 2 street names parsed (mid-block record)
+EDGEMONT BLVD # 002500 TO 002599,1,fewer than 2 street names parsed (mid-block record)
+EDGEMONT BLVD # 002700 TO 002999,1,fewer than 2 street names parsed (mid-block record)
+EDGEMONT BLVD # 003270 TO 003299,1,fewer than 2 street names parsed (mid-block record)
+EDGEMONT BLVD # 003300 TO 003395,1,fewer than 2 street names parsed (mid-block record)
+EDGEMONT BLVD # 003396 TO 003499,1,fewer than 2 street names parsed (mid-block record)
+EDGEMONT BLVD # 003772 TO 003829,1,fewer than 2 street names parsed (mid-block record)
+EDGEMONT BLVD & NEWMARKET DR & UNNAMED LANE,1,fewer than 2 of the named streets are CNV streets
+EDGEMONT BLVD & W 23RD ST,1,CNV street names but no matching CNV intersection
+EDGEWOOD PL # 001170 TO 001199,1,fewer than 2 street names parsed (mid-block record)
+EDGEWOOD RD # 000690 TO 000799,1,fewer than 2 street names parsed (mid-block record)
+ELDON RD # 001223 TO 001264,1,fewer than 2 street names parsed (mid-block record)
+ELDON RD # 001255 TO 001288,1,fewer than 2 street names parsed (mid-block record)
+ELDON RD # 001261 TO 001299 odd,1,fewer than 2 street names parsed (mid-block record)
+ELIZABETH WAY & PAISLEY RD,1,fewer than 2 of the named streets are CNV streets
+EMERSON WAY # 001400 TO 001479,1,fewer than 2 street names parsed (mid-block record)
+ENNERDALE RD # 002250 TO 002329,1,fewer than 2 street names parsed (mid-block record)
+ENNERDALE RD & KIRKSTONE RD,1,fewer than 2 of the named streets are CNV streets
+EPPS AVE & HARRIS AVE & UNNAMED LANE,1,fewer than 2 of the named streets are CNV streets
+EVELYN ST # 001240 TO 001299,1,fewer than 2 street names parsed (mid-block record)
+EVELYN ST # 001300 TO 001439,1,fewer than 2 street names parsed (mid-block record)
+EVELYN ST & LYNN VALLEY RD & RICE LAKE RD,1,fewer than 2 of the named streets are CNV streets
+EVERGLADE PL # 003520 TO 003649,1,fewer than 2 street names parsed (mid-block record)
+EVERGREEN PL # 000512 TO 000540 even,1,fewer than 2 street names parsed (mid-block record)
+EVERGREEN PL & HIGHLAND BLVD & WENTWORTH AVE,1,fewer than 2 of the named streets are CNV streets
+FAIRFIELD RD & HARTFORD PL,1,fewer than 2 of the named streets are CNV streets
+FAIRMONT RD # 003100 TO 003399,1,fewer than 2 street names parsed (mid-block record)
+FAIRMONT RD # 003400 TO 003689,1,fewer than 2 street names parsed (mid-block record)
+FAIRWAY DR # 000400 TO 000499,1,fewer than 2 street names parsed (mid-block record)
+FAIRWAY DR & FAIRWAY PL,1,fewer than 2 of the named streets are CNV streets
+FAIRWAY DR & HUNTINGDON CRES,1,fewer than 2 of the named streets are CNV streets
+FAIRWAY PL # 004106 TO 004147,1,fewer than 2 street names parsed (mid-block record)
+FAIRWAY PL # 004148 TO 004259,1,fewer than 2 street names parsed (mid-block record)
+FELIX CRT # 004000 TO 004049,1,fewer than 2 street names parsed (mid-block record)
+FELTON PL # 000420 TO 000440 even,1,fewer than 2 street names parsed (mid-block record)
+FERNWOOD CRES & PHILIP AVE & SOWDEN ST,1,fewer than 2 of the named streets are CNV streets
+FINTRY PL # 001431 TO 001481 odd,1,fewer than 2 street names parsed (mid-block record)
+FIR ST # 000600 TO 000649,1,fewer than 2 street names parsed (mid-block record)
+FIRCREST PL & KILMER PL & KILMER RD,1,fewer than 2 of the named streets are CNV streets
+FORBES AVE # 000000 TO 000065,1,fewer than 2 street names parsed (mid-block record)
+FORBES AVE # 001400 TO 001449,1,fewer than 2 street names parsed (mid-block record)
+FORBES AVE # 001500 TO 001549,1,fewer than 2 street names parsed (mid-block record)
+FOREST HILLS DR # 000910 TO 000949,1,fewer than 2 street names parsed (mid-block record)
+FRANCISCO CRT # 005100 TO 005158,1,fewer than 2 street names parsed (mid-block record)
+FREDERICK RD # 000836 TO 000899,1,fewer than 2 street names parsed (mid-block record)
+FREDERICK RD # 001500 TO 001599,1,fewer than 2 street names parsed (mid-block record)
+FREDERICK RD & HENDECOURT RD,1,fewer than 2 of the named streets are CNV streets
+FREDERICK RD & MAGINNIS AVE,1,fewer than 2 of the named streets are CNV streets
+FREDERICK RD & SYKES RD,1,fewer than 2 of the named streets are CNV streets
+FROMME RD # 003126 TO 003199,1,fewer than 2 street names parsed (mid-block record)
+FROMME RD # 003300 TO 003399,1,fewer than 2 street names parsed (mid-block record)
+FROMME RD # 003466 TO 003599,1,fewer than 2 street names parsed (mid-block record)
+FROMME RD & SHAKESPEARE AVE,1,fewer than 2 of the named streets are CNV streets
+FRONT ST # 002100 TO 002199,1,fewer than 2 street names parsed (mid-block record)
+FULLERTON AVE # 001880 TO 001979,1,fewer than 2 street names parsed (mid-block record)
+GALLANT AVE # 004300 TO 004359,1,fewer than 2 street names parsed (mid-block record)
+GALLANT AVE # 004400 TO 004499,1,fewer than 2 street names parsed (mid-block record)
+GARDEN AVE # 001600 TO 001799,1,fewer than 2 street names parsed (mid-block record)
+GARDEN AVE # 001840 TO 001989,1,fewer than 2 street names parsed (mid-block record)
+GARIBALDI DR & MANNING CRES,1,fewer than 2 of the named streets are CNV streets
+GARIBALDI DR & ROCHE POINT DR,1,fewer than 2 of the named streets are CNV streets
+GASPE PL & MT SEYMOUR PKY,1,fewer than 2 of the named streets are CNV streets
+GENOA CRES # 000420 TO 000529,1,fewer than 2 street names parsed (mid-block record)
+GLADWIN DR & PEMBERTON AVE,1,fewer than 2 of the named streets are CNV streets
+GLADWIN PL # 002500 TO 002559,1,fewer than 2 street names parsed (mid-block record)
+GLENCANYON DR # 004345 TO 004457,1,fewer than 2 street names parsed (mid-block record)
+GLENCANYON DR & MONTROYAL BLVD,1,fewer than 2 of the named streets are CNV streets
+GLENVIEW CRES & TRENTON PL,1,fewer than 2 of the named streets are CNV streets
+GLENWOOD AVE & HANDSWORTH RD,1,fewer than 2 of the named streets are CNV streets
+GOLDIE CRT & SHONE RD,1,fewer than 2 of the named streets are CNV streets
+GOLF DR # 004110 TO 004181,1,fewer than 2 street names parsed (mid-block record)
+GOLF DR # 004182 TO 004231,1,fewer than 2 street names parsed (mid-block record)
+GRANADA CRES # 000500 TO 000599,1,fewer than 2 street names parsed (mid-block record)
+GRAND BLVD E # 000700 TO 000798 even,1,fewer than 2 street names parsed (mid-block record)
+GRAND BLVD E # 001000 TO 001098 even,1,fewer than 2 street names parsed (mid-block record)
+GRAND BLVD E # 001100 TO 001198 even,1,fewer than 2 street names parsed (mid-block record)
+GRAND BLVD E # 001600 TO 001698 even,1,fewer than 2 street names parsed (mid-block record)
+GRAVELEY ST & W KEITH RD,1,fewer than 2 of the named streets are CNV streets
+GREENOCK PL # 001800 TO 001969,1,fewer than 2 street names parsed (mid-block record)
+GREENOCK PL & HOSKINS RD,1,fewer than 2 of the named streets are CNV streets
+GREG LEE WAY & PURCELL WAY & SKEENA RD,1,fewer than 2 of the named streets are CNV streets
+GRIFFIN PL # 003000 TO 003039,1,fewer than 2 street names parsed (mid-block record)
+GROUSE GRIND TRAIL & NANCY GREENE WAY & PARKING LOT,1,fewer than 2 of the named streets are CNV streets
+GROUSEWOODS CRES & GROUSEWOODS DR & OWL CRT & PRIVATE DRIVEWAY,1,fewer than 2 of the named streets are CNV streets
+HAMBER PL # 003701 TO 003717 odd,1,fewer than 2 street names parsed (mid-block record)
+HAMBER PL # 003740 TO 003889,1,fewer than 2 street names parsed (mid-block record)
+HAMPSHIRE RD & HIGHLAND BLVD & HIGHLAND PL,1,fewer than 2 of the named streets are CNV streets
+HAMPSHIRE RD & LIONS AVE,1,fewer than 2 of the named streets are CNV streets
+HANDSWORTH RD # 000850 TO 000898 even,1,fewer than 2 street names parsed (mid-block record)
+HANDSWORTH RD # 001033 TO 001039 odd,1,fewer than 2 street names parsed (mid-block record)
+HANDSWORTH RD & PRIMROSE LANE,1,fewer than 2 of the named streets are CNV streets
+HANDSWORTH RD & RANGER AVE,1,fewer than 2 of the named streets are CNV streets
+HANDSWORTH RD & SKYLINE DR & TURNING LANE,1,fewer than 2 of the named streets are CNV streets
+HANDSWORTH RD & TIMBERLINE PL,1,fewer than 2 of the named streets are CNV streets
+HANES AVE # 000100 TO 000199,1,fewer than 2 street names parsed (mid-block record)
+HARBOURSIDE DR # 000750 TO 000799,1,fewer than 2 street names parsed (mid-block record)
+HARBOURSIDE DR # 000951 TO 000955 odd,1,fewer than 2 street names parsed (mid-block record)
+HAROLD RD # 001380 TO 001428,1,fewer than 2 street names parsed (mid-block record)
+HARRIS PL # 004451 TO 004489 odd,1,fewer than 2 street names parsed (mid-block record)
+HENDECOURT RD # 000800 TO 000887,1,fewer than 2 street names parsed (mid-block record)
+HENDECOURT RD # 000950 TO 001089,1,fewer than 2 street names parsed (mid-block record)
+HENDRY AVE # 000500 TO 000519,1,fewer than 2 street names parsed (mid-block record)
+HENDRY AVE # 000850 TO 000899,1,fewer than 2 street names parsed (mid-block record)
+HENDRY AVE # 001200 TO 001249,1,fewer than 2 street names parsed (mid-block record)
+HERITAGE BLVD # 001029 TO 001069 odd,1,fewer than 2 street names parsed (mid-block record)
+HERITAGE BLVD # 001101 TO 001179 odd,1,fewer than 2 street names parsed (mid-block record)
+HIGHLAND BLVD # 004050 TO 004089,1,fewer than 2 street names parsed (mid-block record)
+HIGHLAND BLVD & KENNEDY AVE,1,fewer than 2 of the named streets are CNV streets
+HIGHLAND BLVD & LEOVISTA AVE,1,fewer than 2 of the named streets are CNV streets
+HIGHLAND BLVD & WAVERTREE RD,1,fewer than 2 of the named streets are CNV streets
+HILARY PL # 001130 TO 001200 even,1,fewer than 2 street names parsed (mid-block record)
+HILL DR # 002000 TO 002099,1,fewer than 2 street names parsed (mid-block record)
+HILLCREST AVE # 003600 TO 004029,1,fewer than 2 street names parsed (mid-block record)
+HIXON PL # 003900 TO 003949,1,fewer than 2 street names parsed (mid-block record)
+HOLYROOD RD # 000200 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+HONEYSUCKLE PL # 005600 TO 005679,1,fewer than 2 street names parsed (mid-block record)
+HOPE RD # 001500 TO 001549,1,fewer than 2 street names parsed (mid-block record)
+HOPE RD # 001600 TO 001699,1,fewer than 2 street names parsed (mid-block record)
+HOPE RD # 001700 TO 001749,1,fewer than 2 street names parsed (mid-block record)
+HOPE RD & MCGUIRE AVE,1,fewer than 2 of the named streets are CNV streets
+HOPE RD & PHILIP AVE & UNNAMED LANE,1,fewer than 2 of the named streets are CNV streets
+HOSKINS PL # 001650 TO 001699,1,fewer than 2 street names parsed (mid-block record)
+HOSKINS RD # 002700 TO 002769,1,fewer than 2 street names parsed (mid-block record)
+HOSKINS RD # 003700 TO 003899,1,fewer than 2 street names parsed (mid-block record)
+HOSKINS RD # 004140 TO 004199,1,fewer than 2 street names parsed (mid-block record)
+HOSKINS RD # 004737 TO 004773 odd,1,fewer than 2 street names parsed (mid-block record)
+HOSKINS RD & KILKENNY RD,1,fewer than 2 of the named streets are CNV streets
+HOSKINS RD & LANGWORTHY ST,1,fewer than 2 of the named streets are CNV streets
+HOSKINS RD & RALPH ST,1,fewer than 2 of the named streets are CNV streets
+HUCKLEBERRY LANE # 005500 TO 005592,1,fewer than 2 street names parsed (mid-block record)
+HUNTER ST # 001500 TO 001599,1,fewer than 2 street names parsed (mid-block record)
+HUNTINGDON CRES # 000860 TO 000969,1,fewer than 2 street names parsed (mid-block record)
+HUNTLEIGH CRES # 003140 TO 003229,1,fewer than 2 street names parsed (mid-block record)
+HUNTLEIGH CRT # 003301 TO 003379 odd,1,fewer than 2 street names parsed (mid-block record)
+HYANNIS DR # 001900 TO 002059,1,fewer than 2 street names parsed (mid-block record)
+HYANNIS DR # 002060 TO 002119,1,fewer than 2 street names parsed (mid-block record)
+INDIAN RIVER DR # 004764 TO 004999,1,fewer than 2 street names parsed (mid-block record)
+INDIAN RIVER DR # 005200 TO 005302 even,1,fewer than 2 street names parsed (mid-block record)
+INDIAN RIVER DR # 005501 TO 005577 odd,1,fewer than 2 street names parsed (mid-block record)
+INDIAN RIVER DR # 005507 TO 005515 odd,1,fewer than 2 street names parsed (mid-block record)
+INSTITUTE RD # 003274 TO 003555,1,fewer than 2 street names parsed (mid-block record)
+IRON CRT # 001900 TO 001939,1,fewer than 2 street names parsed (mid-block record)
+JEROME PL # 004400 TO 004499,1,fewer than 2 street names parsed (mid-block record)
+JONES AVE # 002100 TO 002198,1,fewer than 2 street names parsed (mid-block record)
+JONES AVE # 002500 TO 002541,1,fewer than 2 street names parsed (mid-block record)
+JONES AVE # 003000 TO 003099,1,fewer than 2 street names parsed (mid-block record)
+JONES AVE & W 16TH AVE,1,fewer than 2 of the named streets are CNV streets
+KEITH RD & W 23RD ST & W KEITH RD,1,CNV street names but no matching CNV intersection
+KENDAL PL # 001160 TO 001189,1,fewer than 2 street names parsed (mid-block record)
+KENNARD AVE # 000750 TO 000799,1,fewer than 2 street names parsed (mid-block record)
+KENSINGTON CRES # 000120 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+KERRSTEAD PL & WESTOVER RD,1,fewer than 2 of the named streets are CNV streets
+KILKENNY RD # 001700 TO 001799,1,fewer than 2 street names parsed (mid-block record)
+KILMARNOCK CRES # 002490 TO 002769,1,fewer than 2 street names parsed (mid-block record)
+KILMER RD # 001440 TO 001489,1,fewer than 2 street names parsed (mid-block record)
+KILMER RD # 001532 TO 001599,1,fewer than 2 street names parsed (mid-block record)
+KINLOCH LANE # 001000 TO 001199,1,fewer than 2 street names parsed (mid-block record)
+KINLOCH LANE & STRATHCONA RD,1,fewer than 2 of the named streets are CNV streets
+KIRKSTONE PL & KIRKSTONE RD,1,fewer than 2 of the named streets are CNV streets
+KIRKSTONE RD # 002000 TO 002059,1,fewer than 2 street names parsed (mid-block record)
+KIRKSTONE RD # 002310 TO 002323,1,fewer than 2 street names parsed (mid-block record)
+KIRKSTONE RD & RUFUS DR & UTILITY ACCESS,1,fewer than 2 of the named streets are CNV streets
+LANGWORTHY ST # 001630 TO 001699,1,fewer than 2 street names parsed (mid-block record)
+LARKHALL CRES & NORTHLANDS DR,1,fewer than 2 of the named streets are CNV streets
+LARKHALL CRES & ORKNEY PL & PARK ACCESS,1,fewer than 2 of the named streets are CNV streets
+LARSON RD # 001700 TO 001739,1,fewer than 2 street names parsed (mid-block record)
+LARSON RD # 002600 TO 002649,1,fewer than 2 street names parsed (mid-block record)
+LAWRENCE PL # 003800 TO 003899,1,fewer than 2 street names parsed (mid-block record)
+LEOVISTA AVE # 000950 TO 000999,1,fewer than 2 street names parsed (mid-block record)
+LEWISTER RD # 003800 TO 003999,1,fewer than 2 street names parsed (mid-block record)
+LIBRARY LANE # 002701 TO 002880,1,fewer than 2 street names parsed (mid-block record)
+LILE DR # 000590 TO 000598 even,1,fewer than 2 street names parsed (mid-block record)
+LILE DR & RAVEN WOODS DR,1,fewer than 2 of the named streets are CNV streets
+LILLOOET RD # 000800 TO 000958 even,1,fewer than 2 street names parsed (mid-block record)
+LILLOOET RD # 000992 TO 001038 even,1,fewer than 2 street names parsed (mid-block record)
+LILLOOET RD # 001050 TO 001076 even,1,fewer than 2 street names parsed (mid-block record)
+LILLOOET RD # 001078 TO 001088 even,1,fewer than 2 street names parsed (mid-block record)
+LILLOOET RD # 001400 TO 001599,1,fewer than 2 street names parsed (mid-block record)
+LILLOOET RD # 001678 TO 001815,1,fewer than 2 street names parsed (mid-block record)
+LILLOOET RD # 004976 TO 005199,1,fewer than 2 street names parsed (mid-block record)
+LIONS AVE # 004070 TO 004129,1,fewer than 2 street names parsed (mid-block record)
+LIONS AVE # 004400 TO 004449,1,fewer than 2 street names parsed (mid-block record)
+LIONS GATE LANE # 001600 TO 001699,1,fewer than 2 street names parsed (mid-block record)
+LLOYD AVE # 002000 TO 002047,1,fewer than 2 street names parsed (mid-block record)
+LLOYD AVE # 002250 TO 002299,1,fewer than 2 street names parsed (mid-block record)
+LLOYD AVE & W 17TH ST,1,fewer than 2 of the named streets are CNV streets
+LLOYD AVE & W 21ST ST,1,fewer than 2 of the named streets are CNV streets
+LODGE RD # 001070 TO 001159,1,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 000600 TO 000623,1,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 002200 TO 002299,1,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 002300 TO 002448 even,1,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 002500 TO 002598 even,1,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 003050 TO 003099,1,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 003120 TO 003199,1,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 003350 TO 003399,1,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 003400 TO 003499,1,fewer than 2 street names parsed (mid-block record)
+LONSDALE AVE # 003800 TO 003893,1,fewer than 2 street names parsed (mid-block record)
+LONSDALE LANE & W 15TH LANE,1,fewer than 2 of the named streets are CNV streets
+LONSDALE LANE & W 18TH LANE,1,fewer than 2 of the named streets are CNV streets
+LONSDALE LANE & W 20TH LANE,1,fewer than 2 of the named streets are CNV streets
+LOOK OUT PT # 001500 TO 001699,1,fewer than 2 street names parsed (mid-block record)
+LOOK OUT PT & ROXBURY RD,1,fewer than 2 of the named streets are CNV streets
+LORAINE AVE & SUNSET BLVD,1,fewer than 2 of the named streets are CNV streets
+LOW LEVEL RD # 001004 TO 001051,1,fewer than 2 street names parsed (mid-block record)
+LOW LEVEL RD & LOWER LEVEL RD,1,fewer than 2 of the named streets are CNV streets
+LYNN VALLEY RD # 000726 TO 000728 even,1,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 000727 TO 000799 odd,1,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 000801 TO 000849 odd,1,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 000850 TO 000898 even,1,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 001001 TO 001099 odd,1,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 001201 TO 001235 odd,1,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 001236 TO 001298 even,1,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 001237 TO 001299 odd,1,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 001470 TO 001499,1,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 001600 TO 001618,1,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 003800 TO 003899,1,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 004000 TO 004199,1,fewer than 2 street names parsed (mid-block record)
+LYNN VALLEY RD # 004600 TO 004665,1,fewer than 2 street names parsed (mid-block record)
+LYTTON ST # 000918 TO 000970,1,fewer than 2 street names parsed (mid-block record)
+MACKAY AVE # 002300 TO 002499,1,fewer than 2 street names parsed (mid-block record)
+MACKAY RD # 000224 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+MADELEY RD # 004090 TO 004299,1,fewer than 2 street names parsed (mid-block record)
+MADELEY RD & MONTROYAL BLVD,1,fewer than 2 of the named streets are CNV streets
+MAHON AVE # 000038 TO 000099,1,fewer than 2 street names parsed (mid-block record)
+MAHON AVE # 000200 TO 000251,1,fewer than 2 street names parsed (mid-block record)
+MAHON AVE # 000252 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+MAHON AVE # 001600 TO 001699,1,fewer than 2 street names parsed (mid-block record)
+MAHON AVE # 001800 TO 001899,1,fewer than 2 street names parsed (mid-block record)
+MAHON AVE # 002000 TO 002099,1,fewer than 2 street names parsed (mid-block record)
+MAHON AVE # 002100 TO 002149,1,fewer than 2 street names parsed (mid-block record)
+MAHON AVE # 003592 TO 003601,1,fewer than 2 street names parsed (mid-block record)
+MAHON AVE & W 29TH ST,1,CNV street names but no matching CNV intersection
+MAHON AVE & W KINGS RD,1,fewer than 2 of the named streets are CNV streets
+MAIN ST # 001650 TO 001688 even,1,fewer than 2 street names parsed (mid-block record)
+MAIN ST OFFRAMP & OXFORD ST & PHIBBS EXCHANGE,1,fewer than 2 of the named streets are CNV streets
+MALASPINA PL # 005350 TO 005379,1,fewer than 2 street names parsed (mid-block record)
+MALSUM DR # 003594 TO 003596 even,1,fewer than 2 street names parsed (mid-block record)
+MANNING PL # 003420 TO 003489,1,fewer than 2 street names parsed (mid-block record)
+MAPLERIDGE DR # 004500 TO 004599,1,fewer than 2 street names parsed (mid-block record)
+MAPLEWOOD CRES # 001122 TO 001149,1,fewer than 2 street names parsed (mid-block record)
+MARIGOLD AVE # 001000 TO 001045,1,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 000732 TO 000748 even,1,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 000990 TO 000998 even,1,fewer than 2 street names parsed (mid-block record)
+MARINE DR # 001800 TO 001861,1,fewer than 2 street names parsed (mid-block record)
+MARINE DR & MOSQUITO CREEK LANE,1,CNV street names but no matching CNV intersection
+MASEFIELD RD # 002550 TO 002669,1,fewer than 2 street names parsed (mid-block record)
+MCCARTNEY CLOSE # 000600 TO 000649,1,fewer than 2 street names parsed (mid-block record)
+MCGUIRE AVE # 001600 TO 001637,1,fewer than 2 street names parsed (mid-block record)
+MCNAIR DR # 001350 TO 001479,1,fewer than 2 street names parsed (mid-block record)
+MEADOWBANK CLOSE # 004500 TO 004599,1,fewer than 2 street names parsed (mid-block record)
+MEDWIN PL # 001600 TO 001799,1,fewer than 2 street names parsed (mid-block record)
+MELBOURNE AVE # 000900 TO 000949,1,fewer than 2 street names parsed (mid-block record)
+MELBOURNE AVE # 001000 TO 001089,1,fewer than 2 street names parsed (mid-block record)
+MERLYNN CRES # 001490 TO 001599,1,fewer than 2 street names parsed (mid-block record)
+MILL ST # 001220 TO 001299,1,fewer than 2 street names parsed (mid-block record)
+MILL ST # 001221 TO 001247 odd,1,fewer than 2 street names parsed (mid-block record)
+MILTON AVE # 003100 TO 003259,1,fewer than 2 street names parsed (mid-block record)
+MISSION RD # 000200 TO 000263,1,fewer than 2 street names parsed (mid-block record)
+MOLINA CRES # 005400 TO 005440 even,1,fewer than 2 street names parsed (mid-block record)
+MOLINA RD # 005500 TO 005599,1,fewer than 2 street names parsed (mid-block record)
+MOLLIE NYE WAY # 002402 TO 002499,1,fewer than 2 street names parsed (mid-block record)
+MONTERAY AVE # 000400 TO 000429,1,fewer than 2 street names parsed (mid-block record)
+MONTROYAL BLVD # 000250 TO 000329,1,fewer than 2 street names parsed (mid-block record)
+MONTROYAL BLVD # 000400 TO 000479,1,fewer than 2 street names parsed (mid-block record)
+MONTROYAL BLVD # 000832 TO 000899,1,fewer than 2 street names parsed (mid-block record)
+MONTROYAL BLVD # 001035 TO 001069,1,fewer than 2 street names parsed (mid-block record)
+MONTROYAL BLVD & SHIRLEY AVE,1,fewer than 2 of the named streets are CNV streets
+MOODY AVE # 001500 TO 001549,1,fewer than 2 street names parsed (mid-block record)
+MOODY AVE # 002000 TO 002041,1,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 000000 TO 000049,1,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 000120 TO 000139,1,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 000200 TO 000215,1,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 000226 TO 000261,1,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 000262 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 000400 TO 000449,1,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 001550 TO 001599,1,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 002000 TO 002057,1,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 002300 TO 002399,1,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 002301 TO 002395 odd,1,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 002781 TO 002899,1,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 003100 TO 003199,1,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 004560 TO 004609,1,fewer than 2 street names parsed (mid-block record)
+MOUNTAIN HWY # 004610 TO 004799,1,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY,1,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 002751 TO 002799 odd,1,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 002801 TO 002899 odd,1,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 002972 TO 003052 even,1,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 003140 TO 003246 even,1,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 003248 TO 003298 even,1,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 003400 TO 003490 even,1,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 003701 TO 003779 odd,1,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 004130 TO 004199,1,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY # 004200 TO 004249,1,fewer than 2 street names parsed (mid-block record)
+MT SEYMOUR PKY & ROSLYN BLVD,1,fewer than 2 of the named streets are CNV streets
+MUNDAY PL # 002800 TO 002899,1,fewer than 2 street names parsed (mid-block record)
+NANCY GREENE WAY # 005400 TO 005508,1,fewer than 2 street names parsed (mid-block record)
+NANCY GREENE WAY # 005600 TO 005799,1,fewer than 2 street names parsed (mid-block record)
+NANCY GREENE WAY # 005800 TO 005898,1,fewer than 2 street names parsed (mid-block record)
+NANCY GREENE WAY # 005920 TO 005940 even,1,fewer than 2 street names parsed (mid-block record)
+NAUGHTON AVE & ROCKCLIFF RD,1,fewer than 2 of the named streets are CNV streets
+NEILSON AVE # 002000 TO 002049,1,fewer than 2 street names parsed (mid-block record)
+NEWDALE CRT # 000200 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+NEWDALE CRT & VENTURA CRES,1,fewer than 2 of the named streets are CNV streets
+NICOLUM CRT # 000800 TO 000899,1,fewer than 2 street names parsed (mid-block record)
+NORDBY PL # 004200 TO 004359,1,fewer than 2 street names parsed (mid-block record)
+NORWOOD AVE # 003484 TO 003499,1,fewer than 2 street names parsed (mid-block record)
+NORWOOD AVE # 004050 TO 004219,1,fewer than 2 street names parsed (mid-block record)
+NORWOOD AVE & W OSBORNE RD & UNNAMED LANE,1,fewer than 2 of the named streets are CNV streets
+NORWOOD AVE & W ST JAMES RD,1,fewer than 2 of the named streets are CNV streets
+OLD LILLOOET RD # 000700 TO 000709,1,fewer than 2 street names parsed (mid-block record)
+OLD LILLOOET RD # 000801 TO 000835 odd,1,fewer than 2 street names parsed (mid-block record)
+OLD LILLOOET RD # 000853 TO 000889 odd,1,fewer than 2 street names parsed (mid-block record)
+OLD LILLOOET RD # 000891 TO 000997 odd,1,fewer than 2 street names parsed (mid-block record)
+ORKNEY PL # 001600 TO 001889,1,fewer than 2 street names parsed (mid-block record)
+ORLOHMA PL # 003800 TO 003884,1,fewer than 2 street names parsed (mid-block record)
+ORWELL ST # 000080 TO 000119,1,fewer than 2 street names parsed (mid-block record)
+ORWELL ST # 000450 TO 000499,1,fewer than 2 street names parsed (mid-block record)
+OWL CRT # 005700 TO 005718,1,fewer than 2 street names parsed (mid-block record)
+PAGE RD # 001600 TO 001659,1,fewer than 2 street names parsed (mid-block record)
+PAISLEY RD # 001400 TO 001599,1,fewer than 2 street names parsed (mid-block record)
+PAISLEY RD & PHILIP AVE,1,fewer than 2 of the named streets are CNV streets
+PATTERDALE DR # 004400 TO 004449,1,fewer than 2 street names parsed (mid-block record)
+PELLY RD & SUNSET BLVD,1,fewer than 2 of the named streets are CNV streets
+PEMBERTON AVE # 001400 TO 001499,1,fewer than 2 street names parsed (mid-block record)
+PEMBERTON AVE # 002600 TO 002749,1,fewer than 2 street names parsed (mid-block record)
+PEMBERTON AVE & PLATEAU DR & W 24TH ST,1,fewer than 2 of the named streets are CNV streets
+PHEASANT PL # 004660 TO 004799,1,fewer than 2 street names parsed (mid-block record)
+PHILIP AVE # 000040 TO 000079,1,fewer than 2 street names parsed (mid-block record)
+PHILIP AVE # 001650 TO 001699,1,fewer than 2 street names parsed (mid-block record)
+PHILIP AVE # 002200 TO 002299,1,fewer than 2 street names parsed (mid-block record)
+PHILIP AVE # 002700 TO 002799,1,fewer than 2 street names parsed (mid-block record)
+PHILIP AVE & W 17TH ST,1,fewer than 2 of the named streets are CNV streets
+PHILIP AVE & W 21ST ST,1,fewer than 2 of the named streets are CNV streets
+PHILIP AVE & W 23RD ST,1,fewer than 2 of the named streets are CNV streets
+PHYLLIS RD # 003800 TO 003899,1,fewer than 2 street names parsed (mid-block record)
+PIERARD RD & WESTOVER RD,1,fewer than 2 of the named streets are CNV streets
+PINEWOOD CRES # 001140 TO 001172,1,fewer than 2 street names parsed (mid-block record)
+PLYMOUTH DR # 000680 TO 000719,1,fewer than 2 street names parsed (mid-block record)
+PLYMOUTH DR # 000721 TO 000859,1,fewer than 2 street names parsed (mid-block record)
+PLYMOUTH DR # 002970 TO 003029,1,fewer than 2 street names parsed (mid-block record)
+PLYMOUTH DR & TOLLCROSS RD,1,fewer than 2 of the named streets are CNV streets
+PORTEAU PL # 000800 TO 000899,1,fewer than 2 street names parsed (mid-block record)
+PRIME ST # 004560 TO 004609,1,fewer than 2 street names parsed (mid-block record)
+PRINCESS AVE & WELLINGTON DR,1,fewer than 2 of the named streets are CNV streets
+PROSPECT AVE # 000800 TO 000939,1,fewer than 2 street names parsed (mid-block record)
+PROSPECT AVE # 000940 TO 000959,1,fewer than 2 street names parsed (mid-block record)
+PROSPECT AVE & SARITA AVE,1,fewer than 2 of the named streets are CNV streets
+PROSPECT RD & RONDOVAL CRES,1,fewer than 2 of the named streets are CNV streets
+PTARMIGAN PL # 005600 TO 005689,1,fewer than 2 street names parsed (mid-block record)
+PURCELL WAY # 001923 TO 001959 odd,1,fewer than 2 street names parsed (mid-block record)
+PURCELL WAY # 001990 TO 001998 even,1,fewer than 2 street names parsed (mid-block record)
+PURCELL WAY # 002055 TO 002055 odd,1,fewer than 2 street names parsed (mid-block record)
+QUEENSBURY AVE # 000600 TO 000649,1,fewer than 2 street names parsed (mid-block record)
+QUEENSBURY AVE # 000650 TO 000699,1,fewer than 2 street names parsed (mid-block record)
+QUINTON PL # 004360 TO 004399,1,fewer than 2 street names parsed (mid-block record)
+RAEBURN ST # 004490 TO 004579,1,fewer than 2 street names parsed (mid-block record)
+RAMSAY RD # 004500 TO 004679,1,fewer than 2 street names parsed (mid-block record)
+RANGER AVE # 004500 TO 004559,1,fewer than 2 street names parsed (mid-block record)
+RANGER AVE # 005000 TO 005099,1,fewer than 2 street names parsed (mid-block record)
+RANGER AVE # 005300 TO 005379,1,fewer than 2 street names parsed (mid-block record)
+RANGER AVE & RUSKIN PL,1,fewer than 2 of the named streets are CNV streets
+RAVEN WOODS DR & SALAL DR,1,fewer than 2 of the named streets are CNV streets
+RAVEN WOODS DR & WINDCREST DR,1,fewer than 2 of the named streets are CNV streets
+REDWOOD ST & SOWDEN ST,1,fewer than 2 of the named streets are CNV streets
+REGENT AVE # 003650 TO 003899,1,fewer than 2 street names parsed (mid-block record)
+RIDGEWAY AVE # 001300 TO 001349,1,fewer than 2 street names parsed (mid-block record)
+RIDGEWAY AVE # 001900 TO 001951,1,fewer than 2 street names parsed (mid-block record)
+RIDGEWOOD DR # 001072 TO 001099,1,fewer than 2 street names parsed (mid-block record)
+RIVERGROVE PL # 002020 TO 002099,1,fewer than 2 street names parsed (mid-block record)
+RIVERSIDE DR # 000070 TO 000100,1,fewer than 2 street names parsed (mid-block record)
+RIVERSIDE DR # 000600 TO 000649,1,fewer than 2 street names parsed (mid-block record)
+RIVERSIDE DR # 000842 TO 001599,1,fewer than 2 street names parsed (mid-block record)
+RIVERSIDE DR # 002157 TO 002299 odd,1,fewer than 2 street names parsed (mid-block record)
+RIVERSIDE DR # 002180 TO 002298 even,1,fewer than 2 street names parsed (mid-block record)
+RIVERSIDE DR & SWINBURNE AVE,1,fewer than 2 of the named streets are CNV streets
+ROCHE POINT DR # 000600 TO 000649,1,fewer than 2 street names parsed (mid-block record)
+ROCHE POINT DR # 000650 TO 000659,1,fewer than 2 street names parsed (mid-block record)
+ROCHE POINT DR # 000801 TO 000879 odd,1,fewer than 2 street names parsed (mid-block record)
+ROCHE POINT DR # 000847 TO 000863 odd,1,fewer than 2 street names parsed (mid-block record)
+ROCHE POINT DR # 000900 TO 000938 even,1,fewer than 2 street names parsed (mid-block record)
+ROCHE POINT DR # 000940 TO 000948 even,1,fewer than 2 street names parsed (mid-block record)
+ROCHE POINT DR # 000958 TO 001099,1,fewer than 2 street names parsed (mid-block record)
+RONDOVAL CRES # 000180 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+ROOSEVELT CRES # 001050 TO 001099,1,fewer than 2 street names parsed (mid-block record)
+ROSLYN BLVD # 000500 TO 000599,1,fewer than 2 street names parsed (mid-block record)
+ROSS RD # 001200 TO 001238,1,fewer than 2 street names parsed (mid-block record)
+ROSS RD & SUNNYHURST RD,1,fewer than 2 of the named streets are CNV streets
+ROSS RD & WEMBLEY DR,1,fewer than 2 of the named streets are CNV streets
+ROXBURY RD & WICKENDEN RD,1,fewer than 2 of the named streets are CNV streets
+ROYAL AVE # 003100 TO 003271,1,fewer than 2 street names parsed (mid-block record)
+RUBY AVE # 003900 TO 004022,1,fewer than 2 street names parsed (mid-block record)
+RUBY AVE & SUNSET BLVD,1,fewer than 2 of the named streets are CNV streets
+RUFUS AVE # 001400 TO 001449,1,fewer than 2 street names parsed (mid-block record)
+RUFUS AVE # 001700 TO 001737,1,fewer than 2 street names parsed (mid-block record)
+RUFUS DR # 001900 TO 001959,1,fewer than 2 street names parsed (mid-block record)
+RUNNYMEDE RD & SANDRINGHAM CRES,1,fewer than 2 of the named streets are CNV streets
+SANDOWN PL # 001970 TO 001999,1,fewer than 2 street names parsed (mid-block record)
+SANDOWN PL # 002010 TO 002069,1,fewer than 2 street names parsed (mid-block record)
+SARITA PL # 005145 TO 005193 odd,1,fewer than 2 street names parsed (mid-block record)
+SAUVE CRT # 000800 TO 000859,1,fewer than 2 street names parsed (mid-block record)
+SAUVE PL # 003800 TO 003879,1,fewer than 2 street names parsed (mid-block record)
+SECHELT DR # 002600 TO 002649,1,fewer than 2 street names parsed (mid-block record)
+SECHELT DR & WHITMAN AVE,1,fewer than 2 of the named streets are CNV streets
+SEYMOUR BLVD # 000700 TO 000849,1,fewer than 2 street names parsed (mid-block record)
+SEYMOUR BLVD # 001000 TO 001065,1,fewer than 2 street names parsed (mid-block record)
+SEYMOUR BLVD # 001268 TO 001299,1,fewer than 2 street names parsed (mid-block record)
+SEYMOUR BLVD & SEYMOUR CRT,1,fewer than 2 of the named streets are CNV streets
+SEYMOUR RIVER PL # 000320 TO 000339,1,fewer than 2 street names parsed (mid-block record)
+SEYMOUR RIVER PL # 000418 TO 000425,1,fewer than 2 street names parsed (mid-block record)
+SHAKESPEARE AVE # 000800 TO 000849,1,fewer than 2 street names parsed (mid-block record)
+SHAKESPEARE AVE # 000850 TO 000909,1,fewer than 2 street names parsed (mid-block record)
+SHAKESPEARE AVE & TENNYSON CRES,1,fewer than 2 of the named streets are CNV streets
+SHAVINGTON ST # 001120 TO 001199,1,fewer than 2 street names parsed (mid-block record)
+SILVERDALE PL # 000600 TO 000699,1,fewer than 2 street names parsed (mid-block record)
+SKEENA RD & TANTALUS RD,1,fewer than 2 of the named streets are CNV streets
+SKYLINE DR # 004080 TO 004119,1,fewer than 2 street names parsed (mid-block record)
+SKYLINE DR # 004700 TO 004759,1,fewer than 2 street names parsed (mid-block record)
+SKYLINE DR # 004760 TO 004809,1,fewer than 2 street names parsed (mid-block record)
+SLEIL-WAUTUTH RD # 003010 TO 003029,1,fewer than 2 street names parsed (mid-block record)
+SOMERSET ST # 000450 TO 000509,1,fewer than 2 street names parsed (mid-block record)
+SONORA DR # 005170 TO 005199,1,fewer than 2 street names parsed (mid-block record)
+SONORA DR # 005304 TO 005311,1,fewer than 2 street names parsed (mid-block record)
+SONORA PL # 000970 TO 000999,1,fewer than 2 street names parsed (mid-block record)
+SPARROW LANE # 003930 TO 003999,1,fewer than 2 street names parsed (mid-block record)
+SPICER RD # 001900 TO 001999,1,fewer than 2 street names parsed (mid-block record)
+ST ANDREWS AVE # 000800 TO 000898 even,1,fewer than 2 street names parsed (mid-block record)
+ST ANDREWS AVE # 001338 TO 001399,1,fewer than 2 street names parsed (mid-block record)
+ST ANDREWS AVE # 001750 TO 001799,1,fewer than 2 street names parsed (mid-block record)
+ST ANDREWS AVE # 001800 TO 001847,1,fewer than 2 street names parsed (mid-block record)
+ST ANDREWS AVE # 002200 TO 002249,1,fewer than 2 street names parsed (mid-block record)
+ST ANDREWS AVE # 002800 TO 002899,1,fewer than 2 street names parsed (mid-block record)
+ST ANDREWS AVE # 003500 TO 003569,1,fewer than 2 street names parsed (mid-block record)
+ST ANDREWS AVE # 003570 TO 003739,1,fewer than 2 street names parsed (mid-block record)
+ST DAVIDS AVE # 000400 TO 000451,1,fewer than 2 street names parsed (mid-block record)
+ST GEORGES AVE # 000600 TO 000649,1,fewer than 2 street names parsed (mid-block record)
+ST GEORGES AVE # 001100 TO 001149,1,fewer than 2 street names parsed (mid-block record)
+ST GEORGES AVE # 001300 TO 001341,1,fewer than 2 street names parsed (mid-block record)
+ST GEORGES AVE # 001434 TO 001449,1,fewer than 2 street names parsed (mid-block record)
+ST GEORGES AVE # 001500 TO 001536,1,fewer than 2 street names parsed (mid-block record)
+ST GEORGES AVE # 001650 TO 001699,1,fewer than 2 street names parsed (mid-block record)
+ST GEORGES AVE # 001800 TO 001848,1,fewer than 2 street names parsed (mid-block record)
+ST GEORGES AVE # 002200 TO 002249,1,fewer than 2 street names parsed (mid-block record)
+ST GEORGES AVE # 002950 TO 003099,1,fewer than 2 street names parsed (mid-block record)
+ST GEORGES AVE # 003250 TO 003299,1,fewer than 2 street names parsed (mid-block record)
+ST GEORGES AVE # 003400 TO 003499,1,fewer than 2 street names parsed (mid-block record)
+ST GEORGES AVE # 004100 TO 004199,1,fewer than 2 street names parsed (mid-block record)
+ST PATRICKS AVE # 000100 TO 000151,1,fewer than 2 street names parsed (mid-block record)
+ST PAULS AVE # 003700 TO 003899,1,fewer than 2 street names parsed (mid-block record)
+STARLIGHT WAY # 004199 TO 004449,1,fewer than 2 street names parsed (mid-block record)
+STONEHAVEN AVE # 004451 TO 004505 odd,1,fewer than 2 street names parsed (mid-block record)
+STRATHAVEN DR # 001000 TO 001049,1,fewer than 2 street names parsed (mid-block record)
+STRATHAVEN DR & STRATHAVEN LANE,1,fewer than 2 of the named streets are CNV streets
+STRATHCONA PL # 004690 TO 004709,1,fewer than 2 street names parsed (mid-block record)
+STRATHCONA RD # 004328 TO 004359,1,fewer than 2 street names parsed (mid-block record)
+STRATHCONA RD # 004541 TO 004686,1,fewer than 2 street names parsed (mid-block record)
+STRATHCONA RD & STRATHCONA WAY,1,fewer than 2 of the named streets are CNV streets
+SUNNYCREST DR # 003600 TO 003699,1,fewer than 2 street names parsed (mid-block record)
+SUNNYCREST DR # 003800 TO 003859,1,fewer than 2 street names parsed (mid-block record)
+SUNNYCREST DR # 003900 TO 003959,1,fewer than 2 street names parsed (mid-block record)
+SUNNYCREST DR # 003960 TO 003999,1,fewer than 2 street names parsed (mid-block record)
+SUNNYHURST RD # 003000 TO 003199,1,fewer than 2 street names parsed (mid-block record)
+SUNNYSIDE DR # 001320 TO 001348 even,1,fewer than 2 street names parsed (mid-block record)
+SUNNYSIDE DR # 001370 TO 001378 even,1,fewer than 2 street names parsed (mid-block record)
+SUNSET BLVD # 003890 TO 003999,1,fewer than 2 street names parsed (mid-block record)
+SUNSHINE FALLS LANE # 005781 TO 005789,1,fewer than 2 street names parsed (mid-block record)
+SUTHERLAND AVE # 001530 TO 001599,1,fewer than 2 street names parsed (mid-block record)
+SUTHERLAND AVE # 001932 TO 002049,1,fewer than 2 street names parsed (mid-block record)
+SWINBURNE AVE # 002500 TO 002599,1,fewer than 2 street names parsed (mid-block record)
+SYKES RD & WELLINGTON DR,1,fewer than 2 of the named streets are CNV streets
+SYLVAN AVE # 000700 TO 000799,1,fewer than 2 street names parsed (mid-block record)
+TAKAYA DR # 003050 TO 003129,1,fewer than 2 street names parsed (mid-block record)
+TALL TREE LANE # 001150 TO 001209,1,fewer than 2 street names parsed (mid-block record)
+TAMARACK RD # 000200 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+TATLOW AVE # 001200 TO 001297,1,fewer than 2 street names parsed (mid-block record)
+TATLOW AVE # 001600 TO 001659,1,fewer than 2 street names parsed (mid-block record)
+TATLOW AVE # 001660 TO 001799,1,fewer than 2 street names parsed (mid-block record)
+TATLOW AVE # 001843 TO 001979,1,fewer than 2 street names parsed (mid-block record)
+TEMPE CRES # 000440 TO 000599,1,fewer than 2 street names parsed (mid-block record)
+TEMPE GLEN DR # 002600 TO 002649,1,fewer than 2 street names parsed (mid-block record)
+TEMPE KNOLL DR # 002654 TO 002899,1,fewer than 2 street names parsed (mid-block record)
+TERRACE AVE # 001341 TO 001359 odd,1,fewer than 2 street names parsed (mid-block record)
+TEVIOT PL # 004580 TO 004628 even,1,fewer than 2 street names parsed (mid-block record)
+THORNCLIFFE DR # 002800 TO 002849,1,fewer than 2 street names parsed (mid-block record)
+THORNCLIFFE DR # 003000 TO 003089,1,fewer than 2 street names parsed (mid-block record)
+TOMPKINS CRES # 002051 TO 002099,1,fewer than 2 street names parsed (mid-block record)
+TOMPKINS CRES # 002100 TO 002299,1,fewer than 2 street names parsed (mid-block record)
+TOURNEY RD # 004600 TO 004698,1,fewer than 2 street names parsed (mid-block record)
+TRANS-CANADA HWY # 001468 TO 001520 even,1,fewer than 2 street names parsed (mid-block record)
+TRANS-CANADA HWY # 001541 TO 001549 odd,1,fewer than 2 street names parsed (mid-block record)
+TRANS-CANADA HWY # 001551 TO 001599 odd,1,fewer than 2 street names parsed (mid-block record)
+TRANS-CANADA HWY # 001660 TO 001702 even,1,fewer than 2 street names parsed (mid-block record)
+TRANS-CANADA HWY # 001800 TO 001800 even,1,fewer than 2 street names parsed (mid-block record)
+TREETOP LANE # 002300 TO 002499,1,fewer than 2 street names parsed (mid-block record)
+TUDOR AVE # 000690 TO 000779,1,fewer than 2 street names parsed (mid-block record)
+UNDERWOOD AVE # 004710 TO 004779,1,fewer than 2 street names parsed (mid-block record)
+UPTON RD # 003350 TO 003551,1,fewer than 2 street names parsed (mid-block record)
+VALENCIA AVE # 004324 TO 004389,1,fewer than 2 street names parsed (mid-block record)
+VENTURA CRES # 000340 TO 000409,1,fewer than 2 street names parsed (mid-block record)
+VIEWLYNN DR # 002300 TO 002399,1,fewer than 2 street names parsed (mid-block record)
+VIEWLYNN DR # 002400 TO 002629,1,fewer than 2 street names parsed (mid-block record)
+VINEDALE RD # 000730 TO 000799,1,fewer than 2 street names parsed (mid-block record)
+VIRGINIA CRES # 004124 TO 004162 even,1,fewer than 2 street names parsed (mid-block record)
+W 13TH ST # 000200 TO 000249,1,fewer than 2 street names parsed (mid-block record)
+W 14TH ST # 000121 TO 000199 odd,1,fewer than 2 street names parsed (mid-block record)
+W 14TH ST # 000200 TO 000223,1,fewer than 2 street names parsed (mid-block record)
+W 14TH ST # 001176 TO 001199,1,fewer than 2 street names parsed (mid-block record)
+W 15TH LANE # 000100 TO 000199,1,fewer than 2 street names parsed (mid-block record)
+W 15TH ST # 000300 TO 000315,1,fewer than 2 street names parsed (mid-block record)
+W 15TH ST # 001200 TO 001217,1,fewer than 2 street names parsed (mid-block record)
+W 16TH ST # 000200 TO 000223,1,fewer than 2 street names parsed (mid-block record)
+W 16TH ST # 000600 TO 000661,1,fewer than 2 street names parsed (mid-block record)
+W 16TH ST # 001200 TO 001225,1,fewer than 2 street names parsed (mid-block record)
+W 16TH ST # 001226 TO 001299,1,fewer than 2 street names parsed (mid-block record)
+W 17TH ST # 000126 TO 000175,1,fewer than 2 street names parsed (mid-block record)
+W 17TH ST # 000324 TO 000399,1,fewer than 2 street names parsed (mid-block record)
+W 17TH ST # 000628 TO 000699,1,fewer than 2 street names parsed (mid-block record)
+W 17TH ST # 000800 TO 000999,1,fewer than 2 street names parsed (mid-block record)
+W 17TH ST # 001032 TO 001077,1,fewer than 2 street names parsed (mid-block record)
+W 18TH ST # 000311 TO 000399,1,fewer than 2 street names parsed (mid-block record)
+W 19TH ST # 000200 TO 000211,1,fewer than 2 street names parsed (mid-block record)
+W 19TH ST # 000212 TO 000275,1,fewer than 2 street names parsed (mid-block record)
+W 19TH ST # 000310 TO 000359,1,fewer than 2 street names parsed (mid-block record)
+W 19TH ST # 000800 TO 000817,1,fewer than 2 street names parsed (mid-block record)
+W 19TH ST # 001000 TO 001073,1,fewer than 2 street names parsed (mid-block record)
+W 1ST ST # 000407 TO 000432,1,fewer than 2 street names parsed (mid-block record)
+W 1ST ST # 000850 TO 000873,1,fewer than 2 street names parsed (mid-block record)
+W 1ST ST # 001111 TO 001199 odd,1,fewer than 2 street names parsed (mid-block record)
+W 1ST ST # 001201 TO 001399 odd,1,fewer than 2 street names parsed (mid-block record)
+W 1ST ST # 001400 TO 001796 even,1,fewer than 2 street names parsed (mid-block record)
+W 20TH ST # 000126 TO 000175,1,fewer than 2 street names parsed (mid-block record)
+W 20TH ST # 001172 TO 001199,1,fewer than 2 street names parsed (mid-block record)
+W 21ST ST # 000124 TO 000175,1,fewer than 2 street names parsed (mid-block record)
+W 21ST ST # 000300 TO 000323,1,fewer than 2 street names parsed (mid-block record)
+W 21ST ST # 001000 TO 001021,1,fewer than 2 street names parsed (mid-block record)
+W 21ST ST # 001100 TO 001199,1,fewer than 2 street names parsed (mid-block record)
+W 21ST ST # 001300 TO 001399,1,fewer than 2 street names parsed (mid-block record)
+W 22ND ST # 000100 TO 000123,1,fewer than 2 street names parsed (mid-block record)
+W 22ND ST # 000200 TO 000267,1,fewer than 2 street names parsed (mid-block record)
+W 22ND ST # 001050 TO 001099,1,fewer than 2 street names parsed (mid-block record)
+W 22ND ST # 001100 TO 001199,1,fewer than 2 street names parsed (mid-block record)
+W 23RD LANE # 000300 TO 000399,1,fewer than 2 street names parsed (mid-block record)
+W 23RD ST # 000200 TO 000221,1,fewer than 2 street names parsed (mid-block record)
+W 23RD ST # 000426 TO 000499,1,fewer than 2 street names parsed (mid-block record)
+W 23RD ST # 001300 TO 001399,1,fewer than 2 street names parsed (mid-block record)
+W 24TH ST # 000200 TO 000275,1,fewer than 2 street names parsed (mid-block record)
+W 24TH ST # 000428 TO 000499,1,fewer than 2 street names parsed (mid-block record)
+W 25TH LANE & WESTVIEW DR,1,fewer than 2 of the named streets are CNV streets
+W 25TH ST # 000150 TO 000298 even,1,fewer than 2 street names parsed (mid-block record)
+W 28TH ST # 000200 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+W 28TH ST # 000300 TO 000399,1,fewer than 2 street names parsed (mid-block record)
+W 28TH ST # 000557 TO 000699,1,fewer than 2 street names parsed (mid-block record)
+W 29TH ST # 000100 TO 000123,1,fewer than 2 street names parsed (mid-block record)
+W 29TH ST # 000400 TO 000448 even,1,fewer than 2 street names parsed (mid-block record)
+W 29TH ST # 000490 TO 000569,1,fewer than 2 street names parsed (mid-block record)
+W 29TH ST # 000570 TO 000699,1,fewer than 2 street names parsed (mid-block record)
+W 2ND ST # 000300 TO 000399,1,fewer than 2 street names parsed (mid-block record)
+W 2ND ST # 000700 TO 000749,1,fewer than 2 street names parsed (mid-block record)
+W 3RD LANE # 000100 TO 000199,1,fewer than 2 street names parsed (mid-block record)
+W 3RD ST # 000200 TO 000249,1,fewer than 2 street names parsed (mid-block record)
+W 3RD ST # 000250 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+W 3RD ST # 000450 TO 000539,1,fewer than 2 street names parsed (mid-block record)
+W 3RD ST # 000540 TO 000599,1,fewer than 2 street names parsed (mid-block record)
+W 3RD ST # 001100 TO 001173,1,fewer than 2 street names parsed (mid-block record)
+W 4TH ST # 000100 TO 000121,1,fewer than 2 street names parsed (mid-block record)
+W 4TH ST # 000300 TO 000349,1,fewer than 2 street names parsed (mid-block record)
+W 5TH ST # 000300 TO 000399,1,fewer than 2 street names parsed (mid-block record)
+W BALMORAL RD # 000200 TO 000229,1,fewer than 2 street names parsed (mid-block record)
+W BRAEMAR RD # 000300 TO 000349,1,fewer than 2 street names parsed (mid-block record)
+W ESPLANADE # 000260 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+W ESPLANADE # 000400 TO 000436,1,fewer than 2 street names parsed (mid-block record)
+W KEITH RD # 000400 TO 000498 even,1,fewer than 2 street names parsed (mid-block record)
+W KEITH RD # 000401 TO 000499 odd,1,fewer than 2 street names parsed (mid-block record)
+W KEITH RD # 000501 TO 000599 odd,1,fewer than 2 street names parsed (mid-block record)
+W KEITH RD # 001000 TO 001029,1,fewer than 2 street names parsed (mid-block record)
+W KEITH RD # 001130 TO 001163,1,fewer than 2 street names parsed (mid-block record)
+W KEITH RD # 001200 TO 001299,1,fewer than 2 street names parsed (mid-block record)
+W KEITH RD # 001400 TO 001499,1,fewer than 2 street names parsed (mid-block record)
+W KEITH RD # 002200 TO 002299,1,fewer than 2 street names parsed (mid-block record)
+W KEITH RD # 002300 TO 002449,1,fewer than 2 street names parsed (mid-block record)
+W KINGS RD # 000328 TO 000367,1,fewer than 2 street names parsed (mid-block record)
+W KINGS RD # 000368 TO 000399,1,fewer than 2 street names parsed (mid-block record)
+W OSBORNE RD # 000200 TO 000299,1,fewer than 2 street names parsed (mid-block record)
+W QUEENS RD # 000400 TO 000463,1,fewer than 2 street names parsed (mid-block record)
+W QUEENS RD # 000464 TO 000499,1,fewer than 2 street names parsed (mid-block record)
+W ROCKLAND RD # 000200 TO 000239,1,fewer than 2 street names parsed (mid-block record)
+W ST JAMES RD # 000100 TO 000199,1,fewer than 2 street names parsed (mid-block record)
+W ST JAMES RD # 000530 TO 000599,1,fewer than 2 street names parsed (mid-block record)
+W VICTORIA PARK AVE # 000681 TO 000683 odd,1,fewer than 2 street names parsed (mid-block record)
+WALPOLE CRES # 002600 TO 002729,1,fewer than 2 street names parsed (mid-block record)
+WAYNE DR # 003210 TO 003349,1,fewer than 2 street names parsed (mid-block record)
+WELCH ST # 001152 TO 001183,1,fewer than 2 street names parsed (mid-block record)
+WELCH ST # 001224 TO 001399,1,fewer than 2 street names parsed (mid-block record)
+WELCH ST # 001400 TO 001549,1,fewer than 2 street names parsed (mid-block record)
+WELCH ST # 001800 TO 001899,1,fewer than 2 street names parsed (mid-block record)
+WELCH ST # 001900 TO 001949,1,fewer than 2 street names parsed (mid-block record)
+WELLINGTON DR # 001260 TO 001299,1,fewer than 2 street names parsed (mid-block record)
+WELLINGTON DR # 001300 TO 001459,1,fewer than 2 street names parsed (mid-block record)
+WEMBLEY DR # 002870 TO 002999,1,fewer than 2 street names parsed (mid-block record)
+WEMBLEY PL # 002843 TO 002927 odd,1,fewer than 2 street names parsed (mid-block record)
+WESTERN AVE # 002300 TO 002336,1,fewer than 2 street names parsed (mid-block record)
+WESTERN AVE # 002329 TO 002358,1,fewer than 2 street names parsed (mid-block record)
+WESTMORELAND CRES # 000724 TO 000799,1,fewer than 2 street names parsed (mid-block record)
+WESTVIEW CRES # 000712 TO 000769,1,fewer than 2 street names parsed (mid-block record)
+WESTVIEW CRES # 000900 TO 000999,1,fewer than 2 street names parsed (mid-block record)
+WESTVIEW DR # 001900 TO 001999,1,fewer than 2 street names parsed (mid-block record)
+WESTVIEW DR # 002000 TO 002099,1,fewer than 2 street names parsed (mid-block record)
+WESTVIEW DR # 002300 TO 002499,1,fewer than 2 street names parsed (mid-block record)
+WHITCHURCH ST # 000810 TO 000899,1,fewer than 2 street names parsed (mid-block record)
+WHITCHURCH ST # 000900 TO 000999,1,fewer than 2 street names parsed (mid-block record)
+WHITELEY CRT # 002564 TO 002699,1,fewer than 2 street names parsed (mid-block record)
+WILLIAM AVE # 001400 TO 001499,1,fewer than 2 street names parsed (mid-block record)
+WILLIAM AVE # 002900 TO 003099,1,fewer than 2 street names parsed (mid-block record)
+WINDCREST DR # 003613 TO 003625 odd,1,fewer than 2 street names parsed (mid-block record)
+WINONA AVE # 000700 TO 000799,1,fewer than 2 street names parsed (mid-block record)
+WOODBINE DR # 002800 TO 002999,1,fewer than 2 street names parsed (mid-block record)
+WOODBINE DR # 003004 TO 003099,1,fewer than 2 street names parsed (mid-block record)
+WOODBINE DR # 003100 TO 003149,1,fewer than 2 street names parsed (mid-block record)
+WOODBINE DR # 003150 TO 003468,1,fewer than 2 street names parsed (mid-block record)
+WOODBURY AVE # 003900 TO 004099,1,fewer than 2 street names parsed (mid-block record)
+WYAT PL # 002650 TO 002754,1,fewer than 2 street names parsed (mid-block record)

@@ -1,0 +1,20 @@
+{
+  "source_id": "cnv_pdf_landuse",
+  "organization": "City of North Vancouver",
+  "dataset": "Schedule A Land Use (PDF)",
+  "source_url": "https://gisext2.cnv.org/PDFMaps/Schedule%20A%20Land%20Use_11x17.pdf",
+  "download_url": "https://gisext2.cnv.org/PDFMaps/Schedule%20A%20Land%20Use_11x17.pdf",
+  "handler": "http_file",
+  "format": "PDF",
+  "geographic_level": null,
+  "coverage": "City of North Vancouver",
+  "version": null,
+  "license": null,
+  "download_date": "2026-08-12T07:14:55+00:00",
+  "sha256": "2b2a28e060baf5d3f164855d2d0120c13933a5569d811a350ba19cd5f23eedce",
+  "notes": "",
+  "http_content_type": "application/pdf",
+  "http_content_disposition": null,
+  "bytes": 971947,
+  "validation": "ok"
+}

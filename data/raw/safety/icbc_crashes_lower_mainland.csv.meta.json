@@ -1,0 +1,20 @@
+{
+  "source_id": "icbc_crashes_lower_mainland_all",
+  "organization": "Insurance Corporation of British Columbia (ICBC)",
+  "dataset": "Lower Mainland Crashes - unfiltered regional extract",
+  "source_url": "https://public.tableau.com/app/profile/icbc/viz/LowerMainlandCrashes/LMDashboard",
+  "download_url": "https://public.tableau.com/views/LowerMainlandCrashes/LMDashboard.csv?:showVizHome=no",
+  "handler": "http_file",
+  "format": "CSV",
+  "geographic_level": "intersection_or_block_name",
+  "coverage": "Metro Vancouver / Lower Mainland",
+  "version": null,
+  "license": "Open Data Licence for ICBC Information",
+  "download_date": "2026-08-12T07:20:02+00:00",
+  "sha256": "8f86d80f70d3147d601c743c8e24f7bcd878e0a219e49f1b1bec952a7fd9204d",
+  "notes": "Regional baseline used to check how CNV compares and to detect name collisions.",
+  "http_content_type": "text/csv",
+  "http_content_disposition": "inline; filename*=UTF-8''LMDashboard.csv",
+  "bytes": 322693,
+  "validation": "ok"
+}

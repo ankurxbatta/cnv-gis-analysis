@@ -1,0 +1,19 @@
+{
+  "source_id": "cnv_2022_official_results",
+  "organization": "City of North Vancouver",
+  "dataset": "Official Results of 2022 City Election",
+  "source_url": "https://www.cnv.org/City-Hall/News-Room/Whats-New/2022/10/19/Official-Results-of-2022-City-Election-Announced",
+  "download_url": "https://www.cnv.org/City-Hall/News-Room/Whats-New/2022/10/19/Official-Results-of-2022-City-Election-Announced",
+  "handler": "html_page",
+  "format": "HTML",
+  "geographic_level": "municipality",
+  "coverage": "City of North Vancouver",
+  "version": null,
+  "license": null,
+  "download_date": "2026-08-12T07:14:54+00:00",
+  "sha256": "3acd13c94ad6637b4ad93f8ac2a1790232ae23120e927224a98ad2d434eafacc",
+  "notes": "Aggregate candidate vote totals and turnout. Contains no individual-level data.",
+  "bytes": 430042,
+  "http_content_type": "text/html; charset=utf-8",
+  "final_url": "https://www.cnv.org/City-Hall/News-Room/Whats-New/2022/10/19/Official-Results-of-2022-City-Election-Announced"
+}

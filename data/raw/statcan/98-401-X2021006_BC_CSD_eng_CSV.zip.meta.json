@@ -1,0 +1,20 @@
+{
+  "source_id": "statcan_census_profile_bc_csd",
+  "organization": "Statistics Canada",
+  "dataset": "Census Profile, 2021 - British Columbia, census subdivisions (98-401-X2021006)",
+  "source_url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm",
+  "download_url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger/comp/GetFile.cfm?Lang=E&FILETYPE=CSV&GEONO=025",
+  "handler": "http_file",
+  "format": "CSV (zip)",
+  "geographic_level": "census_subdivision",
+  "coverage": "British Columbia",
+  "version": null,
+  "license": "Statistics Canada Open Licence",
+  "download_date": "2026-08-12T07:13:37+00:00",
+  "sha256": "0f7e54dc325bafbcd5c6c0f30faae00833c102b1eb051490112e4ea8bf38f705",
+  "notes": "CSD-level totals used to validate that DA sums reconcile to the CNV municipal total.",
+  "http_content_type": "application/unknown;charset=UTF-8",
+  "http_content_disposition": "attachment;filename=98-401-X2021025_eng_CSV.zip",
+  "bytes": 26176494,
+  "validation": "ok"
+}

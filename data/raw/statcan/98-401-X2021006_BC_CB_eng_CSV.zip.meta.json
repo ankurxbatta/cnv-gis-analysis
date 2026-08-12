@@ -1,0 +1,20 @@
+{
+  "source_id": "statcan_census_profile_bc_da",
+  "organization": "Statistics Canada",
+  "dataset": "Census Profile, 2021 - British Columbia, dissemination areas (98-401-X2021006)",
+  "source_url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger.cfm",
+  "download_url": "https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/download-telecharger/comp/GetFile.cfm?Lang=E&FILETYPE=CSV&GEONO=006_BC_CB",
+  "handler": "http_file",
+  "format": "CSV (zip)",
+  "geographic_level": "dissemination_area",
+  "coverage": "British Columbia",
+  "version": "98-401-X2021006, released 2022-12-15",
+  "license": "Statistics Canada Open Licence",
+  "download_date": "2026-08-12T07:13:27+00:00",
+  "sha256": "067f53dfefece572dc9c83d24d90226cc7b7e217b90c4f724a21ffd90457f36f",
+  "notes": "PRIMARY source for population, age and dwelling variables. This is the British-Columbia-only comprehensive Census Profile at DA level, preferred over the 2.2 GB national file. Confirmed via Content-Disposition header.",
+  "http_content_type": "application/unknown;charset=UTF-8",
+  "http_content_disposition": "attachment;filename=98-401-X2021006_BC_CB_eng_CSV.zip",
+  "bytes": 307048228,
+  "validation": "ok"
+}

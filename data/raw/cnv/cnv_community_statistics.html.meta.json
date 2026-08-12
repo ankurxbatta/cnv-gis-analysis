@@ -1,0 +1,19 @@
+{
+  "source_id": "cnv_community_statistics",
+  "organization": "City of North Vancouver",
+  "dataset": "Community Facts & Statistics",
+  "source_url": "https://www.cnv.org/City-Hall/About/community-statistics",
+  "download_url": "https://www.cnv.org/City-Hall/About/community-statistics",
+  "handler": "html_page",
+  "format": "HTML",
+  "geographic_level": null,
+  "coverage": "City of North Vancouver",
+  "version": null,
+  "license": null,
+  "download_date": "2026-08-12T07:14:55+00:00",
+  "sha256": "0b8ce185c1e4ecebd199ecea9038bf9750583cd9c35ccbc406e3fd4d555b1e45",
+  "notes": "Municipal summary statistics; used for cross-validation only, not as a primary source.",
+  "bytes": 511980,
+  "http_content_type": "text/html; charset=utf-8",
+  "final_url": "https://www.cnv.org/City-Hall/About/community-statistics"
+}

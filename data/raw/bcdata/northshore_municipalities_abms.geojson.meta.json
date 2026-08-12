@@ -1,0 +1,21 @@
+{
+  "source_id": "bc_northshore_municipalities",
+  "organization": "Province of BC - GeoBC",
+  "dataset": "ABMS Municipalities - North Shore context",
+  "source_url": "https://catalogue.data.gov.bc.ca/dataset/municipalities-legally-defined-administrative-areas-of-bc",
+  "download_url": "https://catalogue.data.gov.bc.ca/dataset/municipalities-legally-defined-administrative-areas-of-bc",
+  "handler": "wfs",
+  "format": "GeoJSON",
+  "geographic_level": "municipality",
+  "coverage": "North Shore municipalities",
+  "version": null,
+  "license": "Open Government Licence - British Columbia",
+  "download_date": "2026-08-12T07:07:25+00:00",
+  "sha256": "4a3faabebafbd14e6fd77a7d932af7621508eed13cafbd8e9a84fa33bbf09a1c",
+  "notes": "Context layer only, used to verify CNV/DNV separation. Never used as the study area.",
+  "feature_count": 3,
+  "typename": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP",
+  "cql_filter": "ADMIN_AREA_NAME LIKE '%North Vancouver%' OR ADMIN_AREA_NAME LIKE '%West Vancouver%'",
+  "srs": "EPSG:3005",
+  "bytes": 146435
+}

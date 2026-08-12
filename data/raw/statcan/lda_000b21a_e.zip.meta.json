@@ -1,0 +1,20 @@
+{
+  "source_id": "statcan_da_boundaries_2021",
+  "organization": "Statistics Canada",
+  "dataset": "2021 Census - Dissemination Areas cartographic boundary file (92-169-X)",
+  "source_url": "https://www150.statcan.gc.ca/n1/en/catalogue/92-169-X2021001",
+  "download_url": "https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/files-fichiers/lda_000b21a_e.zip",
+  "handler": "http_file",
+  "format": "Shapefile (zip)",
+  "geographic_level": "dissemination_area",
+  "coverage": "Canada",
+  "version": "2021 Census, cartographic boundary",
+  "license": "Statistics Canada Open Licence",
+  "download_date": "2026-08-12T07:08:37+00:00",
+  "sha256": "cb8e00a1165d8f309a62884860112944ea5acc177bb926d966b4a51fbd0c9ecb",
+  "notes": "Primary DA geometry. Join key DAUID. Native CRS EPSG:3347 (Lambert).",
+  "http_content_type": "application/x-zip-compressed",
+  "http_content_disposition": null,
+  "bytes": 197042003,
+  "validation": "ok"
+}

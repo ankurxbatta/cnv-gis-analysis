@@ -1,0 +1,20 @@
+{
+  "source_id": "cnv_pdf_citymap",
+  "organization": "City of North Vancouver",
+  "dataset": "City Map (PDF)",
+  "source_url": "https://gisext2.cnv.org/PDFMaps/CNV_CityMap.pdf",
+  "download_url": "https://gisext2.cnv.org/PDFMaps/CNV_CityMap.pdf",
+  "handler": "http_file",
+  "format": "PDF",
+  "geographic_level": null,
+  "coverage": "City of North Vancouver",
+  "version": null,
+  "license": null,
+  "download_date": "2026-08-12T07:14:55+00:00",
+  "sha256": "efb07f8290e825a536c7d7f2285439e0e06dc14648f1db694a70deca5efe84d9",
+  "notes": "",
+  "http_content_type": "application/pdf",
+  "http_content_disposition": null,
+  "bytes": 6271184,
+  "validation": "ok"
+}

@@ -1,0 +1,20 @@
+{
+  "source_id": "geoweb_sidewalks",
+  "organization": "District of North Vancouver - GEOweb",
+  "dataset": "Sidewalks",
+  "source_url": "https://geoweb.dnv.org/data/",
+  "download_url": "https://geoweb.dnv.org/Products/Data/SHP/RodSidewalk_shp.zip",
+  "handler": "http_file",
+  "format": "Shapefile (zip)",
+  "geographic_level": "sidewalk",
+  "coverage": "District of North Vancouver (verify CNV coverage)",
+  "version": null,
+  "license": null,
+  "download_date": "2026-08-12T07:14:56+00:00",
+  "sha256": "b3b668fa3255e1de294e22d3d382c74839b73378046d481678a42eb537979427",
+  "notes": "",
+  "http_content_type": "application/x-zip-compressed",
+  "http_content_disposition": null,
+  "bytes": 1138786,
+  "validation": "ok"
+}

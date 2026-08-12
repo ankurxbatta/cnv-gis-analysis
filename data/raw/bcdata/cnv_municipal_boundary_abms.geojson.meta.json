@@ -1,0 +1,21 @@
+{
+  "source_id": "bc_cnv_boundary",
+  "organization": "Province of BC - GeoBC / BC Data Catalogue",
+  "dataset": "Municipalities - Legally Defined Administrative Areas of BC (ABMS)",
+  "source_url": "https://catalogue.data.gov.bc.ca/dataset/municipalities-legally-defined-administrative-areas-of-bc",
+  "download_url": "https://catalogue.data.gov.bc.ca/dataset/municipalities-legally-defined-administrative-areas-of-bc",
+  "handler": "wfs",
+  "format": "GeoJSON",
+  "geographic_level": "municipality",
+  "coverage": "City of North Vancouver",
+  "version": null,
+  "license": "Open Government Licence - British Columbia",
+  "download_date": "2026-08-12T07:06:21+00:00",
+  "sha256": "948cb6c8032227e3bfb67783748fb148dacb59d1f9656f5e813ee66679f96641",
+  "notes": "Authoritative legal municipal boundary. LGL_ADMIN_AREA_ID=114. The District of North Vancouver is a separate feature (ID=125) and is deliberately excluded.",
+  "feature_count": 1,
+  "typename": "WHSE_LEGAL_ADMIN_BOUNDARIES.ABMS_MUNICIPALITIES_SP",
+  "cql_filter": "ADMIN_AREA_NAME='City of North Vancouver'",
+  "srs": "EPSG:3005",
+  "bytes": 3031
+}

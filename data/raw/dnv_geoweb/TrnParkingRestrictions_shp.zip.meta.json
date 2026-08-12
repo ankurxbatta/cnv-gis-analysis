@@ -1,0 +1,20 @@
+{
+  "source_id": "geoweb_parking_restrictions",
+  "organization": "District of North Vancouver - GEOweb",
+  "dataset": "Parking Restrictions",
+  "source_url": "https://geoweb.dnv.org/data/",
+  "download_url": "https://geoweb.dnv.org/Products/Data/SHP/TrnParkingRestrictions_shp.zip",
+  "handler": "http_file",
+  "format": "Shapefile (zip)",
+  "geographic_level": "street_segment",
+  "coverage": "District of North Vancouver (verify CNV coverage)",
+  "version": null,
+  "license": null,
+  "download_date": "2026-08-12T07:14:56+00:00",
+  "sha256": "3bd470a587f0846428c8d30b9f8cfdbb37a16f565714989f5ba2d44700bffcce",
+  "notes": "",
+  "http_content_type": "application/x-zip-compressed",
+  "http_content_disposition": null,
+  "bytes": 298773,
+  "validation": "ok"
+}

@@ -1,0 +1,109 @@
+# =============================================================================
+# config/study_area.yaml
+# Study area definition for the City of North Vancouver GIS analysis.
+# =============================================================================
+
+study_area:
+  name: "City of North Vancouver"
+  short_name: "CNV"
+  province: "British Columbia"
+  country: "Canada"
+
+  # Statistics Canada geography identifiers.
+  # CSDUID is verified against the downloaded CSD boundary file in 03_prepare_boundary.py
+  # rather than trusted blindly from this config.
+  statcan:
+    csd_name: "North Vancouver"
+    csd_type: "CY"           # City
+    csduid_expected: "5915051"
+    cduid_expected: "5915"   # Greater Vancouver Census Division
+    pruid: "59"              # British Columbia
+    census_year: 2021
+
+  # BC ABMS legal administrative area
+  bc_abms:
+    admin_area_name: "City of North Vancouver"
+    lgl_admin_area_id: 114
+
+  # Entities that must NOT be confused with the study area.
+  do_not_confuse:
+    - name: "District of North Vancouver"
+      lgl_admin_area_id: 125
+      csduid: "5915046"
+      note: "Separate municipality that surrounds CNV on three sides."
+    - name: "North Vancouver electoral district"
+      note: "Provincial/federal electoral geography; unrelated to municipal boundaries."
+    - name: "Metro Vancouver Regional District"
+      note: "Regional federation; CNV is one member municipality."
+    - name: "North Shore"
+      note: "Informal region covering CNV, DNV and West Vancouver."
+
+# -----------------------------------------------------------------------------
+# Coordinate reference systems
+# -----------------------------------------------------------------------------
+crs:
+  # Analysis CRS for all area/distance/density calculations.
+  analysis: "EPSG:26910"
+  analysis_name: "NAD83 / UTM zone 10N"
+  analysis_rationale: >
+    The CNV ArcGIS server publishes natively in EPSG:26910, so using it as the analysis
+    CRS avoids a reprojection round-trip on the largest layers. It is a metre-based
+    projected CRS appropriate for local distance and area work at municipal scale.
+
+  # Provincial/regional CRS, used when combining with province-wide BC datasets.
+  provincial: "EPSG:3005"
+  provincial_name: "NAD83 / BC Albers"
+
+  # Web mapping export CRS.
+  web: "EPSG:4326"
+  web_name: "WGS 84"
+
+  # StatCan boundary files ship in this CRS and are reprojected on load.
+  statcan_native: "EPSG:3347"
+  statcan_native_name: "NAD83 / Statistics Canada Lambert"
+
+  forbid_degree_measurements: true   # never compute area/length in EPSG:4326
+
+# -----------------------------------------------------------------------------
+# Spatial analysis parameters
+# -----------------------------------------------------------------------------
+analysis:
+  # Buffers used for intersection accessibility measures (metres).
+  intersection_buffers_m: [100, 250, 400]
+
+  # Maximum distance a traffic count station may be from an intersection before
+  # its volume is considered non-representative. Documented in METHODOLOGY.md.
+  traffic_station_association_max_m: 150
+
+  # Tolerance for snapping street centreline endpoints into a shared intersection node.
+  intersection_snap_tolerance_m: 5.0
+
+  # Signal asset points within this distance of an intersection node mark it signalised.
+  signal_cluster_distance_m: 40.0
+
+  # Buffer applied outside the CNV boundary when pulling regional layers (TransLink,
+  # DNV GEOweb) so that edge intersections are not starved of nearby features.
+  edge_context_buffer_m: 500
+
+  # Geometry simplification tolerance for web export only. Never applied to analysis data.
+  web_simplify_tolerance_m: 2.0
+
+# -----------------------------------------------------------------------------
+# Privacy and interpretation constraints (enforced by tests/)
+# -----------------------------------------------------------------------------
+privacy:
+  min_geographic_unit: "dissemination_block"
+  forbid_individual_level_data: true
+  forbidden_field_names:
+    - eligible_voters
+    - voter_name
+    - voter_address
+    - political_preference
+    - party_support
+    - vote_intention
+  adult_population_field: "adult_population_18plus_proxy"
+  adult_population_disclaimer: >
+    Population aged 18 and over from the 2021 Census of Population, used as a demographic
+    proxy for potential electorate size. This is NOT a count of eligible or registered
+    electors: it excludes citizenship and residency requirements, reflects 2021 conditions,
+    and is subject to Statistics Canada random rounding.

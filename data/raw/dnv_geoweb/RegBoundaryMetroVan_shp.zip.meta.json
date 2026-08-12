@@ -1,0 +1,20 @@
+{
+  "source_id": "geoweb_metrovan_municipalities",
+  "organization": "District of North Vancouver - GEOweb",
+  "dataset": "Metro Vancouver Municipalities",
+  "source_url": "https://geoweb.dnv.org/data/",
+  "download_url": "https://geoweb.dnv.org/Products/Data/SHP/RegBoundaryMetroVan_shp.zip",
+  "handler": "http_file",
+  "format": "Shapefile (zip)",
+  "geographic_level": "municipality",
+  "coverage": "Metro Vancouver",
+  "version": null,
+  "license": null,
+  "download_date": "2026-08-12T07:14:56+00:00",
+  "sha256": "38dc5e7751cc5723fd22583de2e32c14d56e5e008d47ae48605aaebf2d593349",
+  "notes": "Boundary cross-check only. The BC ABMS layer remains the authoritative CNV boundary.",
+  "http_content_type": "application/x-zip-compressed",
+  "http_content_disposition": null,
+  "bytes": 63484,
+  "validation": "ok"
+}

@@ -1,0 +1,73 @@
+source_id,local_path,exists,bytes,sha256_ok,content_status,detail
+bc_cnv_boundary,data/raw/bcdata/cnv_municipal_boundary_abms.geojson,True,3031,True,ok,"1 features, crs=urn:ogc:def:crs:EPSG::3005"
+bc_northshore_municipalities,data/raw/bcdata/northshore_municipalities_abms.geojson,True,146435,True,ok,"3 features, crs=urn:ogc:def:crs:EPSG::3005"
+statcan_da_boundaries_2021,data/raw/statcan/lda_000b21a_e.zip,True,197042003,True,ok,5 members
+statcan_db_boundaries_2021,data/raw/statcan/ldb_000b21a_e.zip,True,317391964,True,ok,5 members
+statcan_csd_boundaries_2021,data/raw/statcan/lcsd000b21a_e.zip,True,155981521,True,ok,5 members
+statcan_census_profile_bc_da,data/raw/statcan/98-401-X2021006_BC_CB_eng_CSV.zip,True,307048228,True,ok,4 members
+statcan_census_profile_bc_csd,data/raw/statcan/98-401-X2021006_BC_CSD_eng_CSV.zip,True,26176494,True,ok,4 members
+cnv_neighbourhoods,data/raw/cnv/cnv_neighbourhoods.geojson,True,10300,True,ok,"10 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_named_areas,data/raw/cnv/cnv_named_areas.geojson,True,283219,True,ok,"105 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_street_centreline,data/raw/cnv/cnv_street_centreline.geojson,True,755330,True,ok,"962 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_buildings,data/raw/cnv/cnv_buildings.geojson,True,7417667,True,ok,"11834 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_legal_parcels,data/raw/cnv/cnv_legal_parcels.geojson,True,15846307,True,ok,"7208 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_walkways,data/raw/cnv/cnv_walkways.geojson,True,1997656,True,ok,"2721 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_highrise_buildings,data/raw/cnv/cnv_highrise_buildings.geojson,True,168464,True,ok,"107 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_affordable_housing,data/raw/cnv/cnv_affordable_housing.geojson,True,59943,True,ok,"59 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_population_by_parcel_2021,data/raw/cnv/cnv_population_by_parcel_2021.geojson,True,14726099,True,ok,"7185 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_zoning,data/raw/cnv/cnv_zoning.geojson,True,1033164,True,ok,"683 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_ocp_landuse,data/raw/cnv/cnv_ocp_landuse.geojson,True,823711,True,ok,"609 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_dissemination_blocks,data/raw/cnv/cnv_dissemination_blocks.geojson,True,78827,True,ok,"122 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_db_population_2021,data/raw/cnv/cnv_db_population_2021.geojson,True,200225,True,ok,"302 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_road_designation,data/raw/cnv/cnv_road_designation.geojson,True,66973,True,ok,"230 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_road_classifications,data/raw/cnv/cnv_road_classifications.geojson,True,2053185,True,WARN,"507 features, crs=urn:ogc:def:crs:EPSG::26910 | download warning: server reported 518 features, retrieved 507; expected_count 518 in config, retrieved 507; 11 feature(s) could not be served by the ArcGIS endpoint (OBJECTIDs [206, 244, 267, 337, 381, 499, 522, 532, 543, 2711, 5015])"
+cnv_traffic_signals,data/raw/cnv/cnv_traffic_signals.geojson,True,675809,True,ok,"587 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_traffic_signs,data/raw/cnv/cnv_traffic_signs.geojson,True,864242,True,ok,"1093 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_speed_zones,data/raw/cnv/cnv_speed_zones.geojson,True,51115,True,ok,"120 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_one_way_streets,data/raw/cnv/cnv_one_way_streets.geojson,True,18663,True,ok,"35 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_traffic_calming,data/raw/cnv/cnv_traffic_calming.geojson,True,881661,True,ok,"786 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_truck_routes,data/raw/cnv/cnv_truck_routes.geojson,True,7324,True,ok,"11 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_traffic_volume_northbound,data/raw/traffic/cnv_traffic_volume_northbound.geojson,True,3767,True,ok,"11 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_traffic_volume_southbound,data/raw/traffic/cnv_traffic_volume_southbound.geojson,True,3664,True,ok,"11 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_traffic_volume_eastbound,data/raw/traffic/cnv_traffic_volume_eastbound.geojson,True,4128,True,ok,"8 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_traffic_volume_westbound,data/raw/traffic/cnv_traffic_volume_westbound.geojson,True,4140,True,ok,"8 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_cyclist_volume,data/raw/traffic/cnv_cyclist_volume.geojson,True,5162,True,ok,"10 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_sidewalk_segments,data/raw/cnv/cnv_sidewalk_segments.geojson,True,2118260,True,ok,"1867 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_sidewalk_ramps,data/raw/cnv/cnv_sidewalk_ramps.geojson,True,803022,True,ok,"2613 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_missing_sidewalks,data/raw/cnv/cnv_missing_sidewalks.geojson,True,247960,True,ok,"385 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_pedestrian_areas,data/raw/cnv/cnv_pedestrian_areas.geojson,True,122490,True,ok,"18 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_school_routes,data/raw/cnv/cnv_school_routes.geojson,True,60884,True,ok,"44 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_bike_routes_existing,data/raw/cnv/cnv_bike_routes_existing.geojson,True,189081,True,ok,"199 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_parking_occupancy,data/raw/parking/cnv_parking_occupancy.geojson,True,650511,True,ok,"1169 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_parking_zones,data/raw/parking/cnv_parking_zones.geojson,True,3468158,True,ok,"5981 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_parking_offstreet_lots,data/raw/parking/cnv_parking_offstreet_lots.geojson,True,14345,True,ok,"28 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_parking_signs,data/raw/parking/cnv_parking_signs.geojson,True,1137077,True,ok,"2580 features, crs=urn:ogc:def:crs:EPSG::26910, 1 without geometry"
+cnv_loading_zones,data/raw/parking/cnv_loading_zones.geojson,True,50258,True,ok,"138 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_car_share_parking,data/raw/parking/cnv_car_share_parking.geojson,True,12478,True,ok,"32 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_pay_parking_onstreet,data/raw/parking/cnv_pay_parking_onstreet.geojson,True,98250,True,ok,"223 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_pay_parking_offstreet,data/raw/parking/cnv_pay_parking_offstreet.geojson,True,14345,True,ok,"28 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_pay_stations,data/raw/parking/cnv_pay_stations.geojson,True,11694,True,ok,"42 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_accessible_parking,data/raw/parking/cnv_accessible_parking.geojson,True,66237,True,ok,"158 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_resident_permit_parking_zones,data/raw/parking/cnv_resident_permit_zones.geojson,True,16149,True,ok,"14 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_bus_stops,data/raw/cnv/cnv_bus_stops.geojson,True,67279,True,ok,"183 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_bus_shelters,data/raw/cnv/cnv_bus_shelters.geojson,True,27417,True,ok,"46 features, crs=urn:ogc:def:crs:EPSG::26910"
+cnv_parks,data/raw/cnv/cnv_parks.geojson,True,113309,True,ok,"59 features, crs=urn:ogc:def:crs:EPSG::26910"
+translink_gtfs,data/raw/transit/translink_gtfs.zip,True,16266069,True,ok,16 members
+cnv_past_election_results,data/raw/elections/cnv_past_election_results.html,True,547769,True,ok,528 KB
+cnv_2022_official_results,data/raw/elections/cnv_2022_official_results.html,True,430042,True,ok,415 KB
+cnv_election_landing,data/raw/elections/cnv_election_landing.html,True,436737,True,ok,421 KB
+cnv_pdf_genzoning,data/raw/cnv/CNV_GenZoning48x36.pdf,True,1200857,True,ok,1172 KB
+cnv_pdf_neighbourhoods,data/raw/cnv/CNV_Neighbourhoods.pdf,True,1249952,True,ok,1220 KB
+cnv_pdf_citymap,data/raw/cnv/CNV_CityMap.pdf,True,6271184,True,ok,6124 KB
+cnv_pdf_landuse,data/raw/cnv/Schedule_A_Land_Use_11x17.pdf,True,971947,True,ok,949 KB
+cnv_pdf_regional_context,data/raw/cnv/Schedule_E_RegionalContextMap_11x17.pdf,True,837559,True,ok,817 KB
+cnv_community_statistics,data/raw/cnv/cnv_community_statistics.html,True,511980,True,ok,494 KB
+cnv_traffic_signals_page,data/raw/cnv/cnv_traffic_signals_page.html,True,520538,True,ok,502 KB
+geoweb_streets,data/raw/dnv_geoweb/TrnStreets_shp.zip,True,1938228,True,ok,11 members
+geoweb_intersections,data/raw/dnv_geoweb/TrnIntersection_shp.zip,True,203609,True,ok,6 members
+geoweb_parking_restrictions,data/raw/dnv_geoweb/TrnParkingRestrictions_shp.zip,True,298773,True,ok,6 members
+geoweb_parking_lots,data/raw/dnv_geoweb/RodParkingLot_shp.zip,True,507327,True,ok,6 members
+geoweb_sidewalks,data/raw/dnv_geoweb/RodSidewalk_shp.zip,True,1138786,True,ok,6 members
+geoweb_metrovan_municipalities,data/raw/dnv_geoweb/RegBoundaryMetroVan_shp.zip,True,63484,True,ok,6 members
+icbc_crashes_north_vancouver,data/raw/safety/icbc_crashes_north_vancouver.csv,True,78586,True,ok,"2218 rows, 3 cols"
+icbc_crashes_lower_mainland_all,data/raw/safety/icbc_crashes_lower_mainland.csv,True,322693,True,ok,"9841 rows, 3 cols"

@@ -1,0 +1,168 @@
+# =============================================================================
+# config/scoring.yaml
+# Neutral public-space suitability scoring for CNV intersections.
+#
+# This scores intersections for GENERAL PUBLIC-SPACE VISIBILITY AND FEASIBILITY.
+# It contains no political variable of any kind: no party, candidate, voting history,
+# or demographic-to-preference assumption. Demographic inputs are limited to how many
+# people are physically present near a location.
+# =============================================================================
+
+meta:
+  purpose: >
+    Describe how visible, accessible and feasible each intersection is as a public space,
+    using published municipal and federal data only.
+  prohibited_inputs:
+    - political affiliation
+    - voting history or vote share
+    - candidate or party support
+    - any inference from demographics to political preference
+    - individual-level data of any kind
+  interpretation_warning: >
+    Components measure different things on different evidence bases and are deliberately
+    kept separate. The composite is a convenience summary, not a ground truth ranking.
+    Any component built on sparse data carries a coverage flag and must be read with it.
+
+# Normalisation: percentile ranks are used rather than min-max so that a single extreme
+# value cannot dominate a component.
+normalisation:
+  method: percentile_rank
+  range: [0, 100]
+
+components:
+
+  road_hierarchy_score:
+    description: >
+      Position of the intersection in the road hierarchy, used as a proxy for vehicle
+      exposure. Renamed from 'traffic_score' because it is NOT built on measured traffic.
+    coverage_warning: >
+      Road classification only. Measured traffic volumes were REMOVED from this component:
+      they exist for just 40 of 503 intersections, so blending them in made scores from
+      different rows incomparable (a row with a volume was scored on a different basis
+      from one without). Measured volumes are still reported, as the separate attribute
+      `nearest_traffic_volume` with its `traffic_volume_available` flag.
+    inputs:
+      - field: road_class_weight
+        weight: 1.00
+        note: "Derived from the road classes meeting at the intersection."
+
+  transit_score:
+    description: "Scheduled transit activity within 250 m."
+    coverage_warning: "Complete coverage from the TransLink GTFS feed."
+    inputs:
+      - field: transit_departures_250m
+        weight: 0.60
+      - field: transit_stops_250m
+        weight: 0.25
+      - field: transit_departures_am_peak_250m
+        weight: 0.15
+
+  pedestrian_proxy_score:
+    description: >
+      PROXY for pedestrian activity. This is NOT a pedestrian count. No pedestrian count
+      data is published for CNV intersections.
+    coverage_warning: >
+      Entirely a proxy. Components are population, commercial land use, transit service,
+      pedestrian infrastructure and intersection density.
+    inputs:
+      - field: population_2021_400m
+        weight: 0.30
+      - field: commercial_area_250m_m2
+        weight: 0.25
+      - field: transit_departures_250m
+        weight: 0.20
+      - field: walkway_length_250m
+        weight: 0.15
+      - field: sidewalk_ramps_100m
+        weight: 0.10
+
+  parking_access_score:
+    description: "Ease of parking near the intersection: supply, and how full it gets."
+    coverage_warning: >
+      On-street occupancy comes from a City survey covering 1,169 segments; the survey
+      date could not be established from published documents.
+    inputs:
+      - field: onstreet_supply_250m
+        weight: 0.45
+      - field: offstreet_spaces_400m
+        weight: 0.30
+      - field: onstreet_peak_occupancy_250m
+        weight: 0.25
+        invert: true
+        note: "Higher observed occupancy means less available parking, so this is inverted."
+
+  intersection_prominence_score:
+    description: "How structurally significant the intersection is in the street network."
+    inputs:
+      - field: leg_count
+        weight: 0.40
+      - field: distinct_street_names
+        weight: 0.20
+      - field: max_lanes
+        weight: 0.20
+      - field: signalised
+        weight: 0.20
+
+  safety_score:
+    description: >
+      Recorded collision burden. HIGHER SCORE MEANS FEWER RECORDED COLLISIONS, so that all
+      components point the same way (higher = more suitable).
+    reported_separately: true
+    coverage_warning: >
+      REPORTED SEPARATELY, NOT IN THE COMPOSITE. ICBC data is name-matched with no
+      coordinates and only high-confidence matches are retained, so roughly half of
+      intersections have no collision data. Including a component with that coverage in an
+      average would mean different rows were scored on different component sets.
+      Intersections without a match are unknown, NOT zero collisions.
+    inputs:
+      - field: collision_count
+        weight: 1.0
+        invert: true
+
+# ---------------------------------------------------------------------------
+# REMOVED COMPONENT
+#
+# `visibility_score` was removed after review. It was built from leg_count, max_lanes and
+# commercial area — but leg_count and max_lanes are already inputs to
+# intersection_prominence_score, and the two components correlated at r = 0.79. It was
+# therefore largely a restatement of prominence wearing a different label, while implying
+# a measurement of sightlines that no source supports.
+#
+# The project brief is explicit that a GIS variable for "poor visibility" must not be
+# invented. Sightline obstruction, grade, curvature, vegetation and lighting are instead
+# handled as FIELD OBSERVATIONS in outputs/tables/field_audit_checklist.csv.
+# ---------------------------------------------------------------------------
+
+# Road classification weights used by traffic_score.
+road_class_weights:
+  freeway: 1.00
+  arterial: 0.90
+  Major: 0.85
+  collector: 0.60
+  Minor: 0.45
+  local: 0.25
+  ramp: 0.50
+  lane: 0.10
+  strata: 0.10
+
+# The composite is an unweighted mean of the components below, so that no single
+# dimension silently dominates.
+#
+# Only components with effectively COMPLETE coverage are included, so that every
+# intersection is scored on the same basis. Previously safety_score (57% coverage) was
+# averaged in, which meant 215 intersections were scored on six components and 288 on
+# seven — making the resulting ranks not comparable with each other. Safety is now
+# reported alongside the composite instead of inside it.
+composite:
+  method: mean_of_components
+  components:
+    - road_hierarchy_score
+    - transit_score
+    - pedestrian_proxy_score
+    - parking_access_score
+    - intersection_prominence_score
+  report_components_separately: true
+  excluded_from_composite:
+    - component: safety_score
+      reason: "partial coverage would make rows incomparable; reported as its own column"
+  requires_full_coverage: true

@@ -1,0 +1,19 @@
+{
+  "source_id": "cnv_traffic_signals_page",
+  "organization": "City of North Vancouver",
+  "dataset": "Traffic Signals information page",
+  "source_url": "https://www.cnv.org/Streets-Transportation/Traffic/Traffic-Signals",
+  "download_url": "https://www.cnv.org/Streets-Transportation/Traffic/Traffic-Signals",
+  "handler": "html_page",
+  "format": "HTML",
+  "geographic_level": null,
+  "coverage": "City of North Vancouver",
+  "version": null,
+  "license": null,
+  "download_date": "2026-08-12T07:14:55+00:00",
+  "sha256": "3abe4f9ad717fa5e0f2fd0a5849a5fe8aa62a7665bccc87f0d856007bc0255de",
+  "notes": "Checked for any published signal timing / coordination information.",
+  "bytes": 520538,
+  "http_content_type": "text/html; charset=utf-8",
+  "final_url": "https://www.cnv.org/Streets-Transportation/Traffic/Traffic-Signals"
+}

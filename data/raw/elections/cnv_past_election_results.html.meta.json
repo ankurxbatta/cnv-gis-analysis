@@ -1,0 +1,19 @@
+{
+  "source_id": "cnv_past_election_results",
+  "organization": "City of North Vancouver",
+  "dataset": "Past Election Results",
+  "source_url": "https://www.cnv.org/City-Hall/General-Local-Election/Past-Election-Results",
+  "download_url": "https://www.cnv.org/City-Hall/General-Local-Election/Past-Election-Results",
+  "handler": "html_page",
+  "format": "HTML",
+  "geographic_level": "municipality",
+  "coverage": "City of North Vancouver",
+  "version": null,
+  "license": null,
+  "download_date": "2026-08-12T07:14:53+00:00",
+  "sha256": "8e1e92037f7e5197b738485c8dff2a26e81c68d275af19cabe2125684bb1f83e",
+  "notes": "Landing page for historical results. Linked PDFs are discovered and fetched by 07_prepare_elections.py.",
+  "bytes": 547769,
+  "http_content_type": "text/html; charset=utf-8",
+  "final_url": "https://www.cnv.org/City-Hall/General-Local-Election/Past-Election-Results"
+}

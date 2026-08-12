@@ -1,0 +1,20 @@
+{
+  "source_id": "geoweb_intersections",
+  "organization": "District of North Vancouver - GEOweb",
+  "dataset": "Street Intersections",
+  "source_url": "https://geoweb.dnv.org/data/",
+  "download_url": "https://geoweb.dnv.org/Products/Data/SHP/TrnIntersection_shp.zip",
+  "handler": "http_file",
+  "format": "Shapefile (zip)",
+  "geographic_level": "intersection",
+  "coverage": "North Shore",
+  "version": null,
+  "license": null,
+  "download_date": "2026-08-12T07:14:56+00:00",
+  "sha256": "c5e23b0a46de176d98c22ab79ac2827cdd7245794748836935dd41f4364e1b8b",
+  "notes": "Ready-made intersection points; cross-checked against intersections derived from CNV centrelines.",
+  "http_content_type": "application/x-zip-compressed",
+  "http_content_disposition": null,
+  "bytes": 203609,
+  "validation": "ok"
+}

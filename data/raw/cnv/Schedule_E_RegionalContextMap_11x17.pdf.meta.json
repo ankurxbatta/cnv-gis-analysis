@@ -1,0 +1,20 @@
+{
+  "source_id": "cnv_pdf_regional_context",
+  "organization": "City of North Vancouver",
+  "dataset": "Schedule E Regional Context Map (PDF)",
+  "source_url": "https://gisext2.cnv.org/PDFMaps/Schedule%20E%20RegionalContextMap_11x17.pdf",
+  "download_url": "https://gisext2.cnv.org/PDFMaps/Schedule%20E%20RegionalContextMap_11x17.pdf",
+  "handler": "http_file",
+  "format": "PDF",
+  "geographic_level": null,
+  "coverage": "City of North Vancouver",
+  "version": null,
+  "license": null,
+  "download_date": "2026-08-12T07:14:55+00:00",
+  "sha256": "af2efa1ea98dc7f935f12c1260129e3824434398a111c6fc5d9a46e6198017f9",
+  "notes": "",
+  "http_content_type": "application/pdf",
+  "http_content_disposition": null,
+  "bytes": 837559,
+  "validation": "ok"
+}

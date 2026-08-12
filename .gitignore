@@ -1,0 +1,24 @@
+# ---- large raw downloads: reproducible via scripts/01_download.py ----
+# Metadata sidecars ARE tracked so provenance survives without the payloads.
+data/raw/**
+!data/raw/**/
+!data/raw/**/*.meta.json
+
+# ---- intermediate + derived binaries ----
+data/interim/**
+!data/interim/*.md
+data/processed/*.gpkg
+logs/*.log
+
+# ---- python ----
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+scripts/_shared_css.txt
+
+# ---- os ----
+.DS_Store
+
+# NOTE: outputs/interactive/, outputs/maps/, outputs/tables/ and outputs/report/
+# are deliberately COMMITTED — they are the published site and its downloads.
