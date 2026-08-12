@@ -90,6 +90,22 @@ python scripts/20_generate_report.py
 First full run takes roughly 20 minutes, dominated by ~1.2 GB of Statistics Canada
 downloads. Subsequent runs reuse the cache and complete in about a minute.
 
+### QGIS desktop project (optional)
+
+If QGIS is installed, regenerate the pre-styled desktop project:
+
+```bash
+./scripts/run_qgis_python.sh scripts/23_create_qgis_project.py
+open outputs/qgis/CNV_GIS_Analysis.qgz
+```
+
+30 layers in 9 themed groups, a CARTO basemap underneath, and the same palette as
+the web map. The wrapper boots QGIS's bundled Python — the macOS bundle needs
+`PYTHONHOME`, `PROJ_DATA`, `GDAL_DATA` and a corrected prefix path before PyQGIS
+will import and load its provider libraries.
+
+No QGIS plugins are required: XYZ basemaps and every format used here are core.
+
 ### Viewing the interactive map
 
 ```bash
