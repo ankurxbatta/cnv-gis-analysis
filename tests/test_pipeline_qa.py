@@ -311,8 +311,38 @@ def test_maps_were_generated():
     assert len(pngs) >= 13, f"expected at least 13 maps, found {len(pngs)}"
 
 
-def test_interactive_map_is_self_describing():
-    html = (OUTPUTS / "interactive" / "index.html").read_text(encoding="utf-8")
-    assert "proxy" in html.lower()
-    assert "no political variable" in html.lower()
-    assert (OUTPUTS / "interactive" / "data" / "intersections.geojson").exists()
+@pytest.mark.parametrize("page", ["index.html", "recommendations.html"])
+def test_published_pages_declare_neutrality_and_proxy_status(page):
+    """Any page a reader could act on must state the proxy and neutrality caveats."""
+    path = OUTPUTS / "interactive" / page
+    assert path.exists(), f"{page} was not produced"
+    # Collapse whitespace: the assertion is about wording, not line wrapping.
+    html = " ".join(path.read_text(encoding="utf-8").lower().split())
+    assert "proxy" in html, f"{page} does not mention the proxy caveat"
+    assert "no political variable" in html, f"{page} does not state political neutrality"
+    assert "demographics to political preference" in html, (
+        f"{page} does not rule out demographic-to-preference inference")
+
+
+def test_recommendations_page_carries_the_legal_caveat():
+    """Campaigning near voting places is legally restricted; the page must say so."""
+    raw = (OUTPUTS / "interactive" / "recommendations.html").read_text(encoding="utf-8").lower()
+    html = " ".join(raw.split())
+    assert "voting place" in html and ("restrict" in html or "chief election officer" in html)
+
+
+def test_recommendations_contain_no_political_field():
+    import pandas as pd  # noqa: PLC0415
+    df = pd.read_csv(OUTPUTS / "tables" / "campaign_visibility_recommendations.csv")
+    banned = ("party", "candidate", "vote_share", "political", "partisan", "affiliation",
+              "support", "turnout")
+    for col in df.columns:
+        low = col.lower()
+        if low in ("neutrality", "basis", "legal_note", "reason_text"):
+            continue
+        assert not any(b in low for b in banned), f"political field in recommendations: {col}"
+
+
+def test_interactive_data_layers_exist():
+    for f in ("intersections.geojson", "recommendations.geojson"):
+        assert (OUTPUTS / "interactive" / "data" / f).exists(), f"{f} missing"

@@ -48,6 +48,7 @@ STAGES = {
         ("18_create_maps.py", "Static map series"),
         ("19_create_interactive_map.py", "Interactive web map"),
         ("21_create_review_map.py", "Data review map: excluded and flagged data"),
+        ("22_campaign_visibility.py", "Public visibility recommendations"),
     ],
     "report": [
         ("20_generate_report.py", "Final HTML report and DATA_SOURCES.md"),

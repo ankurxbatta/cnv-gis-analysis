@@ -168,6 +168,9 @@ h2.sec::after{content:"";flex:1;height:1px;background:var(--line)}
 .legend .lb{font-variant-numeric:tabular-nums;font-size:11px;color:var(--muted)}
 .legend + .legend{margin-top:8px}
 .leaflet-control-scale-line{background:var(--surface);color:var(--fg);border-color:var(--line-strong)}
+.leaflet-control-attribution{background:transparent!important;color:var(--faint)!important;
+  font-size:9.5px!important;padding:1px 5px!important;box-shadow:none!important}
+.leaflet-control-attribution a{color:var(--faint)!important;text-decoration:none}
 
 #toggleSide{position:absolute;top:12px;left:12px;z-index:var(--z-float);display:none}
 
@@ -226,14 +229,21 @@ h2.sec::after{content:"";flex:1;height:1px;background:var(--line)}
       </div>
       <div class="callout">
         <strong>The public-space score is politically neutral.</strong> It measures
-        visibility, access and feasibility only. No party, candidate or voting variable, and
-        no inference from demographics to political preference.
+        visibility, access and feasibility only. It contains no political variable &mdash; no
+        party, candidate or voting history &mdash; and makes no inference from demographics
+        to political preference.
       </div>
       <div class="callout warn">
         <strong>Coverage varies by layer.</strong> Collision data covers about half of
         intersections &mdash; the rest are unknown, not zero. Measured traffic volumes exist
         for 40 of 503. Parking occupancy is a 2022&ndash;23 survey, not live data.
       </div>
+
+      <a class="linkrow" href="recommendations.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a7 7 0 1114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg>
+        <span>Where people are &mdash; top public locations</span>
+        <span class="arrow">&rarr;</span>
+      </a>
 
       <a class="linkrow" href="review.html">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
@@ -272,7 +282,10 @@ document.getElementById('theme').onclick=()=>{
 };
 
 /* ---------- map ---------- */
-const map=L.map('map',{preferCanvas:true,zoomControl:false}).setView([49.322,-123.075],14);
+const map=L.map('map',{preferCanvas:true,zoomControl:false,
+  attributionControl:false}).setView([49.322,-123.075],14);
+L.control.attribution({prefix:false,position:'bottomright'})
+  .addAttribution('&copy; OpenStreetMap &copy; CARTO').addTo(map);
 L.control.zoom({position:'topright'}).addTo(map);
 L.control.scale({imperial:false,position:'bottomleft'}).addTo(map);
 const TILES={
@@ -284,7 +297,7 @@ function swapBasemap(){
   const dark=root.getAttribute('data-theme')==='dark';
   if(base) map.removeLayer(base);
   base=L.tileLayer(dark?TILES.dark:TILES.light,
-    {attribution:'&copy; OpenStreetMap contributors &copy; CARTO',maxZoom:19}).addTo(map);
+    {maxZoom:19}).addTo(map);
   base.setZIndex(0);
 }
 swapBasemap();
@@ -468,15 +481,16 @@ const CONF=[
     if(!out.children.length) out.innerHTML='<button disabled style="color:var(--faint)">No match</button>';
   });
 
+  // The legend is generated FROM the same colour arrays the map uses, so the two can
+  // never drift apart when a palette changes.
+  const DENSITY_LABELS=['< 3k','3–6k','6–10k','10–15k','15–20k','20k+ /km²'];
   const legend=L.control({position:'bottomright'});
   legend.onAdd=()=>{const d=L.DomUtil.create('div','legend');
-    d.innerHTML='<h4>Population density</h4>'+
-      [['#EFF6FF','< 3k'],['#BFDBFE','3–6k'],['#93C5FD','6–10k'],
-       ['#60A5FA','10–15k'],['#0F4C5C','15–20k'],['#1D4ED8','20k+ /km²']]
-      .map(([c,l])=>`<div class="row"><i style="background:${c}"></i><span class="lb">${l}</span></div>`).join('')+
-      '<h4 style="margin-top:9px">Public-space score</h4>'+
-      [['#F6F0E4','low'],['#DBC49B','mid'],['#8A6A3B','high']]
-      .map(([c,l])=>`<div class="row"><i style="background:${c}"></i><span class="lb">${l}</span></div>`).join('');
+    const swatches=(cols,labels)=>cols.map((c,i)=>
+      `<div class="row"><i style="background:${c}"></i><span class="lb">${labels[i]}</span></div>`).join('');
+    d.innerHTML='<h4>Population density</h4>'+swatches(BLUES,DENSITY_LABELS)+
+      '<h4 style="margin-top:10px">Public-space score</h4>'+
+      swatches([VIRIDIS[0],VIRIDIS[2],VIRIDIS[4],VIRIDIS[5]],['lower','mid','high','highest']);
     return d;};
   legend.addTo(map);
 

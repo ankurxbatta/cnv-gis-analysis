@@ -313,6 +313,9 @@ h2.sec::after{content:"";flex:1;height:1px;background:var(--line)}
 code{background:var(--surface-2);padding:1.5px 6px;border-radius:5px;font-size:11.5px;
   font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 
+.leaflet-control-attribution{background:transparent!important;color:var(--faint)!important;
+  font-size:9.5px!important;padding:1px 5px!important;box-shadow:none!important}
+.leaflet-control-attribution a{color:var(--faint)!important;text-decoration:none}
 </style></head><body>
 <div id="app"><aside id="side">
 <div class="head"><div class="brandrow">
@@ -342,7 +345,10 @@ function syncThemeIcon(){const d=root.getAttribute('data-theme')==='dark';
  document.getElementById('icon-sun').style.display=d?'none':'block';
  document.getElementById('icon-moon').style.display=d?'block':'none';}
 syncThemeIcon();
-const map=L.map('map',{preferCanvas:true,zoomControl:false}).setView([49.322,-123.075],14);
+const map=L.map('map',{preferCanvas:true,zoomControl:false,
+  attributionControl:false}).setView([49.322,-123.075],14);
+L.control.attribution({prefix:false,position:'bottomright'})
+  .addAttribution('&copy; OpenStreetMap &copy; CARTO').addTo(map);
 L.control.zoom({position:'topright'}).addTo(map);
 L.control.scale({imperial:false,position:'bottomleft'}).addTo(map);
 const TILES={light:'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png',
@@ -351,7 +357,7 @@ let base=null;
 function swapBasemap(){const d=root.getAttribute('data-theme')==='dark';
  if(base) map.removeLayer(base);
  base=L.tileLayer(d?TILES.dark:TILES.light,
-  {attribution:'&copy; OpenStreetMap contributors &copy; CARTO',maxZoom:19}).addTo(map);
+  {maxZoom:19}).addTo(map);
  base.setZIndex(0);}
 swapBasemap();
 document.getElementById('theme').onclick=()=>{const d=root.getAttribute('data-theme')==='dark';

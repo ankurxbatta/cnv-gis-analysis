@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" data-theme="light"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CNV — Public visibility recommendations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+:root{--petrol-700:#0F4C5C;--petrol-500:#3C7C8A;--brass:#B08D57;--crimson:#8C2F39;
+ --bg:#FBFAF8;--surface:#FFFFFF;--surface-2:#F5F2EC;--fg:#1A1917;--muted:#57534E;--faint:#8B857C;
+ --line:#E8E3DA;--line-strong:#D6CFC3;--ok:#2F6B4F;
+ --shadow:0 1px 2px rgba(26,25,23,.04),0 8px 28px rgba(26,25,23,.07);--radius:12px}
+:root[data-theme="dark"]{--bg:#14100C;--surface:#1C1813;--surface-2:#241F19;--fg:#F2EDE4;
+ --muted:#BDB4A6;--faint:#948B7D;--line:#332C24;--line-strong:#463D31;--petrol-700:#7FB3BE;--brass:#D9B579}
+*{box-sizing:border-box}html,body{margin:0;height:100%}
+body{font-family:"Inter",system-ui,sans-serif;font-size:15px;line-height:1.6;color:var(--fg);
+ background:var(--bg);-webkit-font-smoothing:antialiased}
+#app{display:flex;height:100%;overflow:hidden}
+#side{width:430px;flex:0 0 430px;display:flex;flex-direction:column;background:var(--surface);
+ border-right:1px solid var(--line)}
+.head{padding:16px 20px 14px;border-bottom:1px solid var(--line)}
+.head h1{margin:0;font-family:"Playfair Display",Georgia,serif;font-size:21px;font-weight:600;letter-spacing:-.015em}
+.head p{margin:3px 0 0;font-size:12px;color:var(--faint)}
+.body{flex:1;overflow-y:auto;padding:0 20px 44px}
+.callout{border:1px solid var(--line);border-left:3px solid var(--petrol-700);background:var(--surface-2);
+ border-radius:0 10px 10px 0;padding:11px 13px;margin:14px 0;font-size:12.5px;color:var(--muted)}
+.callout.warn{border-left-color:var(--crimson)}
+.callout strong{color:var(--fg)}
+.rec{border:1px solid var(--line);border-radius:var(--radius);padding:13px 15px;margin:11px 0;
+ background:var(--surface);cursor:pointer;transition:border-color .18s ease,box-shadow .18s ease}
+.rec:hover{border-color:var(--petrol-500);box-shadow:var(--shadow)}
+.rec:focus-visible{outline:2px solid var(--petrol-500);outline-offset:2px}
+.rec .top{display:flex;align-items:flex-start;gap:11px}
+.rank{width:29px;height:29px;flex:0 0 29px;border-radius:50%;background:var(--petrol-700);color:#fff;
+ display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
+.rec h3{margin:0;font-size:14px;font-weight:600;line-height:1.35}
+.rec .sub{font-size:11.5px;color:var(--faint);margin-top:2px}
+.pill{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+ padding:3px 8px;border-radius:20px;background:var(--surface-2);color:var(--brass);margin-top:7px}
+.why{margin:9px 0 0;padding:0 0 0 15px;font-size:12.5px;color:var(--muted)}
+.why li{margin:4px 0}
+.why li::marker{color:var(--brass)}
+.sc{margin-left:auto;text-align:right;font-variant-numeric:tabular-nums}
+.sc .n{font-family:"Playfair Display",Georgia,serif;font-size:19px;font-weight:600;color:var(--petrol-700)}
+.sc .l{font-size:9.5px;color:var(--faint);text-transform:uppercase;letter-spacing:.05em}
+h2.sec{display:flex;align-items:center;gap:7px;margin:20px 0 6px;font-size:11px;font-weight:600;
+ text-transform:uppercase;letter-spacing:.07em;color:var(--faint)}
+h2.sec::after{content:"";flex:1;height:1px;background:var(--line)}
+a.back{display:flex;align-items:center;gap:8px;padding:9px 12px;margin:14px 0 0;border:1px solid var(--line);
+ border-radius:9px;color:var(--fg);text-decoration:none;font-size:13px;font-weight:500}
+a.back:hover{background:var(--surface-2)}
+#map{flex:1}
+.leaflet-popup-content-wrapper{border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);color:var(--fg)}
+.leaflet-popup-content{margin:0;font-size:13px;min-width:250px;max-width:320px}
+.ph{padding:11px 13px 8px;border-bottom:1px solid var(--line);font-weight:600}
+.pb{padding:10px 13px 12px;font-size:12.5px;color:var(--muted)}
+@media(max-width:900px){#app{flex-direction:column}#side{width:100%;flex:0 0 auto;max-height:55vh}}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+.leaflet-control-attribution{background:transparent!important;color:var(--faint)!important;
+  font-size:9.5px!important;padding:1px 5px!important;box-shadow:none!important}
+.leaflet-control-attribution a{color:var(--faint)!important;text-decoration:none}
+</style></head><body>
+<div id="app"><aside id="side">
+ <div class="head"><h1>Where people actually are</h1>
+ <p>Highest-exposure public locations in the City of North Vancouver</p></div>
+ <div class="body">
+  <div class="callout"><strong>What this ranks.</strong> Public exposure only: scheduled
+  transit activity, residents within a 5-minute walk, commercial frontage, junction
+  prominence and parking access. It tells you where people <em>are</em>.</div>
+  <div class="callout"><strong>How solid the numbers are.</strong> Transit departures are
+  actual scheduled counts from the TransLink feed. Resident counts are estimates,
+  interpolated from census areas. Footfall is a <em>proxy</em> &mdash; no pedestrian counts
+  are published for this city &mdash; so treat the ordering as indicative and verify on the
+  ground.</div>
+  <div class="callout warn"><strong>What it does not do.</strong> It contains no political
+  variable — no party, candidate or voting history — and makes no inference from
+  demographics to political preference. A campaign of any viewpoint would get this exact
+  same list.</div>
+  <div class="callout warn"><strong>Before you go.</strong> BC's Local Government Act
+  restricts campaigning at and near voting places on voting day, and the City requires
+  permits for some activities on City property. Confirm with the CNV Chief Election
+  Officer.</div>
+  <h2 class="sec">Ranked locations</h2>
+  <div id="list"></div>
+  <a class="back" href="index.html">← Back to the full explorer</a>
+ </div>
+</aside><div id="map"></div></div>
+<script>
+const root=document.documentElement;
+const saved=localStorage.getItem('cnv-theme'); if(saved) root.setAttribute('data-theme',saved);
+const map=L.map('map',{preferCanvas:true,zoomControl:false,
+  attributionControl:false}).setView([49.320,-123.073],14);
+L.control.attribution({prefix:false,position:'bottomright'})
+  .addAttribution('&copy; OpenStreetMap &copy; CARTO').addTo(map);
+L.control.zoom({position:'topright'}).addTo(map);
+L.control.scale({imperial:false,position:'bottomleft'}).addTo(map);
+const dark=root.getAttribute('data-theme')==='dark';
+L.tileLayer(dark?'https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png'
+                :'https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png',
+ {maxZoom:19}).addTo(map);
+
+(async()=>{
+ try{ const b=await (await fetch('data/boundary.geojson')).json();
+   L.geoJSON(b,{style:{color:'#1A1917',weight:2,fill:false}}).addTo(map);}catch(e){}
+ try{ const v=await (await fetch('data/voting_places.geojson')).json();
+   L.geoJSON(v,{pointToLayer:(f,ll)=>L.circleMarker(ll,{radius:7,fillColor:'#8C2F39',
+     color:'#fff',weight:1.8,fillOpacity:.95})
+     .bindPopup('<div class="ph">'+f.properties.place_name+'</div><div class="pb">2022 voting place — campaigning nearby is restricted on voting day.</div>')}).addTo(map);}catch(e){}
+
+ const gj=await (await fetch('data/recommendations.geojson')).json();
+ const marks={};
+ const layer=L.geoJSON(gj,{pointToLayer:(f,ll)=>{
+   const m=L.circleMarker(ll,{radius:12,fillColor:'#0F4C5C',color:'#fff',weight:2,fillOpacity:.95});
+   marks[f.properties.recommendation_rank]=m;
+   const p=f.properties;
+   m.bindPopup(`<div class="ph">${p.recommendation_rank}. ${p.street_names}</div>
+     <div class="pb"><strong>Score ${p.public_space_composite}/100</strong> — ${p.headline}<br><br>${p.reason_text}</div>`,
+     {maxWidth:330});
+   return m;}}).addTo(map);
+ map.fitBounds(layer.getBounds().pad(.15));
+
+ const feats=gj.features.sort((a,b)=>a.properties.recommendation_rank-b.properties.recommendation_rank);
+ document.getElementById('list').innerHTML=feats.map(f=>{const p=f.properties;
+  const why=p.reason_text.split(/(?<=\.)\s+(?=[A-Z])/).filter(Boolean);
+  return `<article class="rec" tabindex="0" data-rank="${p.recommendation_rank}">
+    <div class="top"><div class="rank">${p.recommendation_rank}</div>
+     <div style="flex:1;min-width:0"><h3>${p.street_names}</h3>
+      <div class="sub">${p.neighbourhood||''}</div>
+      <span class="pill">${p.headline}</span></div>
+     <div class="sc"><div class="n">${p.public_space_composite}</div><div class="l">score</div></div></div>
+    <ul class="why">${why.map(w=>`<li>${w}</li>`).join('')}</ul></article>`;}).join('');
+
+ document.querySelectorAll('.rec').forEach(el=>{
+   const go=()=>{const m=marks[el.dataset.rank]; if(m){map.setView(m.getLatLng(),17); m.openPopup();}};
+   el.onclick=go; el.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}};
+ });
+})();
+</script></body></html>
